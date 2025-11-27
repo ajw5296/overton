@@ -42,7 +42,10 @@ class OvertonAPIClient:
             name: Researcher name
             
         Returns:
-            Dict with 'total_results' (int) and 'error' (str or None)
+            Dict with:
+                - 'total_results' (int): Count of publications
+                - 'full_response' (dict): Complete API JSON response
+                - 'error' (str or None): Error message if request failed
         """
         query_string = self._build_query_string(institution, name)
         params = {
@@ -64,7 +67,10 @@ class OvertonAPIClient:
             name: Researcher name
             
         Returns:
-            Dict with 'total_results' (int) and 'error' (str or None)
+            Dict with:
+                - 'total_results' (int): Count of documents
+                - 'full_response' (dict): Complete API JSON response
+                - 'error' (str or None): Error message if request failed
         """
         query_string = self._build_query_string(institution, name)
         params = {
@@ -159,7 +165,7 @@ class OvertonAPIClient:
     
     def _extract_results(self, response: Optional[Dict], name: str, endpoint_type: str) -> Dict:
         """
-        Extract total_results from API response.
+        Extract total_results and full response from API response.
         
         Args:
             response: API response JSON
@@ -167,11 +173,12 @@ class OvertonAPIClient:
             endpoint_type: "publications" or "documents"
             
         Returns:
-            Dict with 'total_results' and 'error'
+            Dict with 'total_results', 'full_response', and 'error'
         """
         if response is None:
             return {
                 'total_results': 0,
+                'full_response': {},
                 'error': f'API request failed after {self.max_retries} attempts'
             }
         
@@ -180,11 +187,13 @@ class OvertonAPIClient:
             logger.info(f"[{name}] {endpoint_type}: {total} results")
             return {
                 'total_results': total,
+                'full_response': response,
                 'error': None
             }
         except (KeyError, AttributeError) as e:
             logger.error(f"Error extracting results for {name}: {e}")
             return {
                 'total_results': 0,
+                'full_response': {},
                 'error': f'Invalid response structure: {str(e)}'
             }

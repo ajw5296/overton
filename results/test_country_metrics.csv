@@ -1,0 +1,4 @@
+Name,citation_countries,unique_country_count,government_citations,igo_citations,status,error,processed_at
+Yubraj Acharya,"France, Germany, IGO, Kenya, South Africa, USA",5,3,42,success,,2025-11-26T12:14:02.413774
+Lee Ahern,"Australia, Estonia, Germany, IGO, Sweden, USA",5,6,3,success,,2025-11-26T12:14:04.979744
+David Almeida,"EU, UK, USA",3,5,0,success,,2025-11-26T12:14:07.440629

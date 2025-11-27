@@ -13,10 +13,10 @@ logger = logging.getLogger(__name__)
 
 def load_researchers(filepath: str) -> pd.DataFrame:
     """
-    Load researcher data from Excel file and clean names.
+    Load researcher data from Excel or CSV file and clean names.
     
     Args:
-        filepath: Path to Excel file containing researcher data
+        filepath: Path to Excel (.xls, .xlsx) or CSV file containing researcher data
         
     Returns:
         DataFrame with cleaned researcher names
@@ -32,10 +32,17 @@ def load_researchers(filepath: str) -> pd.DataFrame:
     
     try:
         logger.info(f"Loading researchers from {file_path}")
-        df = pd.read_excel(filepath)
+        
+        # Determine file type and load accordingly
+        if file_path.suffix.lower() in ['.xls', '.xlsx']:
+            df = pd.read_excel(filepath)
+        elif file_path.suffix.lower() == '.csv':
+            df = pd.read_csv(filepath)
+        else:
+            raise ValueError(f"Unsupported file format: {file_path.suffix}. Use .xls, .xlsx, or .csv")
         
         if 'Name' not in df.columns:
-            raise ValueError("Excel file must contain a 'Name' column")
+            raise ValueError("File must contain a 'Name' column")
         
         # Clean names: remove credentials after comma (e.g., "John Doe, PhD" -> "John Doe")
         original_count = len(df)
@@ -50,7 +57,7 @@ def load_researchers(filepath: str) -> pd.DataFrame:
         return df
         
     except Exception as e:
-        logger.error(f"Error loading Excel file: {e}")
+        logger.error(f"Error loading file: {e}")
         raise
 
 
