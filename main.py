@@ -40,14 +40,7 @@ def parse_arguments():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Extract basic counts (backward compatible)
-  %(prog)s --input data.xls --output results.csv --api-key YOUR_KEY \\
-      --metrics publications_count documents_count
-  
-  # Extract country metrics
-  %(prog)s --input data.xls --output results.csv --api-key YOUR_KEY \\
-      --metrics citation_countries unique_country_count
-  
+
   # Extract all available metrics
   %(prog)s --input data.xls --output results.csv --api-key YOUR_KEY
   
