@@ -20,13 +20,15 @@ class OpenAlexClient:
         Fetches all DOIs for Penn State research documents from the OpenAlex API.
         """
         dois = []
-        page = 1
+        cursor = "*"
+        page_count = 0
+        
         while True:
             try:
                 params = {
                     "filter": "authorships.institutions.lineage:i130769515,publication_year:2020-2025",
                     "per_page": 200,
-                    "page": page,
+                    "cursor": cursor,
                     "select": "doi"
                 }
                 response = requests.get(f"{self.base_url}/works", headers=self.headers, params=params)
@@ -41,8 +43,13 @@ class OpenAlexClient:
                     if result.get("doi"):
                         dois.append(result["doi"])
                 
-                logging.info(f"Page {page}: Fetched {len(results)} results, {len(dois)} total DOIs collected.")
-                page += 1
+                page_count += 1
+                logging.info(f"Page {page_count}: Fetched {len(results)} results, {len(dois)} total DOIs collected.")
+                
+                # Get next cursor
+                cursor = data.get("meta", {}).get("next_cursor")
+                if not cursor:
+                    break
 
             except requests.exceptions.RequestException as e:
                 logging.error(f"An error occurred: {e}")
