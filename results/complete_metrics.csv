@@ -1,4 +1,0 @@
-Name,publications_count,documents_count,citation_countries,unique_country_count,government_citations,igo_citations,first_author_count,second_author_count,last_author_count,avg_author_position,status,error,processed_at
-Yubraj Acharya,13,61,"France, Germany, IGO, Kenya, South Africa, USA",5,3,42,5,3,5,3.0,success,,2025-11-26T12:30:43.329300
-Lee Ahern,6,13,"Australia, Estonia, Germany, IGO, Sweden, USA",5,6,3,0,6,3,2.0,success,,2025-11-26T12:30:49.012465
-David Almeida,2,6,"EU, UK, USA",3,5,0,0,0,1,7.5,success,,2025-11-26T12:30:55.450234
