@@ -16,6 +16,7 @@ class OvertonAPIClient:
     
     DOCUMENTS_URL = "https://app.overton.io/documents.php"
     PUBLICATIONS_URL = "https://app.overton.io/articles.php"
+    ARTICLES_URL = "https://app.overton.io/articles.php"
     
     def __init__(self, api_key: str, delay: float = 0.5, max_retries: int = 3, timeout: int = 30):
         """
@@ -82,6 +83,25 @@ class OvertonAPIClient:
         
         response = self._make_request(self.DOCUMENTS_URL, params)
         return self._extract_results(response, name, "documents")
+
+    def query_by_doi(self, doi: str) -> Dict:
+        """
+        Query the articles endpoint by DOI.
+
+        Args:
+            doi: The DOI of the article.
+
+        Returns:
+            Dict with API response data or an error message.
+        """
+        params = {
+            "format": "json",
+            "query": doi,
+            "api_key": self.api_key
+        }
+        
+        response = self._make_request(self.ARTICLES_URL, params)
+        return self._extract_results(response, doi, "DOI")
     
     def _build_query_string(self, institution: str, name: str) -> str:
         """
