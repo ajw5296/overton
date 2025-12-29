@@ -2,59 +2,147 @@ import json
 import requests
 import time
 import os
+import argparse
 from tqdm import tqdm
 
 # Configuration
 API_KEY = "7cb1b1-daf77f-94ed27"
-INPUT_FILE = "keep/openalex_exports/psu_dois.json"
-OUTPUT_FILE = "keep/overton_hits.json"
-SAMPLE_SIZE = 100
+ARTICLES_URL = "https://app.overton.io/articles.php"
 DOCUMENTS_URL = "https://app.overton.io/documents.php"
 
-def fetch_overton_data():
-    # Read DOIs
-    print(f"Reading DOIs from {INPUT_FILE}...")
-    try:
-        with open(INPUT_FILE, 'r') as f:
-            dois = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: File {INPUT_FILE} not found.")
-        return
 
-    # Take sample
-    sample_dois = dois[:SAMPLE_SIZE]
-    print(f"Processing {len(sample_dois)} DOIs...")
+def fetch_by_orcids(input_file, output_file, sample_size=None):
+    """
+    Fetch Overton data for researchers by ORCID.
+    Queries both articles and documents endpoints.
+    """
+    print(f"Reading researchers from {input_file}...")
+    with open(input_file, 'r', encoding='utf-8') as f:
+        researchers = json.load(f)
 
-    hits = []
-    
-    # Progress bar
-    for doi in tqdm(sample_dois):
-        # The DOI string in the file is like "https://doi.org/10.1080/..."
-        # We'll try querying with the full string first as suggested
-        
-        # We can also try stripping the prefix if we want to be thorough, 
-        # but let's start with the exact string from the file.
-        query_val = f'"{doi}"' # Quote it to be specific? Or raw? 
-        # User example: "query": "10.1186/..." (no quotes inside the value)
-        # But if it contains slashes/colons, quotes might help for exact phrase.
-        # Let's try raw first, similar to the user's example.
-        
+    # Apply sample size if specified
+    if sample_size:
+        researchers = researchers[:sample_size]
+
+    print(f"Processing {len(researchers)} researchers...")
+
+    results = []
+
+    for researcher in tqdm(researchers):
+        orcid_raw = researcher.get("orcid", "")
+        # Strip URL prefix if present
+        orcid = orcid_raw.replace("https://orcid.org/", "")
+
+        if not orcid:
+            continue
+
+        researcher_result = {
+            "orcid": orcid,
+            "display_name": researcher.get("display_name"),
+            "openalex_id": researcher.get("openalex_id"),
+            "field_of_research": researcher.get("field_of_research"),
+            "articles": None,
+            "policy_documents": None
+        }
+
         params = {
             "api_key": API_KEY,
             "format": "json",
-            "query": doi,  # Use the full DOI string
+            "query": orcid,
+            "sort": "relevance"
+        }
+
+        # Query Articles endpoint
+        try:
+            response = requests.get(ARTICLES_URL, params=params, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                total = data.get('query', {}).get('total_results', 0)
+                if total > 0:
+                    researcher_result["articles"] = {
+                        "total": total,
+                        "results": data.get('results', [])
+                    }
+            elif response.status_code == 429:
+                print("\nRate limited on articles. Waiting...")
+                time.sleep(5)
+        except Exception as e:
+            print(f"\nArticles request failed for {orcid}: {e}")
+
+        time.sleep(0.3)  # Rate limiting between requests
+
+        # Query Documents (policy) endpoint
+        try:
+            response = requests.get(DOCUMENTS_URL, params=params, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                total = data.get('query', {}).get('total_results', 0)
+                if total > 0:
+                    researcher_result["policy_documents"] = {
+                        "total": total,
+                        "results": data.get('results', [])
+                    }
+            elif response.status_code == 429:
+                print("\nRate limited on documents. Waiting...")
+                time.sleep(5)
+        except Exception as e:
+            print(f"\nDocuments request failed for {orcid}: {e}")
+
+        # Only include researchers with at least one hit
+        if researcher_result["articles"] or researcher_result["policy_documents"]:
+            results.append(researcher_result)
+
+        time.sleep(0.3)  # Rate limiting between researchers
+
+    # Summary
+    articles_count = sum(1 for r in results if r["articles"])
+    docs_count = sum(1 for r in results if r["policy_documents"])
+
+    print(f"\nFinished. Found {len(results)} researchers with Overton data:")
+    print(f"  - {articles_count} with articles")
+    print(f"  - {docs_count} with policy documents")
+
+    # Save results
+    if results:
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
+        print(f"Results saved to {output_file}")
+    else:
+        print("No hits found.")
+
+
+def fetch_by_dois(input_file, output_file, sample_size=None):
+    """
+    Fetch Overton data by DOIs (documents endpoint only).
+    """
+    print(f"Reading DOIs from {input_file}...")
+    with open(input_file, 'r', encoding='utf-8') as f:
+        dois = json.load(f)
+
+    if sample_size:
+        dois = dois[:sample_size]
+
+    print(f"Processing {len(dois)} DOIs...")
+
+    hits = []
+
+    for doi in tqdm(dois):
+        params = {
+            "api_key": API_KEY,
+            "format": "json",
+            "query": doi,
             "sort": "relevance"
         }
 
         try:
             response = requests.get(DOCUMENTS_URL, params=params, timeout=10)
-            
+
             if response.status_code == 200:
                 data = response.json()
                 total_results = data.get('query', {}).get('total_results', 0)
-                
+
                 if total_results > 0:
-                    print(f"\n[HIT] Found {total_results} documents for DOI: {doi}")
                     hits.append({
                         "doi": doi,
                         "total_results": total_results,
@@ -69,18 +157,35 @@ def fetch_overton_data():
         except Exception as e:
             print(f"\nRequest failed for {doi}: {e}")
 
-        # Rate limiting (conservative)
         time.sleep(0.5)
 
-    # Save results
     print(f"\nFinished. Found hits for {len(hits)} DOIs.")
     if hits:
-        os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-        with open(OUTPUT_FILE, 'w') as f:
-            json.dump(hits, f, indent=2)
-        print(f"Results saved to {OUTPUT_FILE}")
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(hits, f, indent=2, ensure_ascii=False)
+        print(f"Results saved to {output_file}")
     else:
-        print("No hits found in this sample.")
+        print("No hits found.")
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Fetch data from Overton API")
+    parser.add_argument("--mode", choices=["orcid", "doi"], default="orcid",
+                        help="Query mode: 'orcid' for researchers, 'doi' for works")
+    parser.add_argument("--input", type=str, default="keep/openalex_exports/psu_social_science_2025.json",
+                        help="Input JSON file")
+    parser.add_argument("--output", type=str, default="keep/overton_exports/social_science_overton.json",
+                        help="Output JSON file")
+    parser.add_argument("--sample", type=int, default=None,
+                        help="Limit to first N items (for testing)")
+    args = parser.parse_args()
+
+    if args.mode == "orcid":
+        fetch_by_orcids(args.input, args.output, args.sample)
+    else:
+        fetch_by_dois(args.input, args.output, args.sample)
+
 
 if __name__ == "__main__":
-    fetch_overton_data()
+    main()
