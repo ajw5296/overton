@@ -102,12 +102,51 @@ def fetch_by_orcids(input_file, output_file, sample_size=None):
     print(f"  - {articles_count} with articles")
     print(f"  - {docs_count} with policy documents")
 
-    # Save results
+    # Save results to separate files
     if results:
-        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        output_dir = os.path.dirname(output_file)
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Combined results
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2, ensure_ascii=False)
-        print(f"Results saved to {output_file}")
+        print(f"Combined results saved to {output_file}")
+
+        # Articles only
+        articles_results = []
+        for r in results:
+            if r["articles"]:
+                articles_results.append({
+                    "orcid": r["orcid"],
+                    "display_name": r["display_name"],
+                    "openalex_id": r["openalex_id"],
+                    "field_of_research": r["field_of_research"],
+                    "articles": r["articles"]
+                })
+
+        if articles_results:
+            articles_file = output_file.replace(".json", "_articles.json")
+            with open(articles_file, 'w', encoding='utf-8') as f:
+                json.dump(articles_results, f, indent=2, ensure_ascii=False)
+            print(f"Articles saved to {articles_file}")
+
+        # Policy documents only
+        docs_results = []
+        for r in results:
+            if r["policy_documents"]:
+                docs_results.append({
+                    "orcid": r["orcid"],
+                    "display_name": r["display_name"],
+                    "openalex_id": r["openalex_id"],
+                    "field_of_research": r["field_of_research"],
+                    "policy_documents": r["policy_documents"]
+                })
+
+        if docs_results:
+            docs_file = output_file.replace(".json", "_policy_documents.json")
+            with open(docs_file, 'w', encoding='utf-8') as f:
+                json.dump(docs_results, f, indent=2, ensure_ascii=False)
+            print(f"Policy documents saved to {docs_file}")
     else:
         print("No hits found.")
 
