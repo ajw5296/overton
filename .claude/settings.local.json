@@ -18,7 +18,8 @@
       "Bash(python fetch_openalex_samples.py)",
       "mcp__jsonmcp__json_stats",
       "mcp__jsonmcp__json_structure",
-      "mcp__jsonmcp__json_keys"
+      "mcp__jsonmcp__json_keys",
+      "Bash(git count-objects:*)"
     ]
   }
 }

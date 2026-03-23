@@ -173,6 +173,8 @@ Desktop.ini
 # Large data exports
 data/openalex_exports/
 data/overton_exports/
+data/pipeline/
+dashboard/data/
 
 # API keys and sensitive data
 *.key
