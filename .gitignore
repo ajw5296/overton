@@ -170,6 +170,10 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
+# Large data exports
+data/openalex_exports/
+data/overton_exports/
+
 # API keys and sensitive data
 *.key
 secrets.json
