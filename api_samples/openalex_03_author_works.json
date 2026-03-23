@@ -1,0 +1,3527 @@
+{
+  "meta": {
+    "count": 84,
+    "db_response_time_ms": 15,
+    "page": 1,
+    "per_page": 3,
+    "groups_count": null,
+    "cost_usd": 0.0001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W2414696471",
+      "doi": null,
+      "title": "Treatment of visceral fat obesity.",
+      "display_name": "Treatment of visceral fat obesity.",
+      "publication_year": 1991,
+      "publication_date": "1991-01-01",
+      "ids": {
+        "openalex": "https://openalex.org/W2414696471",
+        "mag": "2414696471",
+        "pmid": "https://pubmed.ncbi.nlm.nih.gov/1794940"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "pmid:1794940",
+        "is_oa": false,
+        "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/1794940",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S4306525036",
+          "display_name": "PubMed",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I1299303238",
+          "host_organization_name": "National Institutes of Health",
+          "host_organization_lineage": [
+            "https://openalex.org/I1299303238"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "International journal of obesity",
+        "raw_type": null
+      },
+      "type": "article",
+      "indexed_in": [
+        "pubmed"
+      ],
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5037370138",
+            "display_name": "Tony G. Babb",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I181547552",
+              "display_name": "Baylor College of Medicine",
+              "ror": "https://ror.org/02pttbw34",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I181547552",
+                "https://openalex.org/I2801539370"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I98285908",
+              "display_name": "Osaka University",
+              "ror": "https://ror.org/035t8zc32",
+              "country_code": "JP",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I98285908"
+              ]
+            }
+          ],
+          "countries": [
+            "JP",
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "S Fujioka",
+          "raw_affiliation_strings": [
+            "Second Department of Internal Medicine, Osaka University Medical School, Japan",
+            "§Department of Medicine, Baylor College of Medicine, Houston, TX 77030"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Second Department of Internal Medicine, Osaka University Medical School, Japan",
+              "institution_ids": [
+                "https://openalex.org/I98285908"
+              ]
+            },
+            {
+              "raw_affiliation_string": "§Department of Medicine, Baylor College of Medicine, Houston, TX 77030",
+              "institution_ids": [
+                "https://openalex.org/I181547552"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5025227099",
+            "display_name": "Donna H. Korzick",
+            "orcid": "https://orcid.org/0000-0003-3838-0523"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I181547552",
+              "display_name": "Baylor College of Medicine",
+              "ror": "https://ror.org/02pttbw34",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I181547552",
+                "https://openalex.org/I2801539370"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Y Matsuzawa",
+          "raw_affiliation_strings": [
+            "Baylor college of Medicine;"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Baylor college of Medicine;",
+              "institution_ids": [
+                "https://openalex.org/I181547552"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5112171229",
+            "display_name": "M Meador",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I181547552",
+              "display_name": "Baylor College of Medicine",
+              "ror": "https://ror.org/02pttbw34",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I181547552",
+                "https://openalex.org/I2801539370"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "K Tokunaga",
+          "raw_affiliation_strings": [
+            "Baylor college of Medicine;"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Baylor college of Medicine;",
+              "institution_ids": [
+                "https://openalex.org/I181547552"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5110829983",
+            "display_name": "J. L. Hodgson",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I181547552",
+              "display_name": "Baylor College of Medicine",
+              "ror": "https://ror.org/02pttbw34",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I181547552",
+                "https://openalex.org/I2801539370"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Y Keno",
+          "raw_affiliation_strings": [
+            "Baylor college of Medicine;"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Baylor college of Medicine;",
+              "institution_ids": [
+                "https://openalex.org/I181547552"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5109244305",
+            "display_name": "E. R. Buskirk",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I181547552",
+              "display_name": "Baylor College of Medicine",
+              "ror": "https://ror.org/02pttbw34",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I181547552",
+                "https://openalex.org/I2801539370"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "T Kobatake",
+          "raw_affiliation_strings": [
+            "Baylor college of Medicine;"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Baylor college of Medicine;",
+              "institution_ids": [
+                "https://openalex.org/I181547552"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "S Tarui",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "S Tarui",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 2,
+      "institutions_distinct_count": 6,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5037370138"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I181547552",
+        "https://openalex.org/I98285908"
+      ],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": 9.5517,
+      "has_fulltext": false,
+      "cited_by_count": 100,
+      "citation_normalized_percentile": {
+        "value": 0.98538891,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": true
+      },
+      "cited_by_percentile_year": {
+        "min": 89,
+        "max": 99
+      },
+      "biblio": {
+        "volume": "15",
+        "issue": "1",
+        "first_page": "59",
+        "last_page": "65"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11209",
+        "display_name": "Cardiovascular and exercise physiology",
+        "score": 0.670199990272522,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2707",
+          "display_name": "Complementary and alternative medicine"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/27",
+          "display_name": "Medicine"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/4",
+          "display_name": "Health Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11209",
+          "display_name": "Cardiovascular and exercise physiology",
+          "score": 0.670199990272522,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2707",
+            "display_name": "Complementary and alternative medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/cardiorespiratory-fitness",
+          "display_name": "Cardiorespiratory fitness",
+          "score": 0.7729689478874207
+        },
+        {
+          "id": "https://openalex.org/keywords/medicine",
+          "display_name": "Medicine",
+          "score": 0.7300739884376526
+        },
+        {
+          "id": "https://openalex.org/keywords/vo2-max",
+          "display_name": "VO2 max",
+          "score": 0.6360092163085938
+        },
+        {
+          "id": "https://openalex.org/keywords/ventilatory-threshold",
+          "display_name": "Ventilatory threshold",
+          "score": 0.5775554180145264
+        },
+        {
+          "id": "https://openalex.org/keywords/heart-rate",
+          "display_name": "Heart rate",
+          "score": 0.5343230366706848
+        },
+        {
+          "id": "https://openalex.org/keywords/treadmill",
+          "display_name": "Treadmill",
+          "score": 0.5340850353240967
+        },
+        {
+          "id": "https://openalex.org/keywords/obesity",
+          "display_name": "Obesity",
+          "score": 0.5124266743659973
+        },
+        {
+          "id": "https://openalex.org/keywords/internal-medicine",
+          "display_name": "Internal medicine",
+          "score": 0.5012118816375732
+        },
+        {
+          "id": "https://openalex.org/keywords/animal-science",
+          "display_name": "Animal science",
+          "score": 0.3984736502170563
+        },
+        {
+          "id": "https://openalex.org/keywords/endocrinology",
+          "display_name": "Endocrinology",
+          "score": 0.34309470653533936
+        },
+        {
+          "id": "https://openalex.org/keywords/blood-pressure",
+          "display_name": "Blood pressure",
+          "score": 0.25302791595458984
+        },
+        {
+          "id": "https://openalex.org/keywords/biology",
+          "display_name": "Biology",
+          "score": 0.07049649953842163
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C117437137",
+          "wikidata": "https://www.wikidata.org/wiki/Q5038720",
+          "display_name": "Cardiorespiratory fitness",
+          "level": 2,
+          "score": 0.7729689478874207
+        },
+        {
+          "id": "https://openalex.org/C71924100",
+          "wikidata": "https://www.wikidata.org/wiki/Q11190",
+          "display_name": "Medicine",
+          "level": 0,
+          "score": 0.7300739884376526
+        },
+        {
+          "id": "https://openalex.org/C196310339",
+          "wikidata": "https://www.wikidata.org/wiki/Q60354",
+          "display_name": "VO2 max",
+          "level": 4,
+          "score": 0.6360092163085938
+        },
+        {
+          "id": "https://openalex.org/C2778560200",
+          "wikidata": "https://www.wikidata.org/wiki/Q23807967",
+          "display_name": "Ventilatory threshold",
+          "level": 5,
+          "score": 0.5775554180145264
+        },
+        {
+          "id": "https://openalex.org/C2777953023",
+          "wikidata": "https://www.wikidata.org/wiki/Q1073121",
+          "display_name": "Heart rate",
+          "level": 3,
+          "score": 0.5343230366706848
+        },
+        {
+          "id": "https://openalex.org/C2781464450",
+          "wikidata": "https://www.wikidata.org/wiki/Q839144",
+          "display_name": "Treadmill",
+          "level": 2,
+          "score": 0.5340850353240967
+        },
+        {
+          "id": "https://openalex.org/C511355011",
+          "wikidata": "https://www.wikidata.org/wiki/Q12174",
+          "display_name": "Obesity",
+          "level": 2,
+          "score": 0.5124266743659973
+        },
+        {
+          "id": "https://openalex.org/C126322002",
+          "wikidata": "https://www.wikidata.org/wiki/Q11180",
+          "display_name": "Internal medicine",
+          "level": 1,
+          "score": 0.5012118816375732
+        },
+        {
+          "id": "https://openalex.org/C140793950",
+          "wikidata": "https://www.wikidata.org/wiki/Q168091",
+          "display_name": "Animal science",
+          "level": 1,
+          "score": 0.3984736502170563
+        },
+        {
+          "id": "https://openalex.org/C134018914",
+          "wikidata": "https://www.wikidata.org/wiki/Q162606",
+          "display_name": "Endocrinology",
+          "level": 1,
+          "score": 0.34309470653533936
+        },
+        {
+          "id": "https://openalex.org/C84393581",
+          "wikidata": "https://www.wikidata.org/wiki/Q82642",
+          "display_name": "Blood pressure",
+          "level": 2,
+          "score": 0.25302791595458984
+        },
+        {
+          "id": "https://openalex.org/C86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "level": 0,
+          "score": 0.07049649953842163
+        }
+      ],
+      "mesh": [
+        {
+          "descriptor_ui": "D000273",
+          "descriptor_name": "Adipose Tissue",
+          "qualifier_ui": "Q000473",
+          "qualifier_name": "pathology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000273",
+          "descriptor_name": "Adipose Tissue",
+          "qualifier_ui": "Q000473",
+          "qualifier_name": "pathology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000273",
+          "descriptor_name": "Adipose Tissue",
+          "qualifier_ui": "Q000473",
+          "qualifier_name": "pathology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000818",
+          "descriptor_name": "Animals",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000818",
+          "descriptor_name": "Animals",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000818",
+          "descriptor_name": "Animals",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D003511",
+          "descriptor_name": "Cyclohexanols",
+          "qualifier_ui": "Q000627",
+          "qualifier_name": "therapeutic use",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D003511",
+          "descriptor_name": "Cyclohexanols",
+          "qualifier_ui": "Q000627",
+          "qualifier_name": "therapeutic use",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D003511",
+          "descriptor_name": "Cyclohexanols",
+          "qualifier_ui": "Q000627",
+          "qualifier_name": "therapeutic use",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004038",
+          "descriptor_name": "Diet, Reducing",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004038",
+          "descriptor_name": "Diet, Reducing",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004038",
+          "descriptor_name": "Diet, Reducing",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004187",
+          "descriptor_name": "Disaccharides",
+          "qualifier_ui": "Q000627",
+          "qualifier_name": "therapeutic use",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004187",
+          "descriptor_name": "Disaccharides",
+          "qualifier_ui": "Q000627",
+          "qualifier_name": "therapeutic use",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004187",
+          "descriptor_name": "Disaccharides",
+          "qualifier_ui": "Q000627",
+          "qualifier_name": "therapeutic use",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D005081",
+          "descriptor_name": "Exercise Therapy",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D005081",
+          "descriptor_name": "Exercise Therapy",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D005081",
+          "descriptor_name": "Exercise Therapy",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009765",
+          "descriptor_name": "Obesity",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009765",
+          "descriptor_name": "Obesity",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009765",
+          "descriptor_name": "Obesity",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009765",
+          "descriptor_name": "Obesity",
+          "qualifier_ui": "Q000628",
+          "qualifier_name": "therapy",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009765",
+          "descriptor_name": "Obesity",
+          "qualifier_ui": "Q000628",
+          "qualifier_name": "therapy",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009765",
+          "descriptor_name": "Obesity",
+          "qualifier_ui": "Q000628",
+          "qualifier_name": "therapy",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D012867",
+          "descriptor_name": "Skin",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D012867",
+          "descriptor_name": "Skin",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D012867",
+          "descriptor_name": "Skin",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D013393",
+          "descriptor_name": "Sucrase",
+          "qualifier_ui": "Q000037",
+          "qualifier_name": "antagonists & inhibitors",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D013393",
+          "descriptor_name": "Sucrase",
+          "qualifier_ui": "Q000037",
+          "qualifier_name": "antagonists & inhibitors",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D013393",
+          "descriptor_name": "Sucrase",
+          "qualifier_ui": "Q000037",
+          "qualifier_name": "antagonists & inhibitors",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D014781",
+          "descriptor_name": "Viscera",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D014781",
+          "descriptor_name": "Viscera",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D014781",
+          "descriptor_name": "Viscera",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D017485",
+          "descriptor_name": "1-Deoxynojirimycin",
+          "qualifier_ui": "Q000031",
+          "qualifier_name": "analogs & derivatives",
+          "is_major_topic": true
+        },
+        {
+          "descriptor_ui": "D017485",
+          "descriptor_name": "1-Deoxynojirimycin",
+          "qualifier_ui": "Q000031",
+          "qualifier_name": "analogs & derivatives",
+          "is_major_topic": true
+        },
+        {
+          "descriptor_ui": "D017485",
+          "descriptor_name": "1-Deoxynojirimycin",
+          "qualifier_ui": "Q000031",
+          "qualifier_name": "analogs & derivatives",
+          "is_major_topic": true
+        },
+        {
+          "descriptor_ui": "D065089",
+          "descriptor_name": "Glycoside Hydrolase Inhibitors",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D065089",
+          "descriptor_name": "Glycoside Hydrolase Inhibitors",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D065089",
+          "descriptor_name": "Glycoside Hydrolase Inhibitors",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        }
+      ],
+      "locations_count": 2,
+      "locations": [
+        {
+          "id": "pmid:1794940",
+          "is_oa": false,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/1794940",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306525036",
+            "display_name": "PubMed",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "International journal of obesity",
+          "raw_type": null
+        },
+        {
+          "id": "pmid:2010259",
+          "is_oa": false,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/2010259",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306525036",
+            "display_name": "PubMed",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "International journal of obesity",
+          "raw_type": null
+        }
+      ],
+      "best_oa_location": null,
+      "sustainable_development_goals": [
+        {
+          "score": 0.6499999761581421,
+          "display_name": "Gender equality",
+          "id": "https://metadata.un.org/sdg/5"
+        }
+      ],
+      "awards": [],
+      "funders": [],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 0,
+      "referenced_works": [],
+      "related_works": [
+        "https://openalex.org/W2021609196",
+        "https://openalex.org/W2102356484",
+        "https://openalex.org/W200500237",
+        "https://openalex.org/W2801905116",
+        "https://openalex.org/W2042673480",
+        "https://openalex.org/W1990987229",
+        "https://openalex.org/W2056983114",
+        "https://openalex.org/W2956139917",
+        "https://openalex.org/W3108882205",
+        "https://openalex.org/W2992489044"
+      ],
+      "abstract_inverted_index": {
+        "To": [
+          0
+        ],
+        "investigate": [
+          1
+        ],
+        "the": [
+          2,
+          15,
+          56,
+          97,
+          110,
+          135,
+          145,
+          175,
+          185,
+          256
+        ],
+        "effect": [
+          3,
+          254
+        ],
+        "of": [
+          4,
+          18,
+          144,
+          164,
+          174,
+          190,
+          208,
+          213,
+          226,
+          235,
+          244,
+          255
+        ],
+        "moderate": [
+          5
+        ],
+        "obesity": [
+          6
+        ],
+        "on": [
+          7,
+          40,
+          259
+        ],
+        "ventilatory": [
+          8,
+          16,
+          107,
+          247
+        ],
+        "responses": [
+          9,
+          17,
+          212
+        ],
+        "to": [
+          10,
+          224
+        ],
+        "graded": [
+          11
+        ],
+        "exercise,": [
+          12
+        ],
+        "we": [
+          13
+        ],
+        "compared": [
+          14,
+          152,
+          223
+        ],
+        "ten": [
+          19
+        ],
+        "moderately": [
+          20,
+          214
+        ],
+        "obese": [
+          21,
+          57,
+          98,
+          111,
+          186,
+          215
+        ],
+        "(35": [
+          22
+        ],
+        "+/-": [
+          23,
+          33
+        ],
+        "5": [
+          24
+        ],
+        "percent": [
+          25,
+          35,
+          47,
+          86,
+          124,
+          163,
+          189,
+          207
+        ],
+        "body": [
+          26,
+          36
+        ],
+        "fat)": [
+          27,
+          37
+        ],
+        "and": [
+          28,
+          62,
+          68,
+          84,
+          92,
+          116,
+          161,
+          197,
+          205
+        ],
+        "nine": [
+          29
+        ],
+        "leaner": [
+          30,
+          227
+        ],
+        "women": [
+          31,
+          216
+        ],
+        "(22": [
+          32
+        ],
+        "2": [
+          34
+        ],
+        "during": [
+          38
+        ],
+        "walking": [
+          39
+        ],
+        "a": [
+          41,
+          105
+        ],
+        "treadmill": [
+          42
+        ],
+        "with": [
+          43
+        ],
+        "incremental": [
+          44
+        ],
+        "increases": [
+          45
+        ],
+        "in": [
+          46,
+          60,
+          96,
+          102,
+          184
+        ],
+        "grade.": [
+          48
+        ],
+        "Speed": [
+          49
+        ],
+        "remained": [
+          50
+        ],
+        "constant": [
+          51
+        ],
+        "at": [
+          52,
+          77,
+          122,
+          142,
+          154,
+          172,
+          187,
+          202,
+          219,
+          232,
+          241
+        ],
+        "3.0": [
+          53
+        ],
+        "mph.": [
+          54
+        ],
+        "In": [
+          55
+        ],
+        "women,": [
+          58,
+          228
+        ],
+        "VO2": [
+          59,
+          88,
+          114,
+          128,
+          165
+        ],
+        "l/min": [
+          61
+        ],
+        "ml/FFW/min,": [
+          63
+        ],
+        "fb": [
+          64,
+          198,
+          250,
+          258
+        ],
+        "(b/min),": [
+          65
+        ],
+        "VE": [
+          66,
+          180,
+          237
+        ],
+        "(l/min),": [
+          67
+        ],
+        "HR": [
+          69,
+          132,
+          167,
+          229
+        ],
+        "were": [
+          70,
+          119,
+          138,
+          151
+        ],
+        "significantly": [
+          71,
+          120,
+          140,
+          170,
+          182,
+          200
+        ],
+        "greater": [
+          72,
+          95,
+          183,
+          201
+        ],
+        "(P": [
+          73,
+          193
+        ],
+        "less": [
+          74,
+          194
+        ],
+        "than": [
+          75,
+          195
+        ],
+        "0.05)": [
+          76,
+          196
+        ],
+        "all": [
+          78
+        ],
+        "four": [
+          79,
+          146,
+          176
+        ],
+        "absolute": [
+          80,
+          220
+        ],
+        "workloads.": [
+          81
+        ],
+        "At": [
+          82
+        ],
+        "10.0": [
+          83
+        ],
+        "12.5": [
+          85,
+          123
+        ],
+        "grade,": [
+          87
+        ],
+        "(ml/kg/min)": [
+          89
+        ],
+        "was": [
+          90,
+          94,
+          129,
+          168,
+          181,
+          199
+        ],
+        "smaller": [
+          91
+        ],
+        "VE/VO2": [
+          93,
+          103
+        ],
+        "women.": [
+          99,
+          112
+        ],
+        "The": [
+          100,
+          149,
+          253
+        ],
+        "difference": [
+          101
+        ],
+        "suggests": [
+          104
+        ],
+        "lower": [
+          106
+        ],
+        "threshold": [
+          108,
+          248
+        ],
+        "for": [
+          109
+        ],
+        "Percent": [
+          113
+        ],
+        "max": [
+          115
+        ],
+        "R": [
+          117
+        ],
+        "(VCO2/VO2)": [
+          118
+        ],
+        "different": [
+          121,
+          141,
+          171
+        ],
+        "grade": [
+          125
+        ],
+        "only.": [
+          126
+        ],
+        "When": [
+          127
+        ],
+        "divided": [
+          130
+        ],
+        "by": [
+          131
+        ],
+        "(oxygen": [
+          133
+        ],
+        "pulse),": [
+          134
+        ],
+        "two": [
+          136
+        ],
+        "groups": [
+          137,
+          150
+        ],
+        "not": [
+          139,
+          169
+        ],
+        "any": [
+          143,
+          173
+        ],
+        "workloads": [
+          147,
+          155,
+          221
+        ],
+        "tested.": [
+          148
+        ],
+        "further": [
+          153
+        ],
+        "representing": [
+          156
+        ],
+        "approximately": [
+          157
+        ],
+        "55,": [
+          158,
+          203
+        ],
+        "65,": [
+          159
+        ],
+        "75,": [
+          160,
+          204
+        ],
+        "85": [
+          162,
+          188,
+          206
+        ],
+        "max.": [
+          166
+        ],
+        "relative": [
+          177
+        ],
+        "exercise": [
+          178,
+          245,
+          260
+        ],
+        "intensities.": [
+          179
+        ],
+        "maximum": [
+          191
+        ],
+        "only": [
+          192
+        ],
+        "maximum.": [
+          209
+        ],
+        "Whereas": [
+          210
+        ],
+        "cardiorespiratory": [
+          211
+        ],
+        "are": [
+          217
+        ],
+        "increased": [
+          218
+        ],
+        "when": [
+          222
+        ],
+        "that": [
+          225
+        ],
+        "is": [
+          230,
+          238,
+          251,
+          262
+        ],
+        "similar": [
+          231,
+          240
+        ],
+        "comparable": [
+          233,
+          242
+        ],
+        "intensities": [
+          234,
+          243
+        ],
+        "exercise.": [
+          236
+        ],
+        "also": [
+          239
+        ],
+        "below": [
+          246
+        ],
+        "but": [
+          249
+        ],
+        "greater.": [
+          252
+        ],
+        "higher": [
+          257
+        ],
+        "tolerance": [
+          261
+        ],
+        "unknown.(ABSTRACT": [
+          263
+        ],
+        "TRUNCATED": [
+          264
+        ],
+        "AT": [
+          265
+        ],
+        "250": [
+          266
+        ],
+        "WORDS)": [
+          267
+        ]
+      },
+      "counts_by_year": [
+        {
+          "year": 2025,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2024,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2023,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2022,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2021,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2020,
+          "cited_by_count": 5
+        },
+        {
+          "year": 2019,
+          "cited_by_count": 4
+        },
+        {
+          "year": 2017,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2016,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2015,
+          "cited_by_count": 5
+        },
+        {
+          "year": 2014,
+          "cited_by_count": 6
+        },
+        {
+          "year": 2013,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2012,
+          "cited_by_count": 3
+        }
+      ],
+      "updated_date": "2025-11-06T04:12:42.849631",
+      "created_date": "2016-06-24T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W2009724981",
+      "doi": "https://doi.org/10.1016/s0033-0620(05)80019-2",
+      "title": "Cellular adapations of the myocardium to chronic exercise",
+      "display_name": "Cellular adapations of the myocardium to chronic exercise",
+      "publication_year": 1995,
+      "publication_date": "1995-05-01",
+      "ids": {
+        "openalex": "https://openalex.org/W2009724981",
+        "doi": "https://doi.org/10.1016/s0033-0620(05)80019-2",
+        "mag": "2009724981",
+        "pmid": "https://pubmed.ncbi.nlm.nih.gov/7777668"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "doi:10.1016/s0033-0620(05)80019-2",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1016/s0033-0620(05)80019-2",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S192202259",
+          "display_name": "Progress in Cardiovascular Diseases",
+          "issn_l": "0033-0620",
+          "issn": [
+            "0033-0620",
+            "1873-1740"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Progress in Cardiovascular Diseases",
+        "raw_type": "journal-article"
+      },
+      "type": "review",
+      "indexed_in": [
+        "crossref",
+        "pubmed"
+      ],
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5109236630",
+            "display_name": "Russell L. Moore",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I188538660",
+              "display_name": "University of Colorado Boulder",
+              "ror": "https://ror.org/02ttsq026",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I188538660"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Russell L. Moore",
+          "raw_affiliation_strings": [
+            "Department of Kinesiology, University of Colorado, Boulder 80309-0354, USA",
+            "From the Department of Kinesiology, University of Colorado, Boulder, CO. USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Kinesiology, University of Colorado, Boulder 80309-0354, USA",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "From the Department of Kinesiology, University of Colorado, Boulder, CO. USA",
+              "institution_ids": [
+                "https://openalex.org/I188538660"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5025227099",
+            "display_name": "Donna H. Korzick",
+            "orcid": "https://orcid.org/0000-0003-3838-0523"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I188538660",
+              "display_name": "University of Colorado Boulder",
+              "ror": "https://ror.org/02ttsq026",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I188538660"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Donna H. Korzick",
+          "raw_affiliation_strings": [
+            "From the Department of Kinesiology, University of Colorado, Boulder, CO. USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "From the Department of Kinesiology, University of Colorado, Boulder, CO. USA",
+              "institution_ids": [
+                "https://openalex.org/I188538660"
+              ]
+            }
+          ]
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 1,
+      "institutions_distinct_count": 2,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5109236630"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I188538660"
+      ],
+      "apc_list": {
+        "value": 3550,
+        "currency": "USD",
+        "value_usd": 3550
+      },
+      "apc_paid": null,
+      "fwci": 2.2654,
+      "has_fulltext": false,
+      "cited_by_count": 84,
+      "citation_normalized_percentile": {
+        "value": 0.88038404,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": false
+      },
+      "cited_by_percentile_year": {
+        "min": 89,
+        "max": 99
+      },
+      "biblio": {
+        "volume": "37",
+        "issue": "6",
+        "first_page": "371",
+        "last_page": "396"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11922",
+        "display_name": "Cardiovascular Effects of Exercise",
+        "score": 0.9975000023841858,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2705",
+          "display_name": "Cardiology and Cardiovascular Medicine"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/27",
+          "display_name": "Medicine"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/4",
+          "display_name": "Health Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11922",
+          "display_name": "Cardiovascular Effects of Exercise",
+          "score": 0.9975000023841858,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2705",
+            "display_name": "Cardiology and Cardiovascular Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10821",
+          "display_name": "Cardiovascular Function and Risk Factors",
+          "score": 0.9926999807357788,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2705",
+            "display_name": "Cardiology and Cardiovascular Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10882",
+          "display_name": "Cardiomyopathy and Myosin Studies",
+          "score": 0.9926000237464905,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2705",
+            "display_name": "Cardiology and Cardiovascular Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/medicine",
+          "display_name": "Medicine",
+          "score": 0.9384644031524658
+        },
+        {
+          "id": "https://openalex.org/keywords/cardiology",
+          "display_name": "Cardiology",
+          "score": 0.5972273349761963
+        },
+        {
+          "id": "https://openalex.org/keywords/myocardial-infarction",
+          "display_name": "Myocardial infarction",
+          "score": 0.5735657215118408
+        },
+        {
+          "id": "https://openalex.org/keywords/bradycardia",
+          "display_name": "Bradycardia",
+          "score": 0.5465136170387268
+        },
+        {
+          "id": "https://openalex.org/keywords/internal-medicine",
+          "display_name": "Internal medicine",
+          "score": 0.4674787223339081
+        },
+        {
+          "id": "https://openalex.org/keywords/stroke-volume",
+          "display_name": "Stroke volume",
+          "score": 0.4640777111053467
+        },
+        {
+          "id": "https://openalex.org/keywords/chronic-hypertension",
+          "display_name": "Chronic hypertension",
+          "score": 0.46367523074150085
+        },
+        {
+          "id": "https://openalex.org/keywords/heart-failure",
+          "display_name": "Heart failure",
+          "score": 0.3614228665828705
+        },
+        {
+          "id": "https://openalex.org/keywords/heart-rate",
+          "display_name": "Heart rate",
+          "score": 0.2554466724395752
+        },
+        {
+          "id": "https://openalex.org/keywords/blood-pressure",
+          "display_name": "Blood pressure",
+          "score": 0.11188015341758728
+        },
+        {
+          "id": "https://openalex.org/keywords/ejection-fraction",
+          "display_name": "Ejection fraction",
+          "score": 0.07847008109092712
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C71924100",
+          "wikidata": "https://www.wikidata.org/wiki/Q11190",
+          "display_name": "Medicine",
+          "level": 0,
+          "score": 0.9384644031524658
+        },
+        {
+          "id": "https://openalex.org/C164705383",
+          "wikidata": "https://www.wikidata.org/wiki/Q10379",
+          "display_name": "Cardiology",
+          "level": 1,
+          "score": 0.5972273349761963
+        },
+        {
+          "id": "https://openalex.org/C500558357",
+          "wikidata": "https://www.wikidata.org/wiki/Q12152",
+          "display_name": "Myocardial infarction",
+          "level": 2,
+          "score": 0.5735657215118408
+        },
+        {
+          "id": "https://openalex.org/C2777495988",
+          "wikidata": "https://www.wikidata.org/wiki/Q217111",
+          "display_name": "Bradycardia",
+          "level": 4,
+          "score": 0.5465136170387268
+        },
+        {
+          "id": "https://openalex.org/C126322002",
+          "wikidata": "https://www.wikidata.org/wiki/Q11180",
+          "display_name": "Internal medicine",
+          "level": 1,
+          "score": 0.4674787223339081
+        },
+        {
+          "id": "https://openalex.org/C80461066",
+          "wikidata": "https://www.wikidata.org/wiki/Q1698533",
+          "display_name": "Stroke volume",
+          "level": 4,
+          "score": 0.4640777111053467
+        },
+        {
+          "id": "https://openalex.org/C2909994101",
+          "wikidata": "https://www.wikidata.org/wiki/Q41861",
+          "display_name": "Chronic hypertension",
+          "level": 4,
+          "score": 0.46367523074150085
+        },
+        {
+          "id": "https://openalex.org/C2778198053",
+          "wikidata": "https://www.wikidata.org/wiki/Q181754",
+          "display_name": "Heart failure",
+          "level": 2,
+          "score": 0.3614228665828705
+        },
+        {
+          "id": "https://openalex.org/C2777953023",
+          "wikidata": "https://www.wikidata.org/wiki/Q1073121",
+          "display_name": "Heart rate",
+          "level": 3,
+          "score": 0.2554466724395752
+        },
+        {
+          "id": "https://openalex.org/C84393581",
+          "wikidata": "https://www.wikidata.org/wiki/Q82642",
+          "display_name": "Blood pressure",
+          "level": 2,
+          "score": 0.11188015341758728
+        },
+        {
+          "id": "https://openalex.org/C78085059",
+          "wikidata": "https://www.wikidata.org/wiki/Q641303",
+          "display_name": "Ejection fraction",
+          "level": 3,
+          "score": 0.07847008109092712
+        },
+        {
+          "id": "https://openalex.org/C54355233",
+          "wikidata": "https://www.wikidata.org/wiki/Q7162",
+          "display_name": "Genetics",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C2779234561",
+          "wikidata": "https://www.wikidata.org/wiki/Q11995",
+          "display_name": "Pregnancy",
+          "level": 2,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C2777218350",
+          "wikidata": "https://www.wikidata.org/wiki/Q61335",
+          "display_name": "Preeclampsia",
+          "level": 3,
+          "score": 0.0
+        }
+      ],
+      "mesh": [
+        {
+          "descriptor_ui": "D000222",
+          "descriptor_name": "Adaptation, Physiological",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": true
+        },
+        {
+          "descriptor_ui": "D000222",
+          "descriptor_name": "Adaptation, Physiological",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": true
+        },
+        {
+          "descriptor_ui": "D000222",
+          "descriptor_name": "Adaptation, Physiological",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": true
+        },
+        {
+          "descriptor_ui": "D002318",
+          "descriptor_name": "Cardiovascular Diseases",
+          "qualifier_ui": "Q000517",
+          "qualifier_name": "prevention & control",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D002318",
+          "descriptor_name": "Cardiovascular Diseases",
+          "qualifier_ui": "Q000517",
+          "qualifier_name": "prevention & control",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D002318",
+          "descriptor_name": "Cardiovascular Diseases",
+          "qualifier_ui": "Q000517",
+          "qualifier_name": "prevention & control",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000033",
+          "qualifier_name": "anatomy & histology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000033",
+          "qualifier_name": "anatomy & histology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000033",
+          "qualifier_name": "anatomy & histology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009200",
+          "descriptor_name": "Myocardial Contraction",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009200",
+          "descriptor_name": "Myocardial Contraction",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009200",
+          "descriptor_name": "Myocardial Contraction",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D013318",
+          "descriptor_name": "Stroke Volume",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D013318",
+          "descriptor_name": "Stroke Volume",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D013318",
+          "descriptor_name": "Stroke Volume",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D015444",
+          "descriptor_name": "Exercise",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D015444",
+          "descriptor_name": "Exercise",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D015444",
+          "descriptor_name": "Exercise",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        }
+      ],
+      "locations_count": 2,
+      "locations": [
+        {
+          "id": "doi:10.1016/s0033-0620(05)80019-2",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1016/s0033-0620(05)80019-2",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S192202259",
+            "display_name": "Progress in Cardiovascular Diseases",
+            "issn_l": "0033-0620",
+            "issn": [
+              "0033-0620",
+              "1873-1740"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Progress in Cardiovascular Diseases",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmid:7777668",
+          "is_oa": false,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/7777668",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306525036",
+            "display_name": "PubMed",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Progress in cardiovascular diseases",
+          "raw_type": null
+        }
+      ],
+      "best_oa_location": null,
+      "sustainable_development_goals": [
+        {
+          "score": 0.5799999833106995,
+          "display_name": "Good health and well-being",
+          "id": "https://metadata.un.org/sdg/3"
+        }
+      ],
+      "awards": [],
+      "funders": [],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 295,
+      "referenced_works": [
+        "https://openalex.org/W56845853",
+        "https://openalex.org/W62960180",
+        "https://openalex.org/W86087154",
+        "https://openalex.org/W132504932",
+        "https://openalex.org/W205077453",
+        "https://openalex.org/W220722059",
+        "https://openalex.org/W1222053652",
+        "https://openalex.org/W1479831323",
+        "https://openalex.org/W1525912555",
+        "https://openalex.org/W1534224609",
+        "https://openalex.org/W1552768533",
+        "https://openalex.org/W1599556324",
+        "https://openalex.org/W1820866054",
+        "https://openalex.org/W1824633525",
+        "https://openalex.org/W1863103714",
+        "https://openalex.org/W1863145608",
+        "https://openalex.org/W1886836779",
+        "https://openalex.org/W1895045625",
+        "https://openalex.org/W1909850834",
+        "https://openalex.org/W1918072339",
+        "https://openalex.org/W1919174825",
+        "https://openalex.org/W1924032432",
+        "https://openalex.org/W1960936481",
+        "https://openalex.org/W1964743455",
+        "https://openalex.org/W1965119152",
+        "https://openalex.org/W1965777734",
+        "https://openalex.org/W1970267815",
+        "https://openalex.org/W1970435087",
+        "https://openalex.org/W1971654780",
+        "https://openalex.org/W1972245900",
+        "https://openalex.org/W1976148264",
+        "https://openalex.org/W1978182511",
+        "https://openalex.org/W1978537703",
+        "https://openalex.org/W1978775253",
+        "https://openalex.org/W1980004611",
+        "https://openalex.org/W1980859633",
+        "https://openalex.org/W1981335687",
+        "https://openalex.org/W1981562838",
+        "https://openalex.org/W1983697402",
+        "https://openalex.org/W1983965890",
+        "https://openalex.org/W1986480769",
+        "https://openalex.org/W1987270666",
+        "https://openalex.org/W1988248405",
+        "https://openalex.org/W1988745544",
+        "https://openalex.org/W1989017065",
+        "https://openalex.org/W1989282030",
+        "https://openalex.org/W1990771576",
+        "https://openalex.org/W1995479073",
+        "https://openalex.org/W1996318534",
+        "https://openalex.org/W1997234811",
+        "https://openalex.org/W1997842854",
+        "https://openalex.org/W2000460923",
+        "https://openalex.org/W2003289810",
+        "https://openalex.org/W2005732081",
+        "https://openalex.org/W2005874915",
+        "https://openalex.org/W2006607302",
+        "https://openalex.org/W2009583279",
+        "https://openalex.org/W2010523651",
+        "https://openalex.org/W2011220375",
+        "https://openalex.org/W2013584053",
+        "https://openalex.org/W2015266827",
+        "https://openalex.org/W2018112952",
+        "https://openalex.org/W2018281573",
+        "https://openalex.org/W2019309156",
+        "https://openalex.org/W2021269781",
+        "https://openalex.org/W2027606430",
+        "https://openalex.org/W2027690360",
+        "https://openalex.org/W2028310394",
+        "https://openalex.org/W2029810619",
+        "https://openalex.org/W2030434244",
+        "https://openalex.org/W2032038781",
+        "https://openalex.org/W2034098786",
+        "https://openalex.org/W2035128886",
+        "https://openalex.org/W2035502711",
+        "https://openalex.org/W2036755034",
+        "https://openalex.org/W2036913547",
+        "https://openalex.org/W2039255435",
+        "https://openalex.org/W2041311887",
+        "https://openalex.org/W2044857084",
+        "https://openalex.org/W2048850334",
+        "https://openalex.org/W2049172230",
+        "https://openalex.org/W2051146620",
+        "https://openalex.org/W2051701046",
+        "https://openalex.org/W2053077459",
+        "https://openalex.org/W2055160761",
+        "https://openalex.org/W2055835153",
+        "https://openalex.org/W2059163654",
+        "https://openalex.org/W2061183681",
+        "https://openalex.org/W2063417663",
+        "https://openalex.org/W2064056229",
+        "https://openalex.org/W2064727064",
+        "https://openalex.org/W2065695519",
+        "https://openalex.org/W2066211649",
+        "https://openalex.org/W2066672956",
+        "https://openalex.org/W2067505117",
+        "https://openalex.org/W2068993616",
+        "https://openalex.org/W2069928220",
+        "https://openalex.org/W2071218346",
+        "https://openalex.org/W2071224671",
+        "https://openalex.org/W2072970767",
+        "https://openalex.org/W2073359351",
+        "https://openalex.org/W2073507578",
+        "https://openalex.org/W2074652316",
+        "https://openalex.org/W2077351300",
+        "https://openalex.org/W2078081709",
+        "https://openalex.org/W2078864932",
+        "https://openalex.org/W2079185873",
+        "https://openalex.org/W2081012493",
+        "https://openalex.org/W2084855816",
+        "https://openalex.org/W2085406235",
+        "https://openalex.org/W2085530306",
+        "https://openalex.org/W2085903025",
+        "https://openalex.org/W2087959935",
+        "https://openalex.org/W2092025784",
+        "https://openalex.org/W2093933088",
+        "https://openalex.org/W2094147889",
+        "https://openalex.org/W2097142736",
+        "https://openalex.org/W2097189182",
+        "https://openalex.org/W2100140594",
+        "https://openalex.org/W2101931519",
+        "https://openalex.org/W2104941760",
+        "https://openalex.org/W2107862140",
+        "https://openalex.org/W2110889457",
+        "https://openalex.org/W2112096597",
+        "https://openalex.org/W2114711724",
+        "https://openalex.org/W2115806818",
+        "https://openalex.org/W2122140047",
+        "https://openalex.org/W2125743928",
+        "https://openalex.org/W2126035738",
+        "https://openalex.org/W2126418187",
+        "https://openalex.org/W2132579123",
+        "https://openalex.org/W2146323276",
+        "https://openalex.org/W2147719848",
+        "https://openalex.org/W2159004381",
+        "https://openalex.org/W2159876927",
+        "https://openalex.org/W2164931274",
+        "https://openalex.org/W2168794406",
+        "https://openalex.org/W2171087337",
+        "https://openalex.org/W2171535994",
+        "https://openalex.org/W2174457495",
+        "https://openalex.org/W2175415706",
+        "https://openalex.org/W2177675508",
+        "https://openalex.org/W2178848420",
+        "https://openalex.org/W2179017617",
+        "https://openalex.org/W2179753640",
+        "https://openalex.org/W2199185571",
+        "https://openalex.org/W2202351856",
+        "https://openalex.org/W2222331562",
+        "https://openalex.org/W2224952996",
+        "https://openalex.org/W2225355859",
+        "https://openalex.org/W2232331097",
+        "https://openalex.org/W2235189310",
+        "https://openalex.org/W2237884750",
+        "https://openalex.org/W2239213379",
+        "https://openalex.org/W2239655150",
+        "https://openalex.org/W2241108916",
+        "https://openalex.org/W2242807952",
+        "https://openalex.org/W2243140106",
+        "https://openalex.org/W2252761154",
+        "https://openalex.org/W2255404794",
+        "https://openalex.org/W2258047192",
+        "https://openalex.org/W2259128162",
+        "https://openalex.org/W2262292287",
+        "https://openalex.org/W2262482762",
+        "https://openalex.org/W2264104350",
+        "https://openalex.org/W2264309193",
+        "https://openalex.org/W2265208393",
+        "https://openalex.org/W2265605246",
+        "https://openalex.org/W2267567484",
+        "https://openalex.org/W2271954687",
+        "https://openalex.org/W2272051904",
+        "https://openalex.org/W2275995915",
+        "https://openalex.org/W2276591666",
+        "https://openalex.org/W2278430570",
+        "https://openalex.org/W2280330048",
+        "https://openalex.org/W2280848637",
+        "https://openalex.org/W2284288402",
+        "https://openalex.org/W2289644949",
+        "https://openalex.org/W2289977730",
+        "https://openalex.org/W2291879083",
+        "https://openalex.org/W2294966344",
+        "https://openalex.org/W2296497328",
+        "https://openalex.org/W2303848941",
+        "https://openalex.org/W2304631002",
+        "https://openalex.org/W2306055648",
+        "https://openalex.org/W2306907822",
+        "https://openalex.org/W2315766311",
+        "https://openalex.org/W2315972790",
+        "https://openalex.org/W2322515131",
+        "https://openalex.org/W2324000250",
+        "https://openalex.org/W2340149484",
+        "https://openalex.org/W2340630441",
+        "https://openalex.org/W2342040704",
+        "https://openalex.org/W2346713896",
+        "https://openalex.org/W2394679112",
+        "https://openalex.org/W2395050475",
+        "https://openalex.org/W2396331935",
+        "https://openalex.org/W2397800788",
+        "https://openalex.org/W2400207456",
+        "https://openalex.org/W2400424297",
+        "https://openalex.org/W2400797742",
+        "https://openalex.org/W2400871703",
+        "https://openalex.org/W2401085244",
+        "https://openalex.org/W2401365302",
+        "https://openalex.org/W2403791472",
+        "https://openalex.org/W2404474322",
+        "https://openalex.org/W2407168779",
+        "https://openalex.org/W2407636684",
+        "https://openalex.org/W2407925009",
+        "https://openalex.org/W2408243146",
+        "https://openalex.org/W2409294917",
+        "https://openalex.org/W2409380395",
+        "https://openalex.org/W2410759977",
+        "https://openalex.org/W2411784009",
+        "https://openalex.org/W2411906704",
+        "https://openalex.org/W2411977887",
+        "https://openalex.org/W2412059802",
+        "https://openalex.org/W2412216411",
+        "https://openalex.org/W2413466973",
+        "https://openalex.org/W2413610352",
+        "https://openalex.org/W2413830027",
+        "https://openalex.org/W2414612199",
+        "https://openalex.org/W2415364352",
+        "https://openalex.org/W2415450704",
+        "https://openalex.org/W2416141273",
+        "https://openalex.org/W2416348600",
+        "https://openalex.org/W2417138414",
+        "https://openalex.org/W2417143721",
+        "https://openalex.org/W2417263640",
+        "https://openalex.org/W2417275045",
+        "https://openalex.org/W2417602627",
+        "https://openalex.org/W2417768719",
+        "https://openalex.org/W2418862337",
+        "https://openalex.org/W2419397537",
+        "https://openalex.org/W2419639524",
+        "https://openalex.org/W2420684420",
+        "https://openalex.org/W2430553044",
+        "https://openalex.org/W2430848363",
+        "https://openalex.org/W2435386331",
+        "https://openalex.org/W2435899880",
+        "https://openalex.org/W2460651783",
+        "https://openalex.org/W2461061474",
+        "https://openalex.org/W2461560112",
+        "https://openalex.org/W2471466680",
+        "https://openalex.org/W2472023835",
+        "https://openalex.org/W2472739700",
+        "https://openalex.org/W2473028402",
+        "https://openalex.org/W3141488140",
+        "https://openalex.org/W3151576767",
+        "https://openalex.org/W3209391815",
+        "https://openalex.org/W4285719527",
+        "https://openalex.org/W4300278814",
+        "https://openalex.org/W4320800864",
+        "https://openalex.org/W6602290380",
+        "https://openalex.org/W6602530290",
+        "https://openalex.org/W6608394001",
+        "https://openalex.org/W6628012335",
+        "https://openalex.org/W6638713952",
+        "https://openalex.org/W6638802927",
+        "https://openalex.org/W6639655609",
+        "https://openalex.org/W6647400833",
+        "https://openalex.org/W6685782836",
+        "https://openalex.org/W6687359858",
+        "https://openalex.org/W6690243427",
+        "https://openalex.org/W6692583783",
+        "https://openalex.org/W6694238969",
+        "https://openalex.org/W6695424054",
+        "https://openalex.org/W6696666692",
+        "https://openalex.org/W6696972995",
+        "https://openalex.org/W6698334344",
+        "https://openalex.org/W6699108128",
+        "https://openalex.org/W6712095072",
+        "https://openalex.org/W6712266071",
+        "https://openalex.org/W6712538801",
+        "https://openalex.org/W6713469390",
+        "https://openalex.org/W6714031859",
+        "https://openalex.org/W6714338371",
+        "https://openalex.org/W6714492800",
+        "https://openalex.org/W6714565795",
+        "https://openalex.org/W6715392780",
+        "https://openalex.org/W6715557040",
+        "https://openalex.org/W6715845929",
+        "https://openalex.org/W6716030735",
+        "https://openalex.org/W6716160821",
+        "https://openalex.org/W6716176409",
+        "https://openalex.org/W6716581188",
+        "https://openalex.org/W6716703318",
+        "https://openalex.org/W6716724840",
+        "https://openalex.org/W6717423219",
+        "https://openalex.org/W6717563511",
+        "https://openalex.org/W6718081762",
+        "https://openalex.org/W6718852781",
+        "https://openalex.org/W6720374942",
+        "https://openalex.org/W6803380201",
+        "https://openalex.org/W7073943876"
+      ],
+      "related_works": [
+        "https://openalex.org/W2008966891",
+        "https://openalex.org/W4293007998",
+        "https://openalex.org/W3160145437",
+        "https://openalex.org/W2042018351",
+        "https://openalex.org/W121702550",
+        "https://openalex.org/W2284115669",
+        "https://openalex.org/W588655279",
+        "https://openalex.org/W2089357787",
+        "https://openalex.org/W2383994333",
+        "https://openalex.org/W2407368019"
+      ],
+      "abstract_inverted_index": null,
+      "counts_by_year": [
+        {
+          "year": 2022,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2021,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2020,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2018,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2017,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2015,
+          "cited_by_count": 6
+        },
+        {
+          "year": 2014,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2013,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2012,
+          "cited_by_count": 1
+        }
+      ],
+      "updated_date": "2026-01-13T01:12:25.745995",
+      "created_date": "2016-06-24T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W2045596701",
+      "doi": "https://doi.org/10.1016/j.mce.2014.01.002",
+      "title": "Estrogen and the female heart",
+      "display_name": "Estrogen and the female heart",
+      "publication_year": 2014,
+      "publication_date": "2014-01-22",
+      "ids": {
+        "openalex": "https://openalex.org/W2045596701",
+        "doi": "https://doi.org/10.1016/j.mce.2014.01.002",
+        "mag": "2045596701",
+        "pmid": "https://pubmed.ncbi.nlm.nih.gov/24462775"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "doi:10.1016/j.mce.2014.01.002",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1016/j.mce.2014.01.002",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S191044671",
+          "display_name": "Molecular and Cellular Endocrinology",
+          "issn_l": "0303-7207",
+          "issn": [
+            "0303-7207",
+            "1872-8057"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Molecular and Cellular Endocrinology",
+        "raw_type": "journal-article"
+      },
+      "type": "review",
+      "indexed_in": [
+        "crossref",
+        "pubmed"
+      ],
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "http://doi.org/10.1016/j.mce.2014.01.002",
+        "any_repository_has_fulltext": true
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5091215873",
+            "display_name": "Anne A. Knowlton",
+            "orcid": "https://orcid.org/0000-0001-6410-3525"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210100052",
+              "display_name": "Northern California Research",
+              "ror": "https://ror.org/00zv7v764",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I4210100052"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I84218800",
+              "display_name": "University of California, Davis",
+              "ror": "https://ror.org/05rrcem69",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I84218800"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "A.A. Knowlton",
+          "raw_affiliation_strings": [
+            "The Department of Veteran's Affairs, Northern California VA, Sacramento, CA, USA; Molecular & Cellular Cardiology, Departments of Medicine and Pharmacology, University of California, Davis, USA. Electronic address: aaknowlton@ucdavis.edu",
+            "Molecular & Cellular Cardiology, Departments of Medicine and Pharmacology, University of California, Davis, USA",
+            "The Department of Veteran's Affairs, Northern California VA, Sacramento, CA, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "The Department of Veteran's Affairs, Northern California VA, Sacramento, CA, USA; Molecular & Cellular Cardiology, Departments of Medicine and Pharmacology, University of California, Davis, USA. Electronic address: aaknowlton@ucdavis.edu",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Molecular & Cellular Cardiology, Departments of Medicine and Pharmacology, University of California, Davis, USA",
+              "institution_ids": [
+                "https://openalex.org/I84218800"
+              ]
+            },
+            {
+              "raw_affiliation_string": "The Department of Veteran's Affairs, Northern California VA, Sacramento, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210100052"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5025227099",
+            "display_name": "Donna H. Korzick",
+            "orcid": "https://orcid.org/0000-0003-3838-0523"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I130769515",
+              "display_name": "Pennsylvania State University",
+              "ror": "https://ror.org/04p491231",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I130769515"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "D.H. Korzick",
+          "raw_affiliation_strings": [
+            "Intercollege Program in Physiology and Department of Kinesiology, The Pennsylvania State University, University Park, PA, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Intercollege Program in Physiology and Department of Kinesiology, The Pennsylvania State University, University Park, PA, USA",
+              "institution_ids": [
+                "https://openalex.org/I130769515"
+              ]
+            }
+          ]
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 1,
+      "institutions_distinct_count": 2,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5091215873"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I4210100052",
+        "https://openalex.org/I84218800"
+      ],
+      "apc_list": {
+        "value": 3000,
+        "currency": "USD",
+        "value_usd": 3000
+      },
+      "apc_paid": null,
+      "fwci": 2.9759,
+      "has_fulltext": false,
+      "cited_by_count": 66,
+      "citation_normalized_percentile": {
+        "value": 0.91241223,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": true
+      },
+      "cited_by_percentile_year": {
+        "min": 89,
+        "max": 100
+      },
+      "biblio": {
+        "volume": "389",
+        "issue": "1-2",
+        "first_page": "31",
+        "last_page": "39"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T10756",
+        "display_name": "Estrogen and related hormone effects",
+        "score": 0.9994000196456909,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1311",
+          "display_name": "Genetics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/13",
+          "display_name": "Biochemistry, Genetics and Molecular Biology"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T10756",
+          "display_name": "Estrogen and related hormone effects",
+          "score": 0.9994000196456909,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1311",
+            "display_name": "Genetics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10694",
+          "display_name": "Menopause: Health Impacts and Treatments",
+          "score": 0.9891999959945679,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11503",
+          "display_name": "Cytokine Signaling Pathways and Interactions",
+          "score": 0.9402999877929688,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2730",
+            "display_name": "Oncology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/estrogen",
+          "display_name": "Estrogen",
+          "score": 0.8725149631500244
+        },
+        {
+          "id": "https://openalex.org/keywords/gper",
+          "display_name": "GPER",
+          "score": 0.796785831451416
+        },
+        {
+          "id": "https://openalex.org/keywords/estrogen-receptor",
+          "display_name": "Estrogen receptor",
+          "score": 0.719638466835022
+        },
+        {
+          "id": "https://openalex.org/keywords/biology",
+          "display_name": "Biology",
+          "score": 0.5140186548233032
+        },
+        {
+          "id": "https://openalex.org/keywords/estrogen-receptor-beta",
+          "display_name": "Estrogen receptor beta",
+          "score": 0.48511064052581787
+        },
+        {
+          "id": "https://openalex.org/keywords/estrogen-receptor-alpha",
+          "display_name": "Estrogen receptor alpha",
+          "score": 0.4437369704246521
+        },
+        {
+          "id": "https://openalex.org/keywords/endocrinology",
+          "display_name": "Endocrinology",
+          "score": 0.3748629093170166
+        },
+        {
+          "id": "https://openalex.org/keywords/internal-medicine",
+          "display_name": "Internal medicine",
+          "score": 0.3624635338783264
+        },
+        {
+          "id": "https://openalex.org/keywords/medicine",
+          "display_name": "Medicine",
+          "score": 0.35485410690307617
+        },
+        {
+          "id": "https://openalex.org/keywords/bioinformatics",
+          "display_name": "Bioinformatics",
+          "score": 0.32987433671951294
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C2777164284",
+          "wikidata": "https://www.wikidata.org/wiki/Q277954",
+          "display_name": "Estrogen",
+          "level": 2,
+          "score": 0.8725149631500244
+        },
+        {
+          "id": "https://openalex.org/C166471694",
+          "wikidata": "https://www.wikidata.org/wiki/Q18268232",
+          "display_name": "GPER",
+          "level": 5,
+          "score": 0.796785831451416
+        },
+        {
+          "id": "https://openalex.org/C84606932",
+          "wikidata": "https://www.wikidata.org/wiki/Q416496",
+          "display_name": "Estrogen receptor",
+          "level": 4,
+          "score": 0.719638466835022
+        },
+        {
+          "id": "https://openalex.org/C86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "level": 0,
+          "score": 0.5140186548233032
+        },
+        {
+          "id": "https://openalex.org/C96307122",
+          "wikidata": "https://www.wikidata.org/wiki/Q15329133",
+          "display_name": "Estrogen receptor beta",
+          "level": 5,
+          "score": 0.48511064052581787
+        },
+        {
+          "id": "https://openalex.org/C172313692",
+          "wikidata": "https://www.wikidata.org/wiki/Q14902310",
+          "display_name": "Estrogen receptor alpha",
+          "level": 5,
+          "score": 0.4437369704246521
+        },
+        {
+          "id": "https://openalex.org/C134018914",
+          "wikidata": "https://www.wikidata.org/wiki/Q162606",
+          "display_name": "Endocrinology",
+          "level": 1,
+          "score": 0.3748629093170166
+        },
+        {
+          "id": "https://openalex.org/C126322002",
+          "wikidata": "https://www.wikidata.org/wiki/Q11180",
+          "display_name": "Internal medicine",
+          "level": 1,
+          "score": 0.3624635338783264
+        },
+        {
+          "id": "https://openalex.org/C71924100",
+          "wikidata": "https://www.wikidata.org/wiki/Q11190",
+          "display_name": "Medicine",
+          "level": 0,
+          "score": 0.35485410690307617
+        },
+        {
+          "id": "https://openalex.org/C60644358",
+          "wikidata": "https://www.wikidata.org/wiki/Q128570",
+          "display_name": "Bioinformatics",
+          "level": 1,
+          "score": 0.32987433671951294
+        },
+        {
+          "id": "https://openalex.org/C530470458",
+          "wikidata": "https://www.wikidata.org/wiki/Q128581",
+          "display_name": "Breast cancer",
+          "level": 3,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C121608353",
+          "wikidata": "https://www.wikidata.org/wiki/Q12078",
+          "display_name": "Cancer",
+          "level": 2,
+          "score": 0.0
+        }
+      ],
+      "mesh": [
+        {
+          "descriptor_ui": "D000367",
+          "descriptor_name": "Age Factors",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000367",
+          "descriptor_name": "Age Factors",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000367",
+          "descriptor_name": "Age Factors",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000818",
+          "descriptor_name": "Animals",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000818",
+          "descriptor_name": "Animals",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D000818",
+          "descriptor_name": "Animals",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D002986",
+          "descriptor_name": "Clinical Trials as Topic",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D002986",
+          "descriptor_name": "Clinical Trials as Topic",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D002986",
+          "descriptor_name": "Clinical Trials as Topic",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004967",
+          "descriptor_name": "Estrogens",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004967",
+          "descriptor_name": "Estrogens",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D004967",
+          "descriptor_name": "Estrogens",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D005260",
+          "descriptor_name": "Female",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D005260",
+          "descriptor_name": "Female",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D005260",
+          "descriptor_name": "Female",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006321",
+          "descriptor_name": "Heart",
+          "qualifier_ui": "Q000502",
+          "qualifier_name": "physiology",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D006801",
+          "descriptor_name": "Humans",
+          "qualifier_ui": null,
+          "qualifier_name": null,
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009206",
+          "descriptor_name": "Myocardium",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009206",
+          "descriptor_name": "Myocardium",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D009206",
+          "descriptor_name": "Myocardium",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D011960",
+          "descriptor_name": "Receptors, Estrogen",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D011960",
+          "descriptor_name": "Receptors, Estrogen",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        },
+        {
+          "descriptor_ui": "D011960",
+          "descriptor_name": "Receptors, Estrogen",
+          "qualifier_ui": "Q000378",
+          "qualifier_name": "metabolism",
+          "is_major_topic": false
+        }
+      ],
+      "locations_count": 5,
+      "locations": [
+        {
+          "id": "doi:10.1016/j.mce.2014.01.002",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1016/j.mce.2014.01.002",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S191044671",
+            "display_name": "Molecular and Cellular Endocrinology",
+            "issn_l": "0303-7207",
+            "issn": [
+              "0303-7207",
+              "1872-8057"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Molecular and Cellular Endocrinology",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmid:24462775",
+          "is_oa": false,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/24462775",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306525036",
+            "display_name": "PubMed",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Molecular and cellular endocrinology",
+          "raw_type": null
+        },
+        {
+          "id": "pmh:oai:escholarship.org:ark:/13030/qt22g5p8rr",
+          "is_oa": false,
+          "landing_page_url": "https://escholarship.org/uc/item/22g5p8rr",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400115",
+            "display_name": "eScholarship (California Digital Library)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I2801248553",
+            "host_organization_name": "California Digital Library",
+            "host_organization_lineage": [
+              "https://openalex.org/I2801248553"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Molecular and Cellular Endocrinology, vol 389, iss 1-2",
+          "raw_type": "article"
+        },
+        {
+          "id": "pmh:oai:europepmc.org:4623810",
+          "is_oa": false,
+          "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/5709037",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400806",
+            "display_name": "Europe PMC (PubMed Central)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1303153112",
+            "host_organization_name": "European Bioinformatics Institute",
+            "host_organization_lineage": [
+              "https://openalex.org/I1303153112"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Text"
+        },
+        {
+          "id": "pmh:oai:pubmedcentral.nih.gov:5709037",
+          "is_oa": true,
+          "landing_page_url": "http://doi.org/10.1016/j.mce.2014.01.002",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S2764455111",
+            "display_name": "PubMed Central",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Text"
+        }
+      ],
+      "best_oa_location": {
+        "id": "pmh:oai:pubmedcentral.nih.gov:5709037",
+        "is_oa": true,
+        "landing_page_url": "http://doi.org/10.1016/j.mce.2014.01.002",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S2764455111",
+          "display_name": "PubMed Central",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I1299303238",
+          "host_organization_name": "National Institutes of Health",
+          "host_organization_lineage": [
+            "https://openalex.org/I1299303238"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "",
+        "raw_type": "Text"
+      },
+      "sustainable_development_goals": [
+        {
+          "score": 0.7699999809265137,
+          "display_name": "Good health and well-being",
+          "id": "https://metadata.un.org/sdg/3"
+        }
+      ],
+      "awards": [],
+      "funders": [],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 172,
+      "referenced_works": [
+        "https://openalex.org/W2464003",
+        "https://openalex.org/W44213714",
+        "https://openalex.org/W189206216",
+        "https://openalex.org/W1494381085",
+        "https://openalex.org/W1519613114",
+        "https://openalex.org/W1545179064",
+        "https://openalex.org/W1567898659",
+        "https://openalex.org/W1593442063",
+        "https://openalex.org/W1608587263",
+        "https://openalex.org/W1629814473",
+        "https://openalex.org/W1643087207",
+        "https://openalex.org/W1706420353",
+        "https://openalex.org/W1803128538",
+        "https://openalex.org/W1847379925",
+        "https://openalex.org/W1934120587",
+        "https://openalex.org/W1964002198",
+        "https://openalex.org/W1965080988",
+        "https://openalex.org/W1966502113",
+        "https://openalex.org/W1970755773",
+        "https://openalex.org/W1971658576",
+        "https://openalex.org/W1979986181",
+        "https://openalex.org/W1980752208",
+        "https://openalex.org/W1981210284",
+        "https://openalex.org/W1981467972",
+        "https://openalex.org/W1982260690",
+        "https://openalex.org/W1982365009",
+        "https://openalex.org/W1982559953",
+        "https://openalex.org/W1982647397",
+        "https://openalex.org/W1984126906",
+        "https://openalex.org/W1985198009",
+        "https://openalex.org/W1985748057",
+        "https://openalex.org/W1986289438",
+        "https://openalex.org/W1988397302",
+        "https://openalex.org/W1988611170",
+        "https://openalex.org/W1990477938",
+        "https://openalex.org/W1992316383",
+        "https://openalex.org/W1993861129",
+        "https://openalex.org/W1995318696",
+        "https://openalex.org/W1995748663",
+        "https://openalex.org/W1996474890",
+        "https://openalex.org/W1999031962",
+        "https://openalex.org/W1999587024",
+        "https://openalex.org/W1999894142",
+        "https://openalex.org/W2000142411",
+        "https://openalex.org/W2000165700",
+        "https://openalex.org/W2001418667",
+        "https://openalex.org/W2003115478",
+        "https://openalex.org/W2003201206",
+        "https://openalex.org/W2004302156",
+        "https://openalex.org/W2006786051",
+        "https://openalex.org/W2011389523",
+        "https://openalex.org/W2012139589",
+        "https://openalex.org/W2012740498",
+        "https://openalex.org/W2012885729",
+        "https://openalex.org/W2013781597",
+        "https://openalex.org/W2019723944",
+        "https://openalex.org/W2021400734",
+        "https://openalex.org/W2022799971",
+        "https://openalex.org/W2024905084",
+        "https://openalex.org/W2026171294",
+        "https://openalex.org/W2030852470",
+        "https://openalex.org/W2032080137",
+        "https://openalex.org/W2033845089",
+        "https://openalex.org/W2034456143",
+        "https://openalex.org/W2035111070",
+        "https://openalex.org/W2036550740",
+        "https://openalex.org/W2036698947",
+        "https://openalex.org/W2037181103",
+        "https://openalex.org/W2039369023",
+        "https://openalex.org/W2040184775",
+        "https://openalex.org/W2041895008",
+        "https://openalex.org/W2047263160",
+        "https://openalex.org/W2050765812",
+        "https://openalex.org/W2052963130",
+        "https://openalex.org/W2056951827",
+        "https://openalex.org/W2057262163",
+        "https://openalex.org/W2061710435",
+        "https://openalex.org/W2061962861",
+        "https://openalex.org/W2062128738",
+        "https://openalex.org/W2063177494",
+        "https://openalex.org/W2069787437",
+        "https://openalex.org/W2073883348",
+        "https://openalex.org/W2075088199",
+        "https://openalex.org/W2076752113",
+        "https://openalex.org/W2077374711",
+        "https://openalex.org/W2081506603",
+        "https://openalex.org/W2084022165",
+        "https://openalex.org/W2084794120",
+        "https://openalex.org/W2085814830",
+        "https://openalex.org/W2086198420",
+        "https://openalex.org/W2086399282",
+        "https://openalex.org/W2086683866",
+        "https://openalex.org/W2086813453",
+        "https://openalex.org/W2088604185",
+        "https://openalex.org/W2091232445",
+        "https://openalex.org/W2091690694",
+        "https://openalex.org/W2093189154",
+        "https://openalex.org/W2094212464",
+        "https://openalex.org/W2095561162",
+        "https://openalex.org/W2096221194",
+        "https://openalex.org/W2096391100",
+        "https://openalex.org/W2096673028",
+        "https://openalex.org/W2100205148",
+        "https://openalex.org/W2100322184",
+        "https://openalex.org/W2100356214",
+        "https://openalex.org/W2101690829",
+        "https://openalex.org/W2104146340",
+        "https://openalex.org/W2104172033",
+        "https://openalex.org/W2104606170",
+        "https://openalex.org/W2105846317",
+        "https://openalex.org/W2107541028",
+        "https://openalex.org/W2110115646",
+        "https://openalex.org/W2110543971",
+        "https://openalex.org/W2111152344",
+        "https://openalex.org/W2113259481",
+        "https://openalex.org/W2113264115",
+        "https://openalex.org/W2113576333",
+        "https://openalex.org/W2114215135",
+        "https://openalex.org/W2114624493",
+        "https://openalex.org/W2115233843",
+        "https://openalex.org/W2118780544",
+        "https://openalex.org/W2120995325",
+        "https://openalex.org/W2122653467",
+        "https://openalex.org/W2124138031",
+        "https://openalex.org/W2129814782",
+        "https://openalex.org/W2130366791",
+        "https://openalex.org/W2130504909",
+        "https://openalex.org/W2131434738",
+        "https://openalex.org/W2131782993",
+        "https://openalex.org/W2131966428",
+        "https://openalex.org/W2133917486",
+        "https://openalex.org/W2135406819",
+        "https://openalex.org/W2138650758",
+        "https://openalex.org/W2139204764",
+        "https://openalex.org/W2141353388",
+        "https://openalex.org/W2141369673",
+        "https://openalex.org/W2142631076",
+        "https://openalex.org/W2143577214",
+        "https://openalex.org/W2144808030",
+        "https://openalex.org/W2147304986",
+        "https://openalex.org/W2148254721",
+        "https://openalex.org/W2148496370",
+        "https://openalex.org/W2151524159",
+        "https://openalex.org/W2152312364",
+        "https://openalex.org/W2153062627",
+        "https://openalex.org/W2154648285",
+        "https://openalex.org/W2157431650",
+        "https://openalex.org/W2160305464",
+        "https://openalex.org/W2160760922",
+        "https://openalex.org/W2161734509",
+        "https://openalex.org/W2162500295",
+        "https://openalex.org/W2162503944",
+        "https://openalex.org/W2164063330",
+        "https://openalex.org/W2164208424",
+        "https://openalex.org/W2168332291",
+        "https://openalex.org/W2172060144",
+        "https://openalex.org/W2209282997",
+        "https://openalex.org/W2265991227",
+        "https://openalex.org/W2307252903",
+        "https://openalex.org/W2319569870",
+        "https://openalex.org/W2352579400",
+        "https://openalex.org/W2399446052",
+        "https://openalex.org/W2420416094",
+        "https://openalex.org/W4235464961",
+        "https://openalex.org/W4294294184",
+        "https://openalex.org/W6638009433",
+        "https://openalex.org/W6639081028",
+        "https://openalex.org/W6645634759",
+        "https://openalex.org/W6662896276",
+        "https://openalex.org/W6672780593",
+        "https://openalex.org/W6675515053",
+        "https://openalex.org/W6679355826"
+      ],
+      "related_works": [
+        "https://openalex.org/W3209895153",
+        "https://openalex.org/W2347757859",
+        "https://openalex.org/W4288730575",
+        "https://openalex.org/W2154937055",
+        "https://openalex.org/W2046055340",
+        "https://openalex.org/W3126956649",
+        "https://openalex.org/W2342462201",
+        "https://openalex.org/W2015307784",
+        "https://openalex.org/W4224303136",
+        "https://openalex.org/W200925908"
+      ],
+      "abstract_inverted_index": null,
+      "counts_by_year": [
+        {
+          "year": 2026,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2025,
+          "cited_by_count": 4
+        },
+        {
+          "year": 2024,
+          "cited_by_count": 11
+        },
+        {
+          "year": 2023,
+          "cited_by_count": 4
+        },
+        {
+          "year": 2022,
+          "cited_by_count": 4
+        },
+        {
+          "year": 2021,
+          "cited_by_count": 11
+        },
+        {
+          "year": 2020,
+          "cited_by_count": 8
+        },
+        {
+          "year": 2019,
+          "cited_by_count": 6
+        },
+        {
+          "year": 2018,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2017,
+          "cited_by_count": 6
+        },
+        {
+          "year": 2016,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2015,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2014,
+          "cited_by_count": 1
+        }
+      ],
+      "updated_date": "2026-02-27T16:54:17.756197",
+      "created_date": "2025-10-10T00:00:00"
+    }
+  ],
+  "group_by": []
+}

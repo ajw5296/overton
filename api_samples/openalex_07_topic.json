@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "count": 6,
+    "db_response_time_ms": 4,
+    "page": 1,
+    "per_page": 1,
+    "groups_count": null,
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/T10924",
+      "display_name": "Cardiovascular Health and Disease Prevention",
+      "description": "This cluster of papers focuses on the assessment, impact, and clinical implications of arterial stiffness and endothelial dysfunction in relation to cardiovascular health. It explores the use of various techniques such as pulse wave velocity, carotid intima-media thickness, and brachial artery assessment to predict cardiovascular events and mortality. The papers also discuss the association between arterial stiffness, hypertension, and vascular aging, emphasizing the importance of central blood pressure in assessing cardiovascular risk.",
+      "keywords": [
+        "Arterial Stiffness",
+        "Endothelial Dysfunction",
+        "Cardiovascular Events",
+        "Pulse Wave Velocity",
+        "Aortic Stiffness",
+        "Vascular Aging",
+        "Brachial Artery Assessment",
+        "Central Blood Pressure",
+        "Carotid Intima-Media Thickness",
+        "Hypertension"
+      ],
+      "ids": {
+        "openalex": "https://openalex.org/T10924",
+        "wikipedia": "https://en.wikipedia.org/wiki/Arterial_stiffness"
+      },
+      "subfield": {
+        "id": "https://openalex.org/subfields/2705",
+        "display_name": "Cardiology and Cardiovascular Medicine"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/27",
+        "display_name": "Medicine"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/4",
+        "display_name": "Health Sciences"
+      },
+      "siblings": [
+        {
+          "id": "https://openalex.org/T10065",
+          "display_name": "Atrial Fibrillation Management and Outcomes"
+        },
+        {
+          "id": "https://openalex.org/T10144",
+          "display_name": "Blood Pressure and Hypertension Studies"
+        },
+        {
+          "id": "https://openalex.org/T10172",
+          "display_name": "Cardiac Valve Diseases and Treatments"
+        },
+        {
+          "id": "https://openalex.org/T10198",
+          "display_name": "Heart Failure Treatment and Management"
+        },
+        {
+          "id": "https://openalex.org/T10217",
+          "display_name": "Cardiac electrophysiology and arrhythmias"
+        },
+        {
+          "id": "https://openalex.org/T10292",
+          "display_name": "Acute Myocardial Infarction Research"
+        },
+        {
+          "id": "https://openalex.org/T10598",
+          "display_name": "Cardiac pacing and defibrillation studies"
+        },
+        {
+          "id": "https://openalex.org/T10745",
+          "display_name": "Heart Rate Variability and Autonomic Control"
+        },
+        {
+          "id": "https://openalex.org/T10821",
+          "display_name": "Cardiovascular Function and Risk Factors"
+        },
+        {
+          "id": "https://openalex.org/T10882",
+          "display_name": "Cardiomyopathy and Myosin Studies"
+        },
+        {
+          "id": "https://openalex.org/T11001",
+          "display_name": "Renin-Angiotensin System Studies"
+        },
+        {
+          "id": "https://openalex.org/T11021",
+          "display_name": "ECG Monitoring and Analysis"
+        },
+        {
+          "id": "https://openalex.org/T11064",
+          "display_name": "Antiplatelet Therapy and Cardiovascular Diseases"
+        },
+        {
+          "id": "https://openalex.org/T11083",
+          "display_name": "Cardiac Health and Mental Health"
+        },
+        {
+          "id": "https://openalex.org/T11112",
+          "display_name": "Viral Infections and Immunology Research"
+        },
+        {
+          "id": "https://openalex.org/T11217",
+          "display_name": "Cardiac Arrhythmias and Treatments"
+        },
+        {
+          "id": "https://openalex.org/T11535",
+          "display_name": "Chemotherapy-induced cardiotoxicity and mitigation"
+        },
+        {
+          "id": "https://openalex.org/T11638",
+          "display_name": "Cardiac tumors and thrombi"
+        },
+        {
+          "id": "https://openalex.org/T11922",
+          "display_name": "Cardiovascular Effects of Exercise"
+        },
+        {
+          "id": "https://openalex.org/T11930",
+          "display_name": "Cardiac, Anesthesia and Surgical Outcomes"
+        },
+        {
+          "id": "https://openalex.org/T11962",
+          "display_name": "Cardiac Fibrosis and Remodeling"
+        },
+        {
+          "id": "https://openalex.org/T12082",
+          "display_name": "Takotsubo Cardiomyopathy and Associated Phenomena"
+        },
+        {
+          "id": "https://openalex.org/T12230",
+          "display_name": "Cardiovascular Issues in Pregnancy"
+        },
+        {
+          "id": "https://openalex.org/T12291",
+          "display_name": "Pericarditis and Cardiac Tamponade"
+        },
+        {
+          "id": "https://openalex.org/T12979",
+          "display_name": "Cardiovascular Disease and Adiposity"
+        },
+        {
+          "id": "https://openalex.org/T13381",
+          "display_name": "Heart rate and cardiovascular health"
+        },
+        {
+          "id": "https://openalex.org/T13430",
+          "display_name": "Lipid metabolism and disorders"
+        },
+        {
+          "id": "https://openalex.org/T13522",
+          "display_name": "Cardiovascular Health and Risk Factors"
+        }
+      ],
+      "relevance_score": 3414.2913,
+      "works_count": 69821,
+      "cited_by_count": 1260445,
+      "works_api_url": "https://api.openalex.org/works?filter=topics.id:T10924",
+      "updated_date": "2026-03-05T03:01:17",
+      "created_date": "2024-01-23T15:27:08"
+    }
+  ],
+  "group_by": []
+}

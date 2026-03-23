@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(MSYS_NO_PATHCONV=1 aws logs get-log-events:*)",
+      "Bash(aws ecs describe-services:*)",
+      "Bash(docker build:*)",
+      "Bash(docker tag:*)",
+      "Bash(docker push:*)",
+      "Bash(curl -s \"https://metadata.libraries.psu.edu/v1/users/dhk102/grants\" -H \"X-API-Key: 264d2e02f4c8089b594de2ad8db5f80c0ada5828deca6f06a4d5690d4cd80f869e44aa32b7e4dead64a56f963b368be7\" -H \"Accept: application/json\")",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s \"https://metadata.libraries.psu.edu/v1/users/dhk102/presentations\" -H \"X-API-Key: 264d2e02f4c8089b594de2ad8db5f80c0ada5828deca6f06a4d5690d4cd80f869e44aa32b7e4dead64a56f963b368be7\" -H \"Accept: application/json\")",
+      "Bash(curl -s \"https://metadata.libraries.psu.edu/v1/users/dhk102/etds\" -H \"X-API-Key: 264d2e02f4c8089b594de2ad8db5f80c0ada5828deca6f06a4d5690d4cd80f869e44aa32b7e4dead64a56f963b368be7\" -H \"Accept: application/json\")",
+      "Bash(curl -s \"https://api.openalex.org/institutions/I130769515?mailto=test@example.com\")",
+      "WebFetch(domain:docs.openalex.org)",
+      "Bash(curl -s \"https://api.openalex.org/works?filter=authorships.author.id:A5025227099&per_page=1&sort=cited_by_count:desc&mailto=test@example.com\")",
+      "Bash(python -c \":*)",
+      "Bash(python fetch_openalex_samples.py)",
+      "mcp__jsonmcp__json_stats",
+      "mcp__jsonmcp__json_structure",
+      "mcp__jsonmcp__json_keys"
+    ]
+  }
+}

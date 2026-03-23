@@ -1,0 +1,123 @@
+{
+  "data": [
+    {
+      "id": "10",
+      "type": "organization",
+      "attributes": {
+        "name": "College of Health and Human Development"
+      }
+    },
+    {
+      "id": "182",
+      "type": "organization",
+      "attributes": {
+        "name": "Center For Healthy Aging"
+      }
+    },
+    {
+      "id": "183",
+      "type": "organization",
+      "attributes": {
+        "name": "Methodology Center"
+      }
+    },
+    {
+      "id": "184",
+      "type": "organization",
+      "attributes": {
+        "name": "Edna Bennett Pierce Prevention Research Center (PRC)"
+      }
+    },
+    {
+      "id": "185",
+      "type": "organization",
+      "attributes": {
+        "name": "Biobehavioral Health"
+      }
+    },
+    {
+      "id": "186",
+      "type": "organization",
+      "attributes": {
+        "name": "Communication Sciences and Disorders"
+      }
+    },
+    {
+      "id": "187",
+      "type": "organization",
+      "attributes": {
+        "name": "Human Development and Family Studies"
+      }
+    },
+    {
+      "id": "188",
+      "type": "organization",
+      "attributes": {
+        "name": "Kinesiology"
+      }
+    },
+    {
+      "id": "189",
+      "type": "organization",
+      "attributes": {
+        "name": "Nutritional Sciences"
+      }
+    },
+    {
+      "id": "190",
+      "type": "organization",
+      "attributes": {
+        "name": "Recreation, Park and Tourism Management"
+      }
+    },
+    {
+      "id": "191",
+      "type": "organization",
+      "attributes": {
+        "name": "Health Policy and Administration"
+      }
+    },
+    {
+      "id": "192",
+      "type": "organization",
+      "attributes": {
+        "name": "School of Hospitality Management"
+      }
+    },
+    {
+      "id": "511",
+      "type": "organization",
+      "attributes": {
+        "name": "College of Health and Human Development - Administration"
+      }
+    },
+    {
+      "id": "565",
+      "type": "organization",
+      "attributes": {
+        "name": "College of Health and Human Development Research Centers"
+      }
+    },
+    {
+      "id": "587",
+      "type": "organization",
+      "attributes": {
+        "name": "Biomarker Core Lab"
+      }
+    },
+    {
+      "id": "809",
+      "type": "organization",
+      "attributes": {
+        "name": "Child Health Research Center"
+      }
+    },
+    {
+      "id": "810",
+      "type": "organization",
+      "attributes": {
+        "name": "Center for Health Care and Policy Research"
+      }
+    }
+  ]
+}

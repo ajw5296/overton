@@ -1,0 +1,898 @@
+{
+  "acr6": {
+    "data": [
+      {
+        "id": "358192",
+        "type": "publication",
+        "attributes": {
+          "title": "The 2011 report on dietary reference intakes for calcium and vitamin D from the Institute of Medicine: What clinicians need to know",
+          "secondary_title": null,
+          "publication_type": "Comment/Debate",
+          "status": "Published",
+          "volume": "96",
+          "issue": "1",
+          "edition": null,
+          "page_range": "53-58",
+          "authors_et_al": null,
+          "abstract": "This article summarizes the new 2011 report on dietary requirements for calcium and vitamin D from the Institute of Medicine (IOM). An IOM Committee charged with determining the population needs for these nutrients in North America conducted a comprehensive review of the evidence for both skeletal and extraskeletal outcomes. The Committee concluded that available scientific evidence supports a key role of calcium and vitamin D in skeletal health, consistent with a cause-and-effect relationship and providing a sound basis for determination of intake requirements. For extraskeletal outcomes, including cancer, cardiovascular disease, diabetes, and autoimmune disorders, the evidence was inconsistent, inconclusive as to causality, and insufficient to inform nutritional requirements. Randomized clinical trial evidence for extraskeletal outcomes was limited and generally uninformative. Based on bone health, Recommended Dietary Allowances (RDAs; covering requirements of ≥97.5% of the population) for calcium range from 700 to 1300 mg/d for life-stage groups at least 1 yr of age. For vitamin D, RDAs of 600 IU/d for ages 1-70 yr and 800 IU/d for ages 71 yr and older, corresponding to a serum 25-hydroxyvitamin D level of at least 20 ng/ml (50 nmol/liter), meet the requirements of at least 97.5% of the population. RDAs for vitamin D were derived based on conditions of minimal sun exposure due to wide variability in vitamin D synthesis from ultraviolet light and the risks of skin cancer. Higher values were not consistently associated with greater benefit, and for some outcomes U-shaped associations were observed, with risks at both low and high levels. The Committee concluded that the prevalence of vitamin D inadequacy in North America has been overestimated. Urgent research and clinical priorities were identified, including reassessment of laboratory ranges for 25-hydroxyvitamin D, to avoid problems of both undertreatment and overtreatment.",
+          "doi": "https://doi.org/10.1210/jc.2010-2704",
+          "preferred_open_access_url": "https://academic.oup.com/jcem/article-pdf/96/1/53/10745151/jcem0053.pdf",
+          "publisher": "Endocrine Society",
+          "journal_title": "Journal of Clinical Endocrinology and Metabolism",
+          "published_on": "2011-01-01",
+          "citation_count": 3552,
+          "supplementary_url": null,
+          "contributors": [
+            {
+              "first_name": "A. Catharine",
+              "middle_name": null,
+              "last_name": "Ross",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Jo Ann E.",
+              "middle_name": null,
+              "last_name": "Manson",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Steven A.",
+              "middle_name": null,
+              "last_name": "Abrams",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "John F.",
+              "middle_name": null,
+              "last_name": "Aloia",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Patsy M.",
+              "middle_name": null,
+              "last_name": "Brannon",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Steven K.",
+              "middle_name": null,
+              "last_name": "Clinton",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Ramon A.",
+              "middle_name": null,
+              "last_name": "Durazo-Arvizu",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "J. Christopher",
+              "middle_name": null,
+              "last_name": "Gallagher",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Richard L.",
+              "middle_name": null,
+              "last_name": "Gallo",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Glenville",
+              "middle_name": null,
+              "last_name": "Jones",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Christopher S.",
+              "middle_name": null,
+              "last_name": "Kovacs",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Susan T.",
+              "middle_name": null,
+              "last_name": "Mayne",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Clifford J.",
+              "middle_name": null,
+              "last_name": "Rosen",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Sue A.",
+              "middle_name": null,
+              "last_name": "Shapses",
+              "psu_user_id": null
+            }
+          ],
+          "tags": [
+            {
+              "name": "Calcium",
+              "rank": 2.0
+            },
+            {
+              "name": "Vitamin D",
+              "rank": 2.0
+            },
+            {
+              "name": "Dietary Reference Intake",
+              "rank": 1.0
+            },
+            {
+              "name": "Recommended Dietary Allowances",
+              "rank": 1.0
+            },
+            {
+              "name": "Isotopes Of Calcium",
+              "rank": 1.0
+            },
+            {
+              "name": "National Academies Of Science, Engineering, And Medicine (U.S.) Health And Medicine Division",
+              "rank": 1.0
+            },
+            {
+              "name": "Calcium(0)",
+              "rank": 1.0
+            },
+            {
+              "name": "Medicine",
+              "rank": 1.0
+            },
+            {
+              "name": "Clinician",
+              "rank": 1.0
+            },
+            {
+              "name": "25 Hydroxyvitamin D",
+              "rank": 0.666666686
+            },
+            {
+              "name": "Health",
+              "rank": 0.666666686
+            },
+            {
+              "name": "Population",
+              "rank": 0.5
+            },
+            {
+              "name": "Nutrients",
+              "rank": 0.333333344
+            },
+            {
+              "name": "North America",
+              "rank": 0.333333343
+            },
+            {
+              "name": "Nutritional Requirements",
+              "rank": 0.333333343
+            },
+            {
+              "name": "Dietary Requirements",
+              "rank": 0.2
+            },
+            {
+              "name": "Population Needs",
+              "rank": 0.2
+            },
+            {
+              "name": "Clinical Priorities",
+              "rank": 0.2
+            },
+            {
+              "name": "Overtreatment",
+              "rank": 0.2
+            },
+            {
+              "name": "Skeletal Health",
+              "rank": 0.2
+            },
+            {
+              "name": "Serum 25 Hydroxyvitamin D",
+              "rank": 0.2
+            },
+            {
+              "name": "Undertreatment",
+              "rank": 0.2
+            },
+            {
+              "name": "Vitamin D Metabolism",
+              "rank": 0.2
+            },
+            {
+              "name": "Bone And Bones",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Dietary Calcium",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Medical Overuse",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Medical Problems",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Solar System",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Skin Neoplasms",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Ultraviolet Rays",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Sun",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Bone",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Causality",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Type 1 Diabetes Mellitus",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Skin",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Acoustic Waves",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Cardiovascular Diseases",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Randomized Controlled Trials ",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Serum",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Neoplasms",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Nutrient",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Disorder",
+              "rank": 0.166666672
+            },
+            {
+              "name": "Malignant Neoplasm",
+              "rank": 0.1428571
+            },
+            {
+              "name": "Prevalence",
+              "rank": 0.1428571
+            },
+            {
+              "name": "Diabetes",
+              "rank": 0.1428571
+            },
+            {
+              "name": "Randomized Clinical Trial",
+              "rank": 0.1428571
+            },
+            {
+              "name": "Cardiovascular Disease",
+              "rank": 0.1428571
+            },
+            {
+              "name": "Autoimmune Disease",
+              "rank": 0.1428571
+            },
+            {
+              "name": "Skin Cancer",
+              "rank": 0.1428571
+            },
+            {
+              "name": "Sun Exposure",
+              "rank": 0.1428571
+            }
+          ],
+          "pure_ids": [
+            "e0212070-93df-4669-a173-dbad3c7dd313"
+          ],
+          "activity_insight_ids": [],
+          "profile_preferences": [
+            {
+              "user_id": 46,
+              "webaccess_id": "acr6",
+              "visible_in_profile": true,
+              "position_in_profile": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "371313",
+        "type": "publication",
+        "attributes": {
+          "title": "β-carotene is an important vitamin A source for humans",
+          "secondary_title": null,
+          "publication_type": "Other",
+          "status": "Published",
+          "volume": "140",
+          "issue": "12",
+          "edition": null,
+          "page_range": "2268S-2285S",
+          "authors_et_al": null,
+          "abstract": "Experts in the field of carotenoids met at the Hohenheim consensus conference in July 2009 to elucidate the current status of β-carotene research and to summarize the current knowledge with respect to the chemical properties, physiological function, and intake of β-carotene. The experts discussed 17 questions and reached an agreement formulated in a consensus answer in each case. These consensus answers are based on published valid data, which were carefully reviewed by the individual experts and are justified here by background statements. Ascertaining the impact of β-carotene on the total dietary intake of vitamin A is complicated, because the efficiency of conversion of β-carotene to retinol is not a single ratio and different conversion factors have been used in various surveys and following governmental recommendationswithin different countries. However, a role of β-carotene in fulfilling the recommended intake for vitamin A is apparent from a variety of studies. Thus, besides elucidating the various functions, distribution, and uptake of β-carotene, the consensus conference placed special emphasis on the provitamin A function of β-carotene and the role of β-carotene in the realization of the required/recommended total vitamin A intake in both developed and developing countries. There was consensus that β-carotene is a safe source of vitamin A and that the provitamin A function of β-carotene contributes to vitamin A intake.",
+          "doi": "https://doi.org/10.3945/jn.109.119024",
+          "preferred_open_access_url": "https://doi.org/10.3945/jn.109.119024",
+          "publisher": "Elsevier B.V.",
+          "journal_title": "Journal of Nutrition",
+          "published_on": "2010-12-01",
+          "citation_count": 538,
+          "supplementary_url": null,
+          "contributors": [
+            {
+              "first_name": "Tilman",
+              "middle_name": null,
+              "last_name": "Grune",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Georg",
+              "middle_name": null,
+              "last_name": "Lietz",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Andreu",
+              "middle_name": null,
+              "last_name": "Palou",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "A. Catharine",
+              "middle_name": null,
+              "last_name": "Ross",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Wilhelm",
+              "middle_name": null,
+              "last_name": "Stahl",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Guangweng",
+              "middle_name": null,
+              "last_name": "Tang",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "David",
+              "middle_name": null,
+              "last_name": "Thurnham",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Shi An",
+              "middle_name": null,
+              "last_name": "Yin",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Hans K.",
+              "middle_name": null,
+              "last_name": "Biesalski",
+              "psu_user_id": null
+            }
+          ],
+          "tags": [
+            {
+              "name": "Carotene",
+              "rank": 4.0
+            },
+            {
+              "name": "Retinol",
+              "rank": 1.1818182
+            },
+            {
+              "name": "Vitamin A",
+              "rank": 1.0
+            },
+            {
+              "name": "Carotenoids",
+              "rank": 1.0
+            },
+            {
+              "name": "Vitamin A Intake",
+              "rank": 0.3636364
+            },
+            {
+              "name": "Carotenoid",
+              "rank": 0.24475529999999998
+            },
+            {
+              "name": "Provitamin A",
+              "rank": 0.1818182
+            },
+            {
+              "name": "Consensus Conference",
+              "rank": 0.1818182
+            },
+            {
+              "name": "Dietary Intake",
+              "rank": 0.1818182
+            },
+            {
+              "name": "Provitamins",
+              "rank": 0.181818187
+            },
+            {
+              "name": "Congresses ",
+              "rank": 0.181818187
+            },
+            {
+              "name": "Function Distribution",
+              "rank": 0.0909091
+            },
+            {
+              "name": "Physiological Function",
+              "rank": 0.0909091
+            },
+            {
+              "name": "Valid Data",
+              "rank": 0.0909091
+            },
+            {
+              "name": "Conversion Factor",
+              "rank": 0.0909091
+            },
+            {
+              "name": "Chemical Properties",
+              "rank": 0.0909091
+            },
+            {
+              "name": "Recommended Dose",
+              "rank": 0.0909091
+            },
+            {
+              "name": "Developed Countries",
+              "rank": 0.09090909
+            },
+            {
+              "name": "Developing Countries",
+              "rank": 0.09090909
+            },
+            {
+              "name": "Efficiency Of Conversion",
+              "rank": 0.0769231
+            }
+          ],
+          "pure_ids": [
+            "e79adae9-016e-44aa-a40d-95fa8d4484a0"
+          ],
+          "activity_insight_ids": [],
+          "profile_preferences": [
+            {
+              "user_id": 46,
+              "webaccess_id": "acr6",
+              "visible_in_profile": true,
+              "position_in_profile": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "dhk102": {
+    "data": [
+      {
+        "id": "34670",
+        "type": "publication",
+        "attributes": {
+          "title": "Cellular adapations of the myocardium to chronic exercise",
+          "secondary_title": null,
+          "publication_type": "Academic Journal Article",
+          "status": "Published",
+          "volume": "37",
+          "issue": "6",
+          "edition": null,
+          "page_range": "371-396",
+          "authors_et_al": null,
+          "abstract": "The heart responds positively to programs of chronic dynamic exercise. Hallmark adaptations of the heart include a training bradycardia, increases in end-diastolic dimension and maximal stroke volume, and a general improvement in ventricular performance and contractile function. Of considerable clinical significance are the general observations that chronic exercise renders the myocardium less susceptible to the deleterious effects of acute ischemic episodes and can effectively prevent and/or reverse many of the cardiac functional deficits that are known to occur in settings of chronic hypertension, advanced age, and myocardial infarction. In the text that follows, information gathered over the last 25 to 30 years has been reviewed in an attempt to identify cellular myocardial adaptations, both known and hypothetical, that are responsible for the observed effects of chronic dynamic exercise on the function and morphology of the heart in both normal and selected pathophysiologic settings. Finally, a variety of unresolved issues regarding the ability of chronic exercise to elicit adaptive cardiocyte responses has been identified. In so doing, it is hoped that creative thought and future work in the area will be stimulated.",
+          "doi": "https://doi.org/10.1016/S0033-0620(05)80019-2",
+          "preferred_open_access_url": null,
+          "publisher": "W.B. Saunders",
+          "journal_title": "Progress in Cardiovascular Diseases",
+          "published_on": "1995-01-01",
+          "citation_count": 81,
+          "supplementary_url": null,
+          "contributors": [
+            {
+              "first_name": "Russell L.",
+              "middle_name": null,
+              "last_name": "Moore",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "Donna H.",
+              "middle_name": null,
+              "last_name": "Korzick",
+              "psu_user_id": "dhk102"
+            }
+          ],
+          "tags": [
+            {
+              "name": "Dynamic Exercise",
+              "rank": 2.6666667
+            },
+            {
+              "name": "Heart Infarction",
+              "rank": 1.5
+            },
+            {
+              "name": "Chronic Exercise",
+              "rank": 1.0
+            },
+            {
+              "name": "Myocardium",
+              "rank": 1.0
+            },
+            {
+              "name": "Heart",
+              "rank": 1.0
+            },
+            {
+              "name": "Clinical Significance",
+              "rank": 0.8333333
+            },
+            {
+              "name": "Contractile Function",
+              "rank": 0.8333333
+            },
+            {
+              "name": "Heart Stroke Volume",
+              "rank": 0.5
+            },
+            {
+              "name": "Stroke Volume",
+              "rank": 0.333333343
+            },
+            {
+              "name": "Thinking",
+              "rank": 0.333333343
+            },
+            {
+              "name": "Myocardial Infarction",
+              "rank": 0.333333343
+            },
+            {
+              "name": "Hypertension",
+              "rank": 0.333333343
+            },
+            {
+              "name": "Bradycardia",
+              "rank": 0.333333343
+            },
+            {
+              "name": "Myocardial Adaptation",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Ischaemic Episode",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Performance Function",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Pathophysiologic",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Adaptation",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Advanced Age",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Acute Ischemic",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Deleterious Effects",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Chronic Hypertension",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Observed Effects",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Functional Deficits",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Creative Thinking",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Unresolved Issues",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Cardiocyte",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Ventricular Performance",
+              "rank": 0.3333333
+            }
+          ],
+          "pure_ids": [
+            "2250cc06-9846-4c78-8ee4-946728919584"
+          ],
+          "activity_insight_ids": [],
+          "profile_preferences": [
+            {
+              "user_id": 787,
+              "webaccess_id": "dhk102",
+              "visible_in_profile": true,
+              "position_in_profile": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "350686",
+        "type": "publication",
+        "attributes": {
+          "title": "Estrogen and the female heart",
+          "secondary_title": null,
+          "publication_type": "Other",
+          "status": "Published",
+          "volume": "389",
+          "issue": "1-2",
+          "edition": null,
+          "page_range": "31-39",
+          "authors_et_al": null,
+          "abstract": "Estrogen has a plethora of effects in the cardiovascular system. Studies of estrogen and the heart span human clinical trials and basic cell and molecular investigations. Greater understanding of cell and molecular responses to estrogens can provide further insights into the findings of clinical studies. Differences in expression and cellular/intracellular distribution of the two main receptors, estrogen receptor (ER) α and β, are thought to account for the specificity and differences in responses to estrogen. Much remains to be learned in this area, but cellular distribution within the cardiovascular system is becoming clearer. Identification of GPER as a third ER has introduced further complexity to the system. 17β-estradiol (E2), the most potent human estrogen, clearly has protective properties activating a signaling cascade leading to cellular protection and also influencing expression of the protective heat shock proteins (HSP). E2 protects the heart from ischemic injury in basic studies, but the picture is more involved in the whole organism and clinical studies. Here the complexity of E2's widespread effects comes into play and makes interpretation of findings more challenging. Estrogen loss occurs primarily with aging, but few studies have used aged models despite clear evidence of differences between the response to estrogen deficiency in adult and aged animals. Thus more work is needed focusing on the effects of aging vs. estrogen loss on the cardiovascular system.",
+          "doi": "https://doi.org/10.1016/j.mce.2014.01.002",
+          "preferred_open_access_url": "https://europepmc.org/articles/pmc5709037?pdf=render",
+          "publisher": "Elsevier Ireland Ltd",
+          "journal_title": "Molecular and Cellular Endocrinology",
+          "published_on": "2014-05-25",
+          "citation_count": 62,
+          "supplementary_url": null,
+          "contributors": [
+            {
+              "first_name": "A. A.",
+              "middle_name": null,
+              "last_name": "Knowlton",
+              "psu_user_id": null
+            },
+            {
+              "first_name": "D. H.",
+              "middle_name": null,
+              "last_name": "Korzick",
+              "psu_user_id": "dhk102"
+            }
+          ],
+          "tags": [
+            {
+              "name": "Estrogen Receptor",
+              "rank": 3.0
+            },
+            {
+              "name": "Estrogens",
+              "rank": 2.0
+            },
+            {
+              "name": "Clinical Study",
+              "rank": 2.0
+            },
+            {
+              "name": "Heat Shock Protein",
+              "rank": 1.0
+            },
+            {
+              "name": "Female Heart",
+              "rank": 1.0
+            },
+            {
+              "name": "Estrogen",
+              "rank": 1.0
+            },
+            {
+              "name": "Heart",
+              "rank": 1.0
+            },
+            {
+              "name": "Clinical Trial",
+              "rank": 1.0
+            },
+            {
+              "name": "Subcellular Localization",
+              "rank": 1.0
+            },
+            {
+              "name": "Diethylstilbestrol",
+              "rank": 0.8333333
+            },
+            {
+              "name": "Cardiovascular System",
+              "rank": 0.75
+            },
+            {
+              "name": "Estrogen Deficiency",
+              "rank": 0.6666667
+            },
+            {
+              "name": "Injury",
+              "rank": 0.5
+            },
+            {
+              "name": "Estrogen Receptors",
+              "rank": 0.5
+            },
+            {
+              "name": "Estrogen Loss",
+              "rank": 0.3333333
+            },
+            {
+              "name": "Estradiol",
+              "rank": 0.25
+            },
+            {
+              "name": "Animals",
+              "rank": 0.25
+            },
+            {
+              "name": "Aging Of Materials",
+              "rank": 0.25
+            },
+            {
+              "name": "Heat Shock Proteins",
+              "rank": 0.25
+            },
+            {
+              "name": "Clinical Studies ",
+              "rank": 0.25
+            },
+            {
+              "name": "Protective",
+              "rank": 0.2
+            },
+            {
+              "name": "Molecular Investigation",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Basic Cell",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Cellular Protection",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Intracellular Distribution",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Aged Animals",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Ischemic Injury",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Aging",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Aging Effect",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Signaling Cascades",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Molecular Response",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Cellular Distribution",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Cell Response",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Plethora",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Human Trials",
+              "rank": 0.1666667
+            },
+            {
+              "name": "17 Estradiol",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Whole Organism",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Protective Properties",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Aging Model",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Adult Animals",
+              "rank": 0.1666667
+            },
+            {
+              "name": "Clinical Trials ",
+              "rank": 0.125
+            },
+            {
+              "name": "Heart Injuries",
+              "rank": 0.125
+            },
+            {
+              "name": "Protein",
+              "rank": 0.1
+            },
+            {
+              "name": "Heat",
+              "rank": 0.1
+            }
+          ],
+          "pure_ids": [
+            "a35135b5-0179-430f-b67a-3d4da91d2891"
+          ],
+          "activity_insight_ids": [
+            "87011117056"
+          ],
+          "profile_preferences": [
+            {
+              "user_id": 787,
+              "webaccess_id": "dhk102",
+              "visible_in_profile": true,
+              "position_in_profile": null
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

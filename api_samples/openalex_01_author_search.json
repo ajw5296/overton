@@ -1,0 +1,713 @@
+{
+  "meta": {
+    "count": 1,
+    "db_response_time_ms": 6,
+    "page": 1,
+    "per_page": 1,
+    "groups_count": null,
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/A5025227099",
+      "orcid": "https://orcid.org/0000-0003-3838-0523",
+      "display_name": "Donna H. Korzick",
+      "display_name_alternatives": [
+        "D H. Korzick",
+        "D KORZICK",
+        "D. H. Korzick",
+        "D. Korzick",
+        "D.H. Korzick",
+        "DONNA H. KORZICK",
+        "Donna H Korzick",
+        "Donna H. Korzick",
+        "Donna Hope Korzick",
+        "Donna Korzick"
+      ],
+      "relevance_score": 7375.6274,
+      "works_count": 85,
+      "cited_by_count": 1356,
+      "summary_stats": {
+        "2yr_mean_citedness": 0.0,
+        "h_index": 24,
+        "i10_index": 37
+      },
+      "ids": {
+        "openalex": "https://openalex.org/A5025227099",
+        "orcid": "https://orcid.org/0000-0003-3838-0523"
+      },
+      "affiliations": [
+        {
+          "institution": {
+            "id": "https://openalex.org/I130769515",
+            "ror": "https://ror.org/04p491231",
+            "display_name": "Pennsylvania State University",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I130769515"
+            ]
+          },
+          "years": [
+            2025,
+            2022,
+            2018,
+            2017,
+            2015,
+            2014,
+            2013,
+            2012,
+            2011,
+            2009,
+            2008,
+            2007,
+            2006,
+            2005,
+            2004,
+            2003,
+            2001,
+            1998,
+            1995,
+            1993
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I1316902750",
+            "ror": "https://ror.org/03xjacd83",
+            "display_name": "Cleveland Clinic",
+            "country_code": "US",
+            "type": "healthcare",
+            "lineage": [
+              "https://openalex.org/I1316902750"
+            ]
+          },
+          "years": [
+            1990,
+            1980
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I181547552",
+            "ror": "https://ror.org/02pttbw34",
+            "display_name": "Baylor College of Medicine",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I181547552",
+              "https://openalex.org/I2801539370"
+            ]
+          },
+          "years": [
+            1991
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I188538660",
+            "ror": "https://ror.org/02ttsq026",
+            "display_name": "University of Colorado Boulder",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I188538660"
+            ]
+          },
+          "years": [
+            1998,
+            1996,
+            1995
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I2799810409",
+            "ror": "https://ror.org/02917wp91",
+            "display_name": "Hospital of the University of Pennsylvania",
+            "country_code": "US",
+            "type": "healthcare",
+            "lineage": [
+              "https://openalex.org/I2799810409",
+              "https://openalex.org/I4210143392"
+            ]
+          },
+          "years": [
+            1998
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I285663978",
+            "ror": "https://ror.org/02xwsbr93",
+            "display_name": "Weatherford College",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I285663978"
+            ]
+          },
+          "years": [
+            1998,
+            1997
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I33213144",
+            "ror": "https://ror.org/02y3ad647",
+            "display_name": "University of Florida",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I33213144"
+            ]
+          },
+          "years": [
+            2012
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I39422238",
+            "ror": "https://ror.org/02mpq6x41",
+            "display_name": "University of Illinois Chicago",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I39422238"
+            ]
+          },
+          "years": [
+            1997
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I4210099340",
+            "ror": "https://ror.org/012gfrj24",
+            "display_name": "Intercollege",
+            "country_code": "CY",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I4210099340"
+            ]
+          },
+          "years": [
+            2011
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I4210106879",
+            "ror": "https://ror.org/01jr3y717",
+            "display_name": "Ohio University",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I4210106879"
+            ]
+          },
+          "years": [
+            2006
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I4210115853",
+            "ror": "https://ror.org/027vj6z88",
+            "display_name": "International College of Applied Kinesiology-USA",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I4210115853"
+            ]
+          },
+          "years": [
+            2011,
+            2007,
+            2006,
+            2003
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I4210136305",
+            "ror": "https://ror.org/0390vdb22",
+            "display_name": "Institute on Aging",
+            "country_code": "US",
+            "type": "nonprofit",
+            "lineage": [
+              "https://openalex.org/I4210136305"
+            ]
+          },
+          "years": [
+            1997
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I4210136897",
+            "ror": "https://ror.org/049v75w11",
+            "display_name": "National Institute on Aging",
+            "country_code": "US",
+            "type": "facility",
+            "lineage": [
+              "https://openalex.org/I1299022934",
+              "https://openalex.org/I1299303238",
+              "https://openalex.org/I4210136897"
+            ]
+          },
+          "years": [
+            2001,
+            1997
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I4210166371",
+            "ror": "https://ror.org/05xw0ep96",
+            "display_name": "Czech Academy of Sciences, Institute of Physiology",
+            "country_code": "CZ",
+            "type": "facility",
+            "lineage": [
+              "https://openalex.org/I202391551",
+              "https://openalex.org/I4210166371"
+            ]
+          },
+          "years": [
+            2009
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I76835614",
+            "ror": "https://ror.org/02ymw8z06",
+            "display_name": "University of Missouri",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I76835614"
+            ]
+          },
+          "years": [
+            2004,
+            2001,
+            1999
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I82783531",
+            "ror": "https://ror.org/01h22ap11",
+            "display_name": "Penn State Milton S. Hershey Medical Center",
+            "country_code": "US",
+            "type": "healthcare",
+            "lineage": [
+              "https://openalex.org/I82783531"
+            ]
+          },
+          "years": [
+            1993,
+            1992
+          ]
+        }
+      ],
+      "last_known_institutions": [
+        {
+          "id": "https://openalex.org/I130769515",
+          "ror": "https://ror.org/04p491231",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I130769515"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "id": "https://openalex.org/T11457",
+          "display_name": "Adipose Tissue and Metabolism",
+          "count": 16,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2737",
+            "display_name": "Physiology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11057",
+          "display_name": "Cardiac Ischemia and Reperfusion",
+          "count": 15,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2734",
+            "display_name": "Pathology and Forensic Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11178",
+          "display_name": "Receptor Mechanisms and Signaling",
+          "count": 14,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10301",
+          "display_name": "Mitochondrial Function and Pathology",
+          "count": 11,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10756",
+          "display_name": "Estrogen and related hormone effects",
+          "count": 11,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1311",
+            "display_name": "Genetics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        }
+      ],
+      "topic_share": [
+        {
+          "id": "https://openalex.org/T11057",
+          "display_name": "Cardiac Ischemia and Reperfusion",
+          "value": 0.0001189,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2734",
+            "display_name": "Pathology and Forensic Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10694",
+          "display_name": "Menopause: Health Impacts and Treatments",
+          "value": 0.0001161,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11962",
+          "display_name": "Cardiac Fibrosis and Remodeling",
+          "value": 9.47e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2705",
+            "display_name": "Cardiology and Cardiovascular Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10169",
+          "display_name": "Protein Kinase Regulation and GTPase Signaling",
+          "value": 7.64e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11457",
+          "display_name": "Adipose Tissue and Metabolism",
+          "value": 4.48e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2737",
+            "display_name": "Physiology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        }
+      ],
+      "x_concepts": [
+        {
+          "id": "71924100",
+          "wikidata": "https://www.wikidata.org/wiki/Q11190",
+          "display_name": "Medicine",
+          "score": 0.9410354495048523
+        },
+        {
+          "id": "134018914",
+          "wikidata": "https://www.wikidata.org/wiki/Q162606",
+          "display_name": "Endocrinology",
+          "score": 0.8876432180404663
+        },
+        {
+          "id": "126322002",
+          "wikidata": "https://www.wikidata.org/wiki/Q11180",
+          "display_name": "Internal medicine",
+          "score": 0.882086992263794
+        },
+        {
+          "id": "86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "score": 0.6825003623962402
+        },
+        {
+          "id": "55493867",
+          "wikidata": "https://www.wikidata.org/wiki/Q7094",
+          "display_name": "Biochemistry",
+          "score": 0.29185032844543457
+        }
+      ],
+      "counts_by_year": [
+        {
+          "year": 1980,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 1990,
+          "works_count": 2,
+          "oa_works_count": 0,
+          "cited_by_count": 29
+        },
+        {
+          "year": 1991,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 100
+        },
+        {
+          "year": 1992,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 1993,
+          "works_count": 3,
+          "oa_works_count": 0,
+          "cited_by_count": 1
+        },
+        {
+          "year": 1995,
+          "works_count": 2,
+          "oa_works_count": 0,
+          "cited_by_count": 84
+        },
+        {
+          "year": 1996,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 18
+        },
+        {
+          "year": 1997,
+          "works_count": 3,
+          "oa_works_count": 0,
+          "cited_by_count": 23
+        },
+        {
+          "year": 1998,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 24
+        },
+        {
+          "year": 1999,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2001,
+          "works_count": 3,
+          "oa_works_count": 0,
+          "cited_by_count": 106
+        },
+        {
+          "year": 2003,
+          "works_count": 6,
+          "oa_works_count": 0,
+          "cited_by_count": 75
+        },
+        {
+          "year": 2004,
+          "works_count": 7,
+          "oa_works_count": 1,
+          "cited_by_count": 136
+        },
+        {
+          "year": 2005,
+          "works_count": 8,
+          "oa_works_count": 1,
+          "cited_by_count": 79
+        },
+        {
+          "year": 2006,
+          "works_count": 6,
+          "oa_works_count": 2,
+          "cited_by_count": 110
+        },
+        {
+          "year": 2007,
+          "works_count": 3,
+          "oa_works_count": 0,
+          "cited_by_count": 81
+        },
+        {
+          "year": 2008,
+          "works_count": 2,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2009,
+          "works_count": 3,
+          "oa_works_count": 0,
+          "cited_by_count": 57
+        },
+        {
+          "year": 2011,
+          "works_count": 7,
+          "oa_works_count": 4,
+          "cited_by_count": 81
+        },
+        {
+          "year": 2012,
+          "works_count": 5,
+          "oa_works_count": 2,
+          "cited_by_count": 88
+        },
+        {
+          "year": 2013,
+          "works_count": 4,
+          "oa_works_count": 3,
+          "cited_by_count": 130
+        },
+        {
+          "year": 2014,
+          "works_count": 3,
+          "oa_works_count": 1,
+          "cited_by_count": 74
+        },
+        {
+          "year": 2015,
+          "works_count": 5,
+          "oa_works_count": 0,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2017,
+          "works_count": 2,
+          "oa_works_count": 2,
+          "cited_by_count": 21
+        },
+        {
+          "year": 2018,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 35
+        },
+        {
+          "year": 2022,
+          "works_count": 2,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2025,
+          "works_count": 2,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        }
+      ],
+      "longest_name": "Donna Hope Korzick",
+      "parsed_longest_name": {
+        "first": "donna",
+        "middle": "hope",
+        "last": "korzick",
+        "suffix": "",
+        "nickname": ""
+      },
+      "block_key": "d korzick",
+      "works_api_url": "https://api.openalex.org/works?filter=author.id:A5025227099",
+      "updated_date": "2026-03-03T12:20:50",
+      "created_date": "2016-06-24T00:00:00"
+    }
+  ],
+  "group_by": []
+}

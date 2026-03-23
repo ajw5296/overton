@@ -1,0 +1,843 @@
+{
+  "data": [
+    {
+      "id": "4",
+      "type": "publication",
+      "attributes": {
+        "title": "Rapid estrogen receptor-α activation improves ischemic tolerance in aged female rats through a novel protein kinase Cε -dependent mechanism",
+        "secondary_title": null,
+        "publication_type": "Academic Journal Article",
+        "status": "Published",
+        "volume": "150",
+        "issue": "2",
+        "edition": null,
+        "page_range": "889-896",
+        "authors_et_al": null,
+        "abstract": "The effects of estrogen deficiency on the loss of cardioprotection with advancing age are complex and poorly understood. A major focus of the current study was to uncover a cardioprotective role for rapid, nongenomic estrogen receptor (ER) signaling in the aged female myocardium. We hypothesized that selective ERα activation in aged females would reduce infarct size in part, through reversal of age-associated reductions in mitochondrial protein kinase Cepsi; (PKCepsi;). Hearts isolated from adult (6 month old) and aged (23-24 months old) female F344 rats with ovaries removed (n = 20 per group) were subjected to ischemia/reperfusion (47 min global ischemia). Rats were injected sc with the ERα agonist propylpyrazole triol (PPT) or vehicle 45 min before heart isolation (5 mu;g/kg). Infarct size was greatest in aged vs. adult ovariectomized rats, significantly reduced by PPT, and the protection reversed by prior administration of the ER inhibitor ICI 182,780 (3 mg/kg). Increased ERα particulate targeting occurred after PPT in conjunction with reversal of age-related reductions in nuclear PKCepsi;, mitochondrial PKCepsi; and pAkt (P &lt; 0.05). PPT also increased mRNA levels for the PKCepsi; anchoring protein, receptor for activated C kinase2 (RACK2; P &lt; 0.05). Our data suggest, for the first time, that selective ERα activation reduces ischemic injury in the aged, estrogen-deficient heart through a mechanism involving non- genomic redistribution of ERα and PKCepsi; activation. A novel feed-forward transcriptional mechanism to potentially enhance PKCepsi;-RACK2 interactions was also observed. Collectively, our findings may provide key insight into developing targeted therapeutic interventions in post- menopausal women to reduce ischemia/reperfusion injury, including selective ERa mimetics.",
+        "doi": "https://doi.org/10.1210/en.2008-0708",
+        "preferred_open_access_url": "https://academic.oup.com/endo/article-pdf/150/2/889/10900867/endo0889.pdf",
+        "publisher": "Endocrine Society",
+        "journal_title": "Endocrinology (United States)",
+        "published_on": "2009-02-01",
+        "citation_count": 51,
+        "supplementary_url": null,
+        "contributors": [
+          {
+            "first_name": "Jennifer L.",
+            "middle_name": null,
+            "last_name": "Novotny",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Amy M.",
+            "middle_name": null,
+            "last_name": "Simpson",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Nanette J.",
+            "middle_name": null,
+            "last_name": "Tomicek",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Timothy S.",
+            "middle_name": null,
+            "last_name": "Lancaster",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Donna H.",
+            "middle_name": null,
+            "last_name": "Korzick",
+            "psu_user_id": "dhk102"
+          }
+        ],
+        "tags": [
+          {
+            "name": "Estrogen Receptor",
+            "rank": 4.0
+          },
+          {
+            "name": "Isolated Heart",
+            "rank": 1.25
+          },
+          {
+            "name": "Estrogen Receptor Alpha",
+            "rank": 1.0
+          },
+          {
+            "name": "Aged Female Rat",
+            "rank": 1.0
+          },
+          {
+            "name": "Triol",
+            "rank": 1.0
+          },
+          {
+            "name": "Receptor Activation",
+            "rank": 1.0
+          },
+          {
+            "name": "Protein Kinases",
+            "rank": 1.0
+          },
+          {
+            "name": "Protein Kinase C",
+            "rank": 1.0
+          },
+          {
+            "name": "1,3,5 Tris(4 Hydroxyphenyl) 4 Propyl 1h Pyrazole",
+            "rank": 1.0
+          },
+          {
+            "name": "Ischemic Tolerance",
+            "rank": 1.0
+          },
+          {
+            "name": "Novel Protein Kinase C",
+            "rank": 1.0
+          },
+          {
+            "name": "Female Rats",
+            "rank": 1.0
+          },
+          {
+            "name": "Fischer 344 Rat",
+            "rank": 0.75
+          },
+          {
+            "name": "4,4',4'' (4 Propyl ((1)H) Pyrazole 1,3,5 Triyl) Tris Phenol",
+            "rank": 0.6666667
+          },
+          {
+            "name": "Postmenopause",
+            "rank": 0.625
+          },
+          {
+            "name": "Aged Female",
+            "rank": 0.5
+          },
+          {
+            "name": "Cardioprotection",
+            "rank": 0.5
+          },
+          {
+            "name": "1,3,5 Tris(4 Hydroxyphenyl) 4 Propylpyrazole",
+            "rank": 0.5
+          },
+          {
+            "name": "Ischemia",
+            "rank": 0.5
+          },
+          {
+            "name": "Estrogen Receptors",
+            "rank": 0.5
+          },
+          {
+            "name": "Estrogens",
+            "rank": 0.5
+          },
+          {
+            "name": "Heart",
+            "rank": 0.5
+          },
+          {
+            "name": "Agonist",
+            "rank": 0.5
+          },
+          {
+            "name": "Ischemia Reperfusion Injury",
+            "rank": 0.5
+          },
+          {
+            "name": "Selective Estrogen Receptor Modulators",
+            "rank": 0.5
+          },
+          {
+            "name": "Non Genomic",
+            "rank": 0.5
+          },
+          {
+            "name": "Infarct Size",
+            "rank": 0.5
+          },
+          {
+            "name": "Estrogen Deficiency",
+            "rank": 0.375
+          },
+          {
+            "name": "Eicosanoid Receptor",
+            "rank": 0.375
+          },
+          {
+            "name": "Mitochondrial Protein",
+            "rank": 0.375
+          },
+          {
+            "name": "Infarction",
+            "rank": 0.333333343
+          },
+          {
+            "name": "Age Associated",
+            "rank": 0.25
+          },
+          {
+            "name": "Ischemic Injury",
+            "rank": 0.25
+          },
+          {
+            "name": "Akt1",
+            "rank": 0.25
+          },
+          {
+            "name": "Receptor Agonists",
+            "rank": 0.25
+          },
+          {
+            "name": "Receptor Protein",
+            "rank": 0.25
+          },
+          {
+            "name": "Estrogen Receptor Signaling",
+            "rank": 0.25
+          },
+          {
+            "name": "Mitochondrial Proteins",
+            "rank": 0.25
+          },
+          {
+            "name": "Inbred F344 Rats",
+            "rank": 0.25
+          },
+          {
+            "name": "Reperfusion Injury",
+            "rank": 0.25
+          },
+          {
+            "name": "Reperfusion",
+            "rank": 0.25
+          },
+          {
+            "name": "Ovary",
+            "rank": 0.25
+          },
+          {
+            "name": "Myocardium",
+            "rank": 0.25
+          },
+          {
+            "name": "Messenger Rna",
+            "rank": 0.25
+          },
+          {
+            "name": "Wounds And Injuries",
+            "rank": 0.25
+          },
+          {
+            "name": "Therapeutics",
+            "rank": 0.25
+          },
+          {
+            "name": "Activated Protein C Receptor",
+            "rank": 0.25
+          },
+          {
+            "name": "Fulvestrant",
+            "rank": 0.25
+          },
+          {
+            "name": "Protein Kinase",
+            "rank": 0.25
+          },
+          {
+            "name": "Protein Receptor",
+            "rank": 0.25
+          },
+          {
+            "name": "Advancing Age",
+            "rank": 0.25
+          },
+          {
+            "name": "Transcriptional Mechanism",
+            "rank": 0.25
+          },
+          {
+            "name": "Postmenopausal Women",
+            "rank": 0.25
+          },
+          {
+            "name": "Therapeutic Intervention",
+            "rank": 0.25
+          },
+          {
+            "name": "Young Female",
+            "rank": 0.25
+          },
+          {
+            "name": "Estrogen Receptor Inhibitors",
+            "rank": 0.25
+          },
+          {
+            "name": "F344 Rats",
+            "rank": 0.25
+          },
+          {
+            "name": "Targeted Therapeutics",
+            "rank": 0.25
+          },
+          {
+            "name": "Age Related",
+            "rank": 0.25
+          },
+          {
+            "name": "Novel Feeds",
+            "rank": 0.25
+          },
+          {
+            "name": "Ici 182,780",
+            "rank": 0.25
+          },
+          {
+            "name": "Global Ischemia",
+            "rank": 0.25
+          },
+          {
+            "name": "Ovariectomized Rats",
+            "rank": 0.25
+          },
+          {
+            "name": "Estrogen Receptor Agonists",
+            "rank": 0.25
+          },
+          {
+            "name": "Estrogen",
+            "rank": 0.25
+          },
+          {
+            "name": "Anchoring Proteins",
+            "rank": 0.25
+          },
+          {
+            "name": "Mrna Level",
+            "rank": 0.25
+          },
+          {
+            "name": "Receptor Agonist",
+            "rank": 0.125
+          },
+          {
+            "name": "Receptor",
+            "rank": 0.125
+          },
+          {
+            "name": "Injury",
+            "rank": 0.125
+          }
+        ],
+        "pure_ids": [
+          "479d4f29-6067-48b6-abb8-1345776810c9"
+        ],
+        "activity_insight_ids": [],
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "type": "publication",
+      "attributes": {
+        "title": "Behavioral Impulsivity and Risk-Taking Trajectories Across Early Adolescence in Youths With and Without Family Histories of Alcohol and Other Drug Use Disorders",
+        "secondary_title": null,
+        "publication_type": "Academic Journal Article",
+        "status": "Published",
+        "volume": "39",
+        "issue": "8",
+        "edition": null,
+        "page_range": "1501-1509",
+        "authors_et_al": null,
+        "abstract": "Background: Youths with family histories of alcohol and other drug use disorders (FH+) are at increased susceptibility for developing substance use disorders relative to those without such histories (FH-). This vulnerability may be related to impaired adolescent development of impulse control and elevated risk-taking. However, no previous studies have prospectively examined impulse control and risk-taking in FH+ youth across adolescence. Methods: A total of 386 pre-adolescents (305 FH+, 81 FH-; aged 10 to 12) with no histories of regular alcohol or other drug use were compared on behavioral measures of impulsivity including delay discounting, response initiation (Immediate Memory Task), response inhibition impulsivity (GoStop Impulsivity Paradigm), and risk-taking (Balloon Analogue Risk Task-Youth). Youths completed these laboratory tasks every 6 months, allowing for the examination of 10- to 15-year-olds. Hierarchical linear modeling was used to characterize the development of impulse control and risk-taking as shown in performance of these tasks throughout adolescence. Results: We found that (i) FH+ youths had increased levels of delay discounting and response inhibition impulsivity at study entry; (ii) regardless of FH status, all youths had relatively stable delay discounting across time, improvements in response inhibition and response initiation impulsivity, and increased risk-taking; and (iii) although FH+ youths had increased response inhibition impulsivity at pre-adolescence, these differences were negligible by mid-adolescence. Conclusions: Heightened delay discounting in FH+ pre-adolescents coupled with normal adolescent increases in risk-taking may contribute to their increased susceptibility toward problem substance use in adolescence.",
+        "doi": "https://doi.org/10.1111/acer.12787",
+        "preferred_open_access_url": "https://europepmc.org/articles/pmc4630668?pdf=render",
+        "publisher": "Wiley-Blackwell",
+        "journal_title": "Alcoholism: Clinical and Experimental Research",
+        "published_on": "2015-08-01",
+        "citation_count": 49,
+        "supplementary_url": null,
+        "contributors": [
+          {
+            "first_name": "Donald M.",
+            "middle_name": null,
+            "last_name": "Dougherty",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Sarah L.",
+            "middle_name": null,
+            "last_name": "Lake",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Charles W.",
+            "middle_name": null,
+            "last_name": "Mathias",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Stacy R.",
+            "middle_name": null,
+            "last_name": "Ryan",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Bethany C.",
+            "middle_name": null,
+            "last_name": "Bray",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Nora E.",
+            "middle_name": null,
+            "last_name": "Charles",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Ashley",
+            "middle_name": null,
+            "last_name": "Acheson",
+            "psu_user_id": null
+          }
+        ],
+        "tags": [
+          {
+            "name": "Impulsivity",
+            "rank": 2.8571429
+          },
+          {
+            "name": "Alcohols",
+            "rank": 2.0
+          },
+          {
+            "name": "Response Inhibition",
+            "rank": 1.1428572
+          },
+          {
+            "name": "Pharmaceutical Preparations",
+            "rank": 1.06666667
+          },
+          {
+            "name": "Impulsive Behavior",
+            "rank": 1.0
+          },
+          {
+            "name": "Risk Taking",
+            "rank": 1.0
+          },
+          {
+            "name": "Substance Related Disorders",
+            "rank": 1.0
+          },
+          {
+            "name": "Trajectories",
+            "rank": 1.0
+          },
+          {
+            "name": "Disorder",
+            "rank": 1.0
+          },
+          {
+            "name": "Alcohol",
+            "rank": 1.0
+          },
+          {
+            "name": "Drug",
+            "rank": 1.0
+          },
+          {
+            "name": "Drug Use Disorder",
+            "rank": 1.0
+          },
+          {
+            "name": "Family History",
+            "rank": 1.0
+          },
+          {
+            "name": "Early Adolescence",
+            "rank": 1.0
+          },
+          {
+            "name": "Behavioral Risk Factors",
+            "rank": 1.0
+          },
+          {
+            "name": "Behavioral Impulsivity",
+            "rank": 1.0
+          },
+          {
+            "name": "Impulse Control",
+            "rank": 0.8571428
+          },
+          {
+            "name": "Time",
+            "rank": 0.5
+          },
+          {
+            "name": "Adolescents",
+            "rank": 0.4285714
+          },
+          {
+            "name": "Substance Abuse",
+            "rank": 0.42857139999999994
+          },
+          {
+            "name": "Increased Vulnerability",
+            "rank": 0.2857143
+          },
+          {
+            "name": "Response Initiation",
+            "rank": 0.2857143
+          },
+          {
+            "name": "Preadolescents",
+            "rank": 0.2857143
+          },
+          {
+            "name": "Inhibition (Psychology)",
+            "rank": 0.266666681
+          },
+          {
+            "name": "Delay Discounting",
+            "rank": 0.266666681
+          },
+          {
+            "name": "Psychological Inhibition",
+            "rank": 0.266666681
+          },
+          {
+            "name": "Balloons",
+            "rank": 0.142857149
+          },
+          {
+            "name": "Data Storage Equipment",
+            "rank": 0.142857149
+          },
+          {
+            "name": "Hierarchical Linear Modeling",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Behavioral Measures",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Normal Adolescents",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Task Response",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Laboratory Tasks",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Vulnerability",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Balloon Analogue Risk Task",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Increasing Risk",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Physical Dependence",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Drug Related Problems",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Immediate Memory",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Mid Adolescence",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Drug Use",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Memory Task",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Preadolescence",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Substance Use Disorder",
+            "rank": 0.1428571
+          },
+          {
+            "name": "Adolescent Development",
+            "rank": 0.06666667
+          },
+          {
+            "name": "Short Term Memory",
+            "rank": 0.06666667
+          },
+          {
+            "name": "Task Performance And Analysis",
+            "rank": 0.06666667
+          }
+        ],
+        "pure_ids": [
+          "347eefb1-2794-4718-ad59-daf077cb961b"
+        ],
+        "activity_insight_ids": [
+          "105399701504"
+        ],
+        "profile_preferences": [
+          {
+            "user_id": 336,
+            "webaccess_id": "bcb178",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "type": "publication",
+      "attributes": {
+        "title": "Determinants of water and sodium intake and output",
+        "secondary_title": null,
+        "publication_type": "Academic Journal Article",
+        "status": "Published",
+        "volume": "73",
+        "issue": null,
+        "edition": null,
+        "page_range": "73-82",
+        "authors_et_al": null,
+        "abstract": "Physiological regulation of sodium and water intake and output is required for the maintenance of homeostasis. The behavioral and neuroendocrine mechanisms that govern fluid and salt balance are highly interdependent, with acute and chronic alterations in renal output tightly balanced by appropriate changes in thirst and, to a lesser extent in humans, sodium appetite. In healthy individuals, these tightly coupled mechanisms maintain extracellular fluid volume and body tonicity within a narrow homeostatic range by initiating ingestive behaviors and the release of hormones necessary to conserve water and sodium within the body. In this review, the factors that determine output of sodium and fluid and those that determine \"normal\" input (i.e., matched to output) are addressed. For output, individual variability accompanied by dysregulation of homeostatic mechanisms may contribute to acute and/or chronic disease. To illustrate that point, the specific condition of salt-sensitive hypertension is discussed. For input, physical characteristics, physiological phenotypes, genetic and developmental influences, and cultural and environmental factors combine to result in a wide range of individual variability that, in humans, is compensated for by alterations in excretion.",
+        "doi": "https://doi.org/10.1093/nutrit/nuv033",
+        "preferred_open_access_url": "https://academic.oup.com/nutritionreviews/article-pdf/73/suppl_2/73/5440473/nuv033.pdf",
+        "publisher": "Oxford University Press",
+        "journal_title": "Nutrition Reviews",
+        "published_on": "2015-08-18",
+        "citation_count": 67,
+        "supplementary_url": null,
+        "contributors": [
+          {
+            "first_name": "Anna E.",
+            "middle_name": null,
+            "last_name": "Stanhewicz",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "W. Larry",
+            "middle_name": null,
+            "last_name": "Kenney",
+            "psu_user_id": "w7k"
+          }
+        ],
+        "tags": [
+          {
+            "name": "Tonicity",
+            "rank": 1.3333333
+          },
+          {
+            "name": "Sodium",
+            "rank": 1.0
+          },
+          {
+            "name": "Drinking",
+            "rank": 1.0
+          },
+          {
+            "name": "Water Intake",
+            "rank": 1.0
+          },
+          {
+            "name": "Sodium Chloride",
+            "rank": 1.0
+          },
+          {
+            "name": "Liquid",
+            "rank": 1.0
+          },
+          {
+            "name": "Sodium Intake",
+            "rank": 1.0
+          },
+          {
+            "name": "Fluid Balance",
+            "rank": 0.8333333
+          },
+          {
+            "name": "Salts",
+            "rank": 0.5
+          },
+          {
+            "name": "Genetics",
+            "rank": 0.5
+          },
+          {
+            "name": "Sodium Balance",
+            "rank": 0.5
+          },
+          {
+            "name": "Developmental Influences",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Healthy Individuals",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Extracellular Volume",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Salt Balance",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Cultural Factors",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Genetic Influences",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Behavioral Mechanisms",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Dysregulation",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Homeostatic Mechanisms",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Neuroendocrine Pathway",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Physiological Characters",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Specific Conditions",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Salt Sensitive Hypertension",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Ingestive Behavior",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Coupled Mechanism",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Tightly Coupled",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Water Input",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Physiological Regulation",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Hypertension",
+            "rank": 0.25
+          },
+          {
+            "name": "Phenotype",
+            "rank": 0.25
+          },
+          {
+            "name": "Kidney",
+            "rank": 0.25
+          },
+          {
+            "name": "Water",
+            "rank": 0.25
+          },
+          {
+            "name": "Hormones",
+            "rank": 0.25
+          },
+          {
+            "name": "Maintenance",
+            "rank": 0.25
+          },
+          {
+            "name": "Chronic Disease",
+            "rank": 0.25
+          },
+          {
+            "name": "Homeostasis",
+            "rank": 0.25
+          },
+          {
+            "name": "Appetite",
+            "rank": 0.25
+          },
+          {
+            "name": "Acute Disease",
+            "rank": 0.25
+          },
+          {
+            "name": "Extracellular Fluid",
+            "rank": 0.25
+          },
+          {
+            "name": "Water Electrolyte Balance",
+            "rank": 0.25
+          },
+          {
+            "name": "Thirst",
+            "rank": 0.25
+          }
+        ],
+        "pure_ids": [
+          "47cf7fad-bcc6-445b-8c86-3450d2185769"
+        ],
+        "activity_insight_ids": [],
+        "profile_preferences": [
+          {
+            "user_id": 3900,
+            "webaccess_id": "w7k",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    }
+  ]
+}

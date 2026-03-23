@@ -1,0 +1,1589 @@
+{
+  "meta": {
+    "count": 237,
+    "db_response_time_ms": 35,
+    "page": 1,
+    "per_page": 1,
+    "groups_count": null,
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/S157527038",
+      "issn_l": "0013-7227",
+      "issn": [
+        "0013-7227",
+        "1945-7170"
+      ],
+      "display_name": "Endocrinology",
+      "host_organization": "https://openalex.org/P4310311648",
+      "host_organization_name": "Oxford University Press",
+      "host_organization_lineage": [
+        "https://openalex.org/P4310311648",
+        "https://openalex.org/P4310311647"
+      ],
+      "relevance_score": 74045.02,
+      "works_count": 51603,
+      "oa_works_count": 15666,
+      "cited_by_count": 2359411,
+      "summary_stats": {
+        "2yr_mean_citedness": 2.8588516746411483,
+        "h_index": 371,
+        "i10_index": 39243
+      },
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_in_doaj_since_year": null,
+      "is_high_oa_rate": false,
+      "is_high_oa_rate_since_year": null,
+      "is_in_scielo": false,
+      "is_ojs": false,
+      "is_core": true,
+      "oa_flip_year": null,
+      "first_publication_year": 1917,
+      "last_publication_year": 2026,
+      "ids": {
+        "openalex": "https://openalex.org/S157527038",
+        "issn_l": "0013-7227",
+        "issn": [
+          "0013-7227",
+          "1945-7170"
+        ],
+        "mag": "157527038",
+        "wikidata": null
+      },
+      "homepage_url": "https://academic.oup.com/endo/",
+      "apc_prices": [
+        {
+          "price": 3400,
+          "currency": "USD"
+        }
+      ],
+      "apc_usd": 3400,
+      "country_code": "US",
+      "societies": [],
+      "alternate_titles": [],
+      "type": "journal",
+      "topics": [
+        {
+          "id": "https://openalex.org/T10748",
+          "display_name": "Growth Hormone and Insulin-like Growth Factors",
+          "count": 8512,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10756",
+          "display_name": "Estrogen and related hormone effects",
+          "count": 6113,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1311",
+            "display_name": "Genetics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10960",
+          "display_name": "Hypothalamic control of reproductive hormones",
+          "count": 4575,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2743",
+            "display_name": "Reproductive Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10293",
+          "display_name": "Thyroid Disorders and Treatments",
+          "count": 3719,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11839",
+          "display_name": "Hormonal Regulation and Hypertension",
+          "count": 3521,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10529",
+          "display_name": "Stress Responses and Cortisol",
+          "count": 3513,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2802",
+            "display_name": "Behavioral Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11457",
+          "display_name": "Adipose Tissue and Metabolism",
+          "count": 3180,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2737",
+            "display_name": "Physiology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10839",
+          "display_name": "Pancreatic function and diabetes",
+          "count": 3165,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2746",
+            "display_name": "Surgery"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11146",
+          "display_name": "Hormonal and reproductive studies",
+          "count": 3062,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10489",
+          "display_name": "Regulation of Appetite and Obesity",
+          "count": 2975,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2807",
+            "display_name": "Endocrine and Autonomic Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10364",
+          "display_name": "Reproductive Biology and Fertility",
+          "count": 2668,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2739",
+            "display_name": "Public Health, Environmental and Occupational Health"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11541",
+          "display_name": "Neuroendocrine regulation and behavior",
+          "count": 2626,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3207",
+            "display_name": "Social Psychology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/32",
+            "display_name": "Psychology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10814",
+          "display_name": "Neuropeptides and Animal Physiology",
+          "count": 2566,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2804",
+            "display_name": "Cellular and Molecular Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11339",
+          "display_name": "Metabolism, Diabetes, and Cancer",
+          "count": 2519,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11629",
+          "display_name": "Birth, Development, and Health",
+          "count": 2281,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2735",
+            "display_name": "Pediatrics, Perinatology and Child Health"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10390",
+          "display_name": "Ovarian function and disorders",
+          "count": 2176,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2743",
+            "display_name": "Reproductive Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10584",
+          "display_name": "Reproductive Physiology in Livestock",
+          "count": 2139,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1102",
+            "display_name": "Agronomy and Crop Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/11",
+            "display_name": "Agricultural and Biological Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11510",
+          "display_name": "Reproductive System and Pregnancy",
+          "count": 2022,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2403",
+            "display_name": "Immunology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/24",
+            "display_name": "Immunology and Microbiology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11178",
+          "display_name": "Receptor Mechanisms and Signaling",
+          "count": 1992,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10116",
+          "display_name": "Sperm and Testicular Function",
+          "count": 1572,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2743",
+            "display_name": "Reproductive Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12267",
+          "display_name": "Diet and metabolism studies",
+          "count": 1557,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2737",
+            "display_name": "Physiology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12421",
+          "display_name": "Adrenal Hormones and Disorders",
+          "count": 1390,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10631",
+          "display_name": "Cancer, Hypoxia, and Metabolism",
+          "count": 1275,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1306",
+            "display_name": "Cancer Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10832",
+          "display_name": "Pituitary Gland Disorders and Treatments",
+          "count": 1261,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11221",
+          "display_name": "Bone health and treatments",
+          "count": 1230,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2730",
+            "display_name": "Oncology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        }
+      ],
+      "topic_share": [
+        {
+          "id": "https://openalex.org/T10960",
+          "display_name": "Hypothalamic control of reproductive hormones",
+          "value": 0.0428094,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2743",
+            "display_name": "Reproductive Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10748",
+          "display_name": "Growth Hormone and Insulin-like Growth Factors",
+          "value": 0.0376701,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10756",
+          "display_name": "Estrogen and related hormone effects",
+          "value": 0.0230043,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1311",
+            "display_name": "Genetics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10293",
+          "display_name": "Thyroid Disorders and Treatments",
+          "value": 0.0201493,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10489",
+          "display_name": "Regulation of Appetite and Obesity",
+          "value": 0.0184717,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2807",
+            "display_name": "Endocrine and Autonomic Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11839",
+          "display_name": "Hormonal Regulation and Hypertension",
+          "value": 0.0155921,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11146",
+          "display_name": "Hormonal and reproductive studies",
+          "value": 0.014137,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10529",
+          "display_name": "Stress Responses and Cortisol",
+          "value": 0.0129103,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2802",
+            "display_name": "Behavioral Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11339",
+          "display_name": "Metabolism, Diabetes, and Cancer",
+          "value": 0.0124482,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11541",
+          "display_name": "Neuroendocrine regulation and behavior",
+          "value": 0.0118359,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3207",
+            "display_name": "Social Psychology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/32",
+            "display_name": "Psychology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10390",
+          "display_name": "Ovarian function and disorders",
+          "value": 0.0110604,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2743",
+            "display_name": "Reproductive Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11501",
+          "display_name": "TGF-β signaling in diseases",
+          "value": 0.0106258,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12421",
+          "display_name": "Adrenal Hormones and Disorders",
+          "value": 0.0101594,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10839",
+          "display_name": "Pancreatic function and diabetes",
+          "value": 0.0099831,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2746",
+            "display_name": "Surgery"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10584",
+          "display_name": "Reproductive Physiology in Livestock",
+          "value": 0.0096898,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1102",
+            "display_name": "Agronomy and Crop Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/11",
+            "display_name": "Agricultural and Biological Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10814",
+          "display_name": "Neuropeptides and Animal Physiology",
+          "value": 0.009638,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2804",
+            "display_name": "Cellular and Molecular Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T14486",
+          "display_name": "Cardiovascular, Neuropeptides, and Oxidative Stress Research",
+          "value": 0.008963,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2746",
+            "display_name": "Surgery"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11457",
+          "display_name": "Adipose Tissue and Metabolism",
+          "value": 0.0087803,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2737",
+            "display_name": "Physiology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11510",
+          "display_name": "Reproductive System and Pregnancy",
+          "value": 0.0086386,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2403",
+            "display_name": "Immunology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/24",
+            "display_name": "Immunology and Microbiology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11956",
+          "display_name": "Sexual Differentiation and Disorders",
+          "value": 0.0076729,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11219",
+          "display_name": "Bone Metabolism and Diseases",
+          "value": 0.007547,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10116",
+          "display_name": "Sperm and Testicular Function",
+          "value": 0.0071102,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2743",
+            "display_name": "Reproductive Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10364",
+          "display_name": "Reproductive Biology and Fertility",
+          "value": 0.0071069,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2739",
+            "display_name": "Public Health, Environmental and Occupational Health"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10169",
+          "display_name": "Protein Kinase Regulation and GTPase Signaling",
+          "value": 0.0064603,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1312",
+            "display_name": "Molecular Biology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10832",
+          "display_name": "Pituitary Gland Disorders and Treatments",
+          "value": 0.005975,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2712",
+            "display_name": "Endocrinology, Diabetes and Metabolism"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        }
+      ],
+      "counts_by_year": [
+        {
+          "year": 2026,
+          "works_count": 27,
+          "oa_works_count": 10,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2025,
+          "works_count": 225,
+          "oa_works_count": 153,
+          "cited_by_count": 331
+        },
+        {
+          "year": 2024,
+          "works_count": 166,
+          "oa_works_count": 125,
+          "cited_by_count": 861
+        },
+        {
+          "year": 2023,
+          "works_count": 205,
+          "oa_works_count": 169,
+          "cited_by_count": 1727
+        },
+        {
+          "year": 2022,
+          "works_count": 215,
+          "oa_works_count": 204,
+          "cited_by_count": 2829
+        },
+        {
+          "year": 2021,
+          "works_count": 270,
+          "oa_works_count": 268,
+          "cited_by_count": 5805
+        },
+        {
+          "year": 2020,
+          "works_count": 256,
+          "oa_works_count": 249,
+          "cited_by_count": 7992
+        },
+        {
+          "year": 2019,
+          "works_count": 250,
+          "oa_works_count": 243,
+          "cited_by_count": 7218
+        },
+        {
+          "year": 2018,
+          "works_count": 289,
+          "oa_works_count": 281,
+          "cited_by_count": 11043
+        },
+        {
+          "year": 2017,
+          "works_count": 451,
+          "oa_works_count": 435,
+          "cited_by_count": 15759
+        },
+        {
+          "year": 2016,
+          "works_count": 456,
+          "oa_works_count": 404,
+          "cited_by_count": 14742
+        },
+        {
+          "year": 2015,
+          "works_count": 514,
+          "oa_works_count": 424,
+          "cited_by_count": 21850
+        },
+        {
+          "year": 2014,
+          "works_count": 536,
+          "oa_works_count": 493,
+          "cited_by_count": 24766
+        },
+        {
+          "year": 2013,
+          "works_count": 499,
+          "oa_works_count": 450,
+          "cited_by_count": 24835
+        },
+        {
+          "year": 2012,
+          "works_count": 583,
+          "oa_works_count": 527,
+          "cited_by_count": 33401
+        },
+        {
+          "year": 2011,
+          "works_count": 568,
+          "oa_works_count": 494,
+          "cited_by_count": 34303
+        },
+        {
+          "year": 2010,
+          "works_count": 676,
+          "oa_works_count": 569,
+          "cited_by_count": 39745
+        },
+        {
+          "year": 2009,
+          "works_count": 555,
+          "oa_works_count": 464,
+          "cited_by_count": 38172
+        },
+        {
+          "year": 2008,
+          "works_count": 794,
+          "oa_works_count": 673,
+          "cited_by_count": 53495
+        },
+        {
+          "year": 2007,
+          "works_count": 735,
+          "oa_works_count": 563,
+          "cited_by_count": 49934
+        },
+        {
+          "year": 2006,
+          "works_count": 703,
+          "oa_works_count": 513,
+          "cited_by_count": 55444
+        },
+        {
+          "year": 2005,
+          "works_count": 681,
+          "oa_works_count": 506,
+          "cited_by_count": 58955
+        },
+        {
+          "year": 2004,
+          "works_count": 708,
+          "oa_works_count": 507,
+          "cited_by_count": 62206
+        },
+        {
+          "year": 2003,
+          "works_count": 851,
+          "oa_works_count": 621,
+          "cited_by_count": 75655
+        },
+        {
+          "year": 2002,
+          "works_count": 1080,
+          "oa_works_count": 601,
+          "cited_by_count": 58736
+        },
+        {
+          "year": 2001,
+          "works_count": 1334,
+          "oa_works_count": 657,
+          "cited_by_count": 68286
+        },
+        {
+          "year": 2000,
+          "works_count": 1170,
+          "oa_works_count": 559,
+          "cited_by_count": 68895
+        },
+        {
+          "year": 1999,
+          "works_count": 1478,
+          "oa_works_count": 721,
+          "cited_by_count": 79157
+        },
+        {
+          "year": 1998,
+          "works_count": 1336,
+          "oa_works_count": 643,
+          "cited_by_count": 73829
+        },
+        {
+          "year": 1997,
+          "works_count": 1486,
+          "oa_works_count": 707,
+          "cited_by_count": 81107
+        },
+        {
+          "year": 1996,
+          "works_count": 1529,
+          "oa_works_count": 817,
+          "cited_by_count": 69468
+        },
+        {
+          "year": 1995,
+          "works_count": 1499,
+          "oa_works_count": 11,
+          "cited_by_count": 64449
+        },
+        {
+          "year": 1994,
+          "works_count": 1484,
+          "oa_works_count": 15,
+          "cited_by_count": 64245
+        },
+        {
+          "year": 1993,
+          "works_count": 1599,
+          "oa_works_count": 22,
+          "cited_by_count": 71459
+        },
+        {
+          "year": 1992,
+          "works_count": 1882,
+          "oa_works_count": 57,
+          "cited_by_count": 71138
+        },
+        {
+          "year": 1991,
+          "works_count": 993,
+          "oa_works_count": 49,
+          "cited_by_count": 54131
+        },
+        {
+          "year": 1990,
+          "works_count": 951,
+          "oa_works_count": 65,
+          "cited_by_count": 51197
+        },
+        {
+          "year": 1989,
+          "works_count": 953,
+          "oa_works_count": 59,
+          "cited_by_count": 49739
+        },
+        {
+          "year": 1988,
+          "works_count": 910,
+          "oa_works_count": 37,
+          "cited_by_count": 44869
+        },
+        {
+          "year": 1987,
+          "works_count": 774,
+          "oa_works_count": 38,
+          "cited_by_count": 34290
+        },
+        {
+          "year": 1986,
+          "works_count": 881,
+          "oa_works_count": 50,
+          "cited_by_count": 39967
+        },
+        {
+          "year": 1985,
+          "works_count": 871,
+          "oa_works_count": 56,
+          "cited_by_count": 42319
+        },
+        {
+          "year": 1984,
+          "works_count": 820,
+          "oa_works_count": 50,
+          "cited_by_count": 37160
+        },
+        {
+          "year": 1983,
+          "works_count": 797,
+          "oa_works_count": 47,
+          "cited_by_count": 34093
+        },
+        {
+          "year": 1982,
+          "works_count": 782,
+          "oa_works_count": 29,
+          "cited_by_count": 33575
+        },
+        {
+          "year": 1981,
+          "works_count": 786,
+          "oa_works_count": 45,
+          "cited_by_count": 35085
+        },
+        {
+          "year": 1980,
+          "works_count": 688,
+          "oa_works_count": 28,
+          "cited_by_count": 32500
+        },
+        {
+          "year": 1979,
+          "works_count": 603,
+          "oa_works_count": 32,
+          "cited_by_count": 28828
+        },
+        {
+          "year": 1978,
+          "works_count": 637,
+          "oa_works_count": 23,
+          "cited_by_count": 31072
+        },
+        {
+          "year": 1977,
+          "works_count": 503,
+          "oa_works_count": 18,
+          "cited_by_count": 27456
+        },
+        {
+          "year": 1976,
+          "works_count": 417,
+          "oa_works_count": 30,
+          "cited_by_count": 26344
+        },
+        {
+          "year": 1975,
+          "works_count": 455,
+          "oa_works_count": 39,
+          "cited_by_count": 27024
+        },
+        {
+          "year": 1974,
+          "works_count": 506,
+          "oa_works_count": 34,
+          "cited_by_count": 28336
+        },
+        {
+          "year": 1973,
+          "works_count": 481,
+          "oa_works_count": 24,
+          "cited_by_count": 20791
+        },
+        {
+          "year": 1972,
+          "works_count": 483,
+          "oa_works_count": 37,
+          "cited_by_count": 21358
+        },
+        {
+          "year": 1971,
+          "works_count": 467,
+          "oa_works_count": 38,
+          "cited_by_count": 17520
+        },
+        {
+          "year": 1970,
+          "works_count": 421,
+          "oa_works_count": 29,
+          "cited_by_count": 16455
+        },
+        {
+          "year": 1969,
+          "works_count": 422,
+          "oa_works_count": 24,
+          "cited_by_count": 15082
+        },
+        {
+          "year": 1968,
+          "works_count": 392,
+          "oa_works_count": 24,
+          "cited_by_count": 13291
+        },
+        {
+          "year": 1967,
+          "works_count": 393,
+          "oa_works_count": 30,
+          "cited_by_count": 11773
+        },
+        {
+          "year": 1966,
+          "works_count": 364,
+          "oa_works_count": 28,
+          "cited_by_count": 11048
+        },
+        {
+          "year": 1965,
+          "works_count": 354,
+          "oa_works_count": 33,
+          "cited_by_count": 9410
+        },
+        {
+          "year": 1964,
+          "works_count": 338,
+          "oa_works_count": 28,
+          "cited_by_count": 8593
+        },
+        {
+          "year": 1963,
+          "works_count": 301,
+          "oa_works_count": 26,
+          "cited_by_count": 8140
+        },
+        {
+          "year": 1962,
+          "works_count": 299,
+          "oa_works_count": 21,
+          "cited_by_count": 9134
+        },
+        {
+          "year": 1961,
+          "works_count": 311,
+          "oa_works_count": 24,
+          "cited_by_count": 9877
+        },
+        {
+          "year": 1960,
+          "works_count": 273,
+          "oa_works_count": 14,
+          "cited_by_count": 6163
+        },
+        {
+          "year": 1959,
+          "works_count": 279,
+          "oa_works_count": 22,
+          "cited_by_count": 9050
+        },
+        {
+          "year": 1958,
+          "works_count": 250,
+          "oa_works_count": 14,
+          "cited_by_count": 6635
+        },
+        {
+          "year": 1957,
+          "works_count": 226,
+          "oa_works_count": 26,
+          "cited_by_count": 5128
+        },
+        {
+          "year": 1956,
+          "works_count": 228,
+          "oa_works_count": 11,
+          "cited_by_count": 4722
+        },
+        {
+          "year": 1955,
+          "works_count": 218,
+          "oa_works_count": 14,
+          "cited_by_count": 5769
+        },
+        {
+          "year": 1954,
+          "works_count": 215,
+          "oa_works_count": 12,
+          "cited_by_count": 5125
+        },
+        {
+          "year": 1953,
+          "works_count": 194,
+          "oa_works_count": 8,
+          "cited_by_count": 4987
+        },
+        {
+          "year": 1952,
+          "works_count": 160,
+          "oa_works_count": 7,
+          "cited_by_count": 3620
+        },
+        {
+          "year": 1951,
+          "works_count": 194,
+          "oa_works_count": 9,
+          "cited_by_count": 4332
+        },
+        {
+          "year": 1950,
+          "works_count": 145,
+          "oa_works_count": 9,
+          "cited_by_count": 3991
+        },
+        {
+          "year": 1949,
+          "works_count": 170,
+          "oa_works_count": 9,
+          "cited_by_count": 4930
+        },
+        {
+          "year": 1948,
+          "works_count": 127,
+          "oa_works_count": 3,
+          "cited_by_count": 2970
+        },
+        {
+          "year": 1947,
+          "works_count": 139,
+          "oa_works_count": 9,
+          "cited_by_count": 3313
+        },
+        {
+          "year": 1946,
+          "works_count": 113,
+          "oa_works_count": 6,
+          "cited_by_count": 2799
+        },
+        {
+          "year": 1945,
+          "works_count": 142,
+          "oa_works_count": 8,
+          "cited_by_count": 2519
+        },
+        {
+          "year": 1944,
+          "works_count": 125,
+          "oa_works_count": 9,
+          "cited_by_count": 3161
+        },
+        {
+          "year": 1943,
+          "works_count": 138,
+          "oa_works_count": 10,
+          "cited_by_count": 3126
+        },
+        {
+          "year": 1942,
+          "works_count": 248,
+          "oa_works_count": 13,
+          "cited_by_count": 3742
+        },
+        {
+          "year": 1941,
+          "works_count": 323,
+          "oa_works_count": 16,
+          "cited_by_count": 5296
+        },
+        {
+          "year": 1940,
+          "works_count": 344,
+          "oa_works_count": 24,
+          "cited_by_count": 4783
+        },
+        {
+          "year": 1939,
+          "works_count": 263,
+          "oa_works_count": 3,
+          "cited_by_count": 3776
+        },
+        {
+          "year": 1938,
+          "works_count": 204,
+          "oa_works_count": 13,
+          "cited_by_count": 4510
+        },
+        {
+          "year": 1937,
+          "works_count": 114,
+          "oa_works_count": 3,
+          "cited_by_count": 2229
+        },
+        {
+          "year": 1936,
+          "works_count": 116,
+          "oa_works_count": 12,
+          "cited_by_count": 1386
+        },
+        {
+          "year": 1935,
+          "works_count": 90,
+          "oa_works_count": 8,
+          "cited_by_count": 742
+        },
+        {
+          "year": 1934,
+          "works_count": 85,
+          "oa_works_count": 1,
+          "cited_by_count": 1019
+        },
+        {
+          "year": 1933,
+          "works_count": 72,
+          "oa_works_count": 3,
+          "cited_by_count": 797
+        },
+        {
+          "year": 1932,
+          "works_count": 69,
+          "oa_works_count": 5,
+          "cited_by_count": 1171
+        },
+        {
+          "year": 1931,
+          "works_count": 56,
+          "oa_works_count": 6,
+          "cited_by_count": 723
+        },
+        {
+          "year": 1930,
+          "works_count": 87,
+          "oa_works_count": 2,
+          "cited_by_count": 335
+        },
+        {
+          "year": 1929,
+          "works_count": 71,
+          "oa_works_count": 3,
+          "cited_by_count": 460
+        },
+        {
+          "year": 1928,
+          "works_count": 60,
+          "oa_works_count": 6,
+          "cited_by_count": 392
+        },
+        {
+          "year": 1927,
+          "works_count": 54,
+          "oa_works_count": 0,
+          "cited_by_count": 325
+        },
+        {
+          "year": 1926,
+          "works_count": 57,
+          "oa_works_count": 3,
+          "cited_by_count": 394
+        },
+        {
+          "year": 1925,
+          "works_count": 59,
+          "oa_works_count": 5,
+          "cited_by_count": 316
+        },
+        {
+          "year": 1924,
+          "works_count": 69,
+          "oa_works_count": 6,
+          "cited_by_count": 302
+        },
+        {
+          "year": 1923,
+          "works_count": 63,
+          "oa_works_count": 5,
+          "cited_by_count": 281
+        },
+        {
+          "year": 1922,
+          "works_count": 79,
+          "oa_works_count": 18,
+          "cited_by_count": 503
+        },
+        {
+          "year": 1921,
+          "works_count": 67,
+          "oa_works_count": 18,
+          "cited_by_count": 457
+        },
+        {
+          "year": 1920,
+          "works_count": 48,
+          "oa_works_count": 12,
+          "cited_by_count": 337
+        },
+        {
+          "year": 1919,
+          "works_count": 34,
+          "oa_works_count": 8,
+          "cited_by_count": 126
+        },
+        {
+          "year": 1918,
+          "works_count": 35,
+          "oa_works_count": 10,
+          "cited_by_count": 158
+        },
+        {
+          "year": 1917,
+          "works_count": 57,
+          "oa_works_count": 13,
+          "cited_by_count": 214
+        }
+      ],
+      "works_api_url": "https://api.openalex.org/works?filter=primary_location.source.id:S157527038",
+      "updated_date": "2026-03-05T10:02:55",
+      "created_date": "2016-06-24T00:00:00"
+    }
+  ],
+  "group_by": []
+}

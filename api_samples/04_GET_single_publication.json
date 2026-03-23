@@ -1,0 +1,351 @@
+{
+  "data": {
+    "id": "4",
+    "type": "publication",
+    "attributes": {
+      "title": "Rapid estrogen receptor-α activation improves ischemic tolerance in aged female rats through a novel protein kinase Cε -dependent mechanism",
+      "secondary_title": null,
+      "publication_type": "Academic Journal Article",
+      "status": "Published",
+      "volume": "150",
+      "issue": "2",
+      "edition": null,
+      "page_range": "889-896",
+      "authors_et_al": null,
+      "abstract": "The effects of estrogen deficiency on the loss of cardioprotection with advancing age are complex and poorly understood. A major focus of the current study was to uncover a cardioprotective role for rapid, nongenomic estrogen receptor (ER) signaling in the aged female myocardium. We hypothesized that selective ERα activation in aged females would reduce infarct size in part, through reversal of age-associated reductions in mitochondrial protein kinase Cepsi; (PKCepsi;). Hearts isolated from adult (6 month old) and aged (23-24 months old) female F344 rats with ovaries removed (n = 20 per group) were subjected to ischemia/reperfusion (47 min global ischemia). Rats were injected sc with the ERα agonist propylpyrazole triol (PPT) or vehicle 45 min before heart isolation (5 mu;g/kg). Infarct size was greatest in aged vs. adult ovariectomized rats, significantly reduced by PPT, and the protection reversed by prior administration of the ER inhibitor ICI 182,780 (3 mg/kg). Increased ERα particulate targeting occurred after PPT in conjunction with reversal of age-related reductions in nuclear PKCepsi;, mitochondrial PKCepsi; and pAkt (P &lt; 0.05). PPT also increased mRNA levels for the PKCepsi; anchoring protein, receptor for activated C kinase2 (RACK2; P &lt; 0.05). Our data suggest, for the first time, that selective ERα activation reduces ischemic injury in the aged, estrogen-deficient heart through a mechanism involving non- genomic redistribution of ERα and PKCepsi; activation. A novel feed-forward transcriptional mechanism to potentially enhance PKCepsi;-RACK2 interactions was also observed. Collectively, our findings may provide key insight into developing targeted therapeutic interventions in post- menopausal women to reduce ischemia/reperfusion injury, including selective ERa mimetics.",
+      "doi": "https://doi.org/10.1210/en.2008-0708",
+      "preferred_open_access_url": "https://academic.oup.com/endo/article-pdf/150/2/889/10900867/endo0889.pdf",
+      "publisher": "Endocrine Society",
+      "journal_title": "Endocrinology (United States)",
+      "published_on": "2009-02-01",
+      "citation_count": 51,
+      "supplementary_url": null,
+      "contributors": [
+        {
+          "first_name": "Jennifer L.",
+          "middle_name": null,
+          "last_name": "Novotny",
+          "psu_user_id": null
+        },
+        {
+          "first_name": "Amy M.",
+          "middle_name": null,
+          "last_name": "Simpson",
+          "psu_user_id": null
+        },
+        {
+          "first_name": "Nanette J.",
+          "middle_name": null,
+          "last_name": "Tomicek",
+          "psu_user_id": null
+        },
+        {
+          "first_name": "Timothy S.",
+          "middle_name": null,
+          "last_name": "Lancaster",
+          "psu_user_id": null
+        },
+        {
+          "first_name": "Donna H.",
+          "middle_name": null,
+          "last_name": "Korzick",
+          "psu_user_id": "dhk102"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Estrogen Receptor",
+          "rank": 4.0
+        },
+        {
+          "name": "Isolated Heart",
+          "rank": 1.25
+        },
+        {
+          "name": "Estrogen Receptor Alpha",
+          "rank": 1.0
+        },
+        {
+          "name": "Aged Female Rat",
+          "rank": 1.0
+        },
+        {
+          "name": "Triol",
+          "rank": 1.0
+        },
+        {
+          "name": "Receptor Activation",
+          "rank": 1.0
+        },
+        {
+          "name": "Protein Kinases",
+          "rank": 1.0
+        },
+        {
+          "name": "Protein Kinase C",
+          "rank": 1.0
+        },
+        {
+          "name": "1,3,5 Tris(4 Hydroxyphenyl) 4 Propyl 1h Pyrazole",
+          "rank": 1.0
+        },
+        {
+          "name": "Ischemic Tolerance",
+          "rank": 1.0
+        },
+        {
+          "name": "Novel Protein Kinase C",
+          "rank": 1.0
+        },
+        {
+          "name": "Female Rats",
+          "rank": 1.0
+        },
+        {
+          "name": "Fischer 344 Rat",
+          "rank": 0.75
+        },
+        {
+          "name": "4,4',4'' (4 Propyl ((1)H) Pyrazole 1,3,5 Triyl) Tris Phenol",
+          "rank": 0.6666667
+        },
+        {
+          "name": "Postmenopause",
+          "rank": 0.625
+        },
+        {
+          "name": "Aged Female",
+          "rank": 0.5
+        },
+        {
+          "name": "Cardioprotection",
+          "rank": 0.5
+        },
+        {
+          "name": "1,3,5 Tris(4 Hydroxyphenyl) 4 Propylpyrazole",
+          "rank": 0.5
+        },
+        {
+          "name": "Ischemia",
+          "rank": 0.5
+        },
+        {
+          "name": "Estrogen Receptors",
+          "rank": 0.5
+        },
+        {
+          "name": "Estrogens",
+          "rank": 0.5
+        },
+        {
+          "name": "Heart",
+          "rank": 0.5
+        },
+        {
+          "name": "Agonist",
+          "rank": 0.5
+        },
+        {
+          "name": "Ischemia Reperfusion Injury",
+          "rank": 0.5
+        },
+        {
+          "name": "Selective Estrogen Receptor Modulators",
+          "rank": 0.5
+        },
+        {
+          "name": "Non Genomic",
+          "rank": 0.5
+        },
+        {
+          "name": "Infarct Size",
+          "rank": 0.5
+        },
+        {
+          "name": "Estrogen Deficiency",
+          "rank": 0.375
+        },
+        {
+          "name": "Eicosanoid Receptor",
+          "rank": 0.375
+        },
+        {
+          "name": "Mitochondrial Protein",
+          "rank": 0.375
+        },
+        {
+          "name": "Infarction",
+          "rank": 0.333333343
+        },
+        {
+          "name": "Age Associated",
+          "rank": 0.25
+        },
+        {
+          "name": "Ischemic Injury",
+          "rank": 0.25
+        },
+        {
+          "name": "Akt1",
+          "rank": 0.25
+        },
+        {
+          "name": "Receptor Agonists",
+          "rank": 0.25
+        },
+        {
+          "name": "Receptor Protein",
+          "rank": 0.25
+        },
+        {
+          "name": "Estrogen Receptor Signaling",
+          "rank": 0.25
+        },
+        {
+          "name": "Mitochondrial Proteins",
+          "rank": 0.25
+        },
+        {
+          "name": "Inbred F344 Rats",
+          "rank": 0.25
+        },
+        {
+          "name": "Reperfusion Injury",
+          "rank": 0.25
+        },
+        {
+          "name": "Reperfusion",
+          "rank": 0.25
+        },
+        {
+          "name": "Ovary",
+          "rank": 0.25
+        },
+        {
+          "name": "Myocardium",
+          "rank": 0.25
+        },
+        {
+          "name": "Messenger Rna",
+          "rank": 0.25
+        },
+        {
+          "name": "Wounds And Injuries",
+          "rank": 0.25
+        },
+        {
+          "name": "Therapeutics",
+          "rank": 0.25
+        },
+        {
+          "name": "Activated Protein C Receptor",
+          "rank": 0.25
+        },
+        {
+          "name": "Fulvestrant",
+          "rank": 0.25
+        },
+        {
+          "name": "Protein Kinase",
+          "rank": 0.25
+        },
+        {
+          "name": "Protein Receptor",
+          "rank": 0.25
+        },
+        {
+          "name": "Advancing Age",
+          "rank": 0.25
+        },
+        {
+          "name": "Transcriptional Mechanism",
+          "rank": 0.25
+        },
+        {
+          "name": "Postmenopausal Women",
+          "rank": 0.25
+        },
+        {
+          "name": "Therapeutic Intervention",
+          "rank": 0.25
+        },
+        {
+          "name": "Young Female",
+          "rank": 0.25
+        },
+        {
+          "name": "Estrogen Receptor Inhibitors",
+          "rank": 0.25
+        },
+        {
+          "name": "F344 Rats",
+          "rank": 0.25
+        },
+        {
+          "name": "Targeted Therapeutics",
+          "rank": 0.25
+        },
+        {
+          "name": "Age Related",
+          "rank": 0.25
+        },
+        {
+          "name": "Novel Feeds",
+          "rank": 0.25
+        },
+        {
+          "name": "Ici 182,780",
+          "rank": 0.25
+        },
+        {
+          "name": "Global Ischemia",
+          "rank": 0.25
+        },
+        {
+          "name": "Ovariectomized Rats",
+          "rank": 0.25
+        },
+        {
+          "name": "Estrogen Receptor Agonists",
+          "rank": 0.25
+        },
+        {
+          "name": "Estrogen",
+          "rank": 0.25
+        },
+        {
+          "name": "Anchoring Proteins",
+          "rank": 0.25
+        },
+        {
+          "name": "Mrna Level",
+          "rank": 0.25
+        },
+        {
+          "name": "Receptor Agonist",
+          "rank": 0.125
+        },
+        {
+          "name": "Receptor",
+          "rank": 0.125
+        },
+        {
+          "name": "Injury",
+          "rank": 0.125
+        }
+      ],
+      "pure_ids": [
+        "479d4f29-6067-48b6-abb8-1345776810c9"
+      ],
+      "activity_insight_ids": [],
+      "profile_preferences": [
+        {
+          "user_id": 787,
+          "webaccess_id": "dhk102",
+          "visible_in_profile": true,
+          "position_in_profile": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "id": "3198",
+      "type": "organization_membership",
+      "attributes": {
+        "organization_name": "Kinesiology",
+        "organization_type": "Department",
+        "position_title": "Professor",
+        "position_started_on": "2000-01-03",
+        "position_ended_on": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,1971 @@
+{
+  "data": [
+    {
+      "id": "57137",
+      "type": "presentation",
+      "attributes": {
+        "title": "Inhibition of Programmed Necrosis Limits Infarct Size through Altered Mitochondrial and Immune Responses in the Aged Female Rat Heart",
+        "activity_insight_identifier": "161929052160",
+        "name": "Women’s Health Research Conference",
+        "organization": "Penn State University",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57140",
+      "type": "presentation",
+      "attributes": {
+        "title": "Why Penn State? (October 2017)",
+        "activity_insight_identifier": "161928939520",
+        "name": "2017 STEM Openhouse",
+        "organization": "Penn State Graduate School",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Panels",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "I moderated a faculty panel discussion for students from URM backgrounds for a recruitment session for the graduate school.",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57141",
+      "type": "presentation",
+      "attributes": {
+        "title": "Acute Coronary Syndrome:  How Does the Aged Female Heart Die?",
+        "activity_insight_identifier": "161928949760",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": "The Pennsylvania State University",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57142",
+      "type": "presentation",
+      "attributes": {
+        "title": "T32 Supplements Rigor and Reproducibility",
+        "activity_insight_identifier": "161929015296",
+        "name": "Training, Workforce Development & Diversity (TWD) 2017 Program Directors' Meeting",
+        "organization": "NIH",
+        "location": "Baltimore Maryland",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Panels",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": "Invited by NIH NIGMS program officials to present on our T32 boot camp development and implementation; podium presentation/part of a panel",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57143",
+      "type": "presentation",
+      "attributes": {
+        "title": "Advanced training in business entrepreneurship or research reproducibility:  a value added approach",
+        "activity_insight_identifier": "161929027584",
+        "name": "Training, Workforce Development & Diversity (TWD) 2017 Program Directors' Meeting",
+        "organization": "NIH",
+        "location": "Baltimore Maryland",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57144",
+      "type": "presentation",
+      "attributes": {
+        "title": null,
+        "activity_insight_identifier": "87012403200",
+        "name": "Physiology IGDP Research Retreat 2017",
+        "organization": "The Huck Institutes of the Life Sciences",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "session moderator, participant, organizer",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57145",
+      "type": "presentation",
+      "attributes": {
+        "title": "Why Penn State? (October 2016)",
+        "activity_insight_identifier": "144932089856",
+        "name": "2016 STEM Openhouse",
+        "organization": "Penn State Graduate School",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Panels",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "I moderated a faculty panel discussion for students from URM backgrounds for a recruitment session for graduate school",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57146",
+      "type": "presentation",
+      "attributes": {
+        "title": "Oh the research places you will go!",
+        "activity_insight_identifier": "144932198400",
+        "name": "SROP and McNair Scholars Program Research Symposium",
+        "organization": "Penn State Office of Graduate Educational Equity Programs (OGEEP)",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Keynotes/Plenary Addresses",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "Keynote address for closing program for the annual SROP and McNair Scholars Program Research Symposium",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57147",
+      "type": "presentation",
+      "attributes": {
+        "title": "Post-Menopausal Estrogen Deficiency and Acute Coronary Syndrome:  How Does the Aged Female Heart Die?",
+        "activity_insight_identifier": "87011872768",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": "The Pennsylvania State University, Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57148",
+      "type": "presentation",
+      "attributes": {
+        "title": "Mending a Broken Heart:  Mitochondria as Therapeutic Targets to Reduce Cardiovascular Deaths in Aged Women",
+        "activity_insight_identifier": "144920422400",
+        "name": "Undergraduate Research in Science and Engineering\" (U-RISE)",
+        "organization": "Schreyer Honors College",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "60 min slide seminar",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57149",
+      "type": "presentation",
+      "attributes": {
+        "title": "Mitochondrial Quality Control in the Function of the Heart and Other Organs",
+        "activity_insight_identifier": "126388506624",
+        "name": "5th Regional Translational Research in Mitochondria, Aging, and Disease –TriMAD Symposia",
+        "organization": null,
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Organized and Chaired Plenary Session",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "Regional",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57150",
+      "type": "presentation",
+      "attributes": {
+        "title": null,
+        "activity_insight_identifier": "144932337664",
+        "name": "Physiology IGDP Research Retreat 2015",
+        "organization": "The Huck Institutes of the Life Sciences",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "session moderator, participant, organizer",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57138",
+      "type": "presentation",
+      "attributes": {
+        "title": "Influence of Age and Ischemia on Cardiac Subsarcolemmal and Interfibrillar Mitochondria Function and Morphology in a Novel Model of Estrogen Deficiency",
+        "activity_insight_identifier": "161929041920",
+        "name": "Arizona Physiological Society Annual Meeting",
+        "organization": null,
+        "location": "Flagstaff, AZ",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "Regional",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57139",
+      "type": "presentation",
+      "attributes": {
+        "title": "Programmed Necrosis in the Aged Female Heart:  Are Mitochondria Immune from Damage?",
+        "activity_insight_identifier": "161928992768",
+        "name": "Department of Biomedical Engineering Seminar Series",
+        "organization": "Penn State University",
+        "location": "Penn State University",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57151",
+      "type": "presentation",
+      "attributes": {
+        "title": "\"Influence of Age and Ischemia on Cardiac Subsarcolemmal and Interfibrillar Mitochondria Function and Morphology in a Novel Model of Estrogen Deficiency",
+        "activity_insight_identifier": "126382999552",
+        "name": "5th Regional Translational Research in Mitochondria, Aging, and Disease –TriMAD Symposia",
+        "organization": null,
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "Regional",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57152",
+      "type": "presentation",
+      "attributes": {
+        "title": "Influence of age and ischemia on cardiac sub-sarcolemmal and interfibrillar mitochondria in a novel model of estrogen deficiency",
+        "activity_insight_identifier": "126383052800",
+        "name": "Basic Cardiovascular Sciences Conference (BCVS) Conference",
+        "organization": "American Heart Association",
+        "location": "New Orleans, LA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "International",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57153",
+      "type": "presentation",
+      "attributes": {
+        "title": "Delivering Effective Seminars:  Presenting Data at a Scientific Meeting",
+        "activity_insight_identifier": "87011807232",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": "The Pennsylvania State University, Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57154",
+      "type": "presentation",
+      "attributes": {
+        "title": "Risk Factors for Cardiovascular Disease and other Introductory Heart Facts",
+        "activity_insight_identifier": "87011934208",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": "The Pennsylvania State University, Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57155",
+      "type": "presentation",
+      "attributes": {
+        "title": "Academia and Work-Family Balance: Imagine the Possibilities",
+        "activity_insight_identifier": "126388887552",
+        "name": null,
+        "organization": "Penn State Physiology IGDP",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Panels",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "As part of our ongoing career planning discussions, I organized this session focused on balancing work and family at various stages of the academic life cycle.  Goals were to share strategies, decision points and some thoughtful reflection on work-family issues you may confront as you move through the academic ranks at an R1 university. All graduate students and post-doctoral fellows were welcomed from across the university.",
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57156",
+      "type": "presentation",
+      "attributes": {
+        "title": "Respiratory physiology",
+        "activity_insight_identifier": "87014451200",
+        "name": "BIOL 472 Mammalian Physiology",
+        "organization": null,
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Visiting Presentations in Classes",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": "Spring semester",
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57157",
+      "type": "presentation",
+      "attributes": {
+        "title": "Influence of Age and Ischemia on Cardiac Mitochondria in a Novel Model of Estrogen Deficiency",
+        "activity_insight_identifier": "106057709568",
+        "name": "4th Regional Translational Research in Mitochondria, Aging, and Disease –TriMAD Symposia",
+        "organization": null,
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Unknown",
+        "abstract": null,
+        "comment": null,
+        "scope": "Regional",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57158",
+      "type": "presentation",
+      "attributes": {
+        "title": "NIH Training Grants:  What's In It for You?",
+        "activity_insight_identifier": "106057852928",
+        "name": "HUCK Graduate Student Orientation",
+        "organization": "HUCK Institutes for the Life Sciences",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57159",
+      "type": "presentation",
+      "attributes": {
+        "title": "The Academic Job Search at Research 1 Universities.",
+        "activity_insight_identifier": "87011659776",
+        "name": "Kinesiology Coloquium",
+        "organization": "The Pennsylvania State University, Department of Kinesiology",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Panels",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57160",
+      "type": "presentation",
+      "attributes": {
+        "title": "Defining the Mentoring Relationship:  Your Responsibilities as a Mentee",
+        "activity_insight_identifier": "87011741696",
+        "name": "Noll Seminar",
+        "organization": "The Pennsylvania State University, Department of Kinesiology",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57161",
+      "type": "presentation",
+      "attributes": {
+        "title": null,
+        "activity_insight_identifier": "87012331520",
+        "name": "Bioinformatics and Genomics IGDP Research Retreat 2013",
+        "organization": "The Huck Institutes of the Life Sciences",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Participant",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57162",
+      "type": "presentation",
+      "attributes": {
+        "title": null,
+        "activity_insight_identifier": "87012438016",
+        "name": "National Directors of Graduate Programs in Pharmacology and Physiology Biennial Meeting",
+        "organization": null,
+        "location": "Fort Worth, TX",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Participant",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57163",
+      "type": "presentation",
+      "attributes": {
+        "title": "Aging exacerbates alcohol-induced decrease in skeletal muscle protein synthesis",
+        "activity_insight_identifier": "87011422208",
+        "name": "Annual Research Society on Alcoholism",
+        "organization": "Research Society on Alcoholism",
+        "location": "Orlando, FL",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Papers",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          },
+          {
+            "user_id": 536,
+            "webaccess_id": "chl1",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57164",
+      "type": "presentation",
+      "attributes": {
+        "title": null,
+        "activity_insight_identifier": "87012468736",
+        "name": "The Center for Medical Genomics Annual Retreat",
+        "organization": null,
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Participant",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57165",
+      "type": "presentation",
+      "attributes": {
+        "title": "Altered mitochondrial morphology elucidates cell death mechanisms in the aged female rat heart.",
+        "activity_insight_identifier": "87011584000",
+        "name": "Annual Experimental Biology Meeting",
+        "organization": "Experimental Biology",
+        "location": "Boston, MA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Papers",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57166",
+      "type": "presentation",
+      "attributes": {
+        "title": "Consequences of ischemia/reperfusion injury to mitochondria morphology and ultrastructure in an aged female rat model.",
+        "activity_insight_identifier": "87011520512",
+        "name": "Penn State Annual Undergraduate Research Exhibition",
+        "organization": null,
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Papers",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57167",
+      "type": "presentation",
+      "attributes": {
+        "title": "Defining the Mentoring Relationship:  Your Responsibilities as a Mentee",
+        "activity_insight_identifier": "75665979392",
+        "name": "Physiology Graduate Student Meetings",
+        "organization": "The Pennsylvania State University",
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Podiums",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57168",
+      "type": "presentation",
+      "attributes": {
+        "title": "Incrased mitochondrial permeability transition pore opening dominates ischemia-reperfusion injury in the aged female rat heart.",
+        "activity_insight_identifier": "75665973248",
+        "name": "American Heart Association Basic Cardiovascular Sciences Conference 2012 Scientific Sessions",
+        "organization": null,
+        "location": "New Orleans LA.",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "International",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57169",
+      "type": "presentation",
+      "attributes": {
+        "title": "Post-Menopausal Estrogen Deficiency and Acute coronary Syndrome:  Mitochondrial Mechanisms and Cell Death",
+        "activity_insight_identifier": "75665975296",
+        "name": "Department of Nutritional Sciences",
+        "organization": "The Pennsylvania State University",
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Podiums",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57170",
+      "type": "presentation",
+      "attributes": {
+        "title": "Mitochondrial Mechanisms of Cell Death in the Aged Female Rat Heart",
+        "activity_insight_identifier": "75665977344",
+        "name": "Pathobiology, IID, MM and MT Combined Research Retreat",
+        "organization": "The Pennsylvania State University",
+        "location": "Tussey Mountain, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Podiums",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57171",
+      "type": "presentation",
+      "attributes": {
+        "title": "Presenting Data at a Scientific Meeting",
+        "activity_insight_identifier": "75665985536",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": null,
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Podiums",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57172",
+      "type": "presentation",
+      "attributes": {
+        "title": "Components of an effective Poster Presentation.",
+        "activity_insight_identifier": "75665981440",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": null,
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Podiums",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57173",
+      "type": "presentation",
+      "attributes": {
+        "title": "Post-Menopausal Estrogen Deficiency and Acute Coronary Syndrome:  Can Animal Models Tell Us Anything?",
+        "activity_insight_identifier": "75665983488",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": null,
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Podiums",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57174",
+      "type": "presentation",
+      "attributes": {
+        "title": "Risk Factors for Cardiovascular Disease and other Introductory Heart Facts.",
+        "activity_insight_identifier": "75665987584",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": null,
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Podiums",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "57175",
+      "type": "presentation",
+      "attributes": {
+        "title": "Summer Translational Cardiovascular Sciences Institute Overview:  Project Planning and Research Responsibilities",
+        "activity_insight_identifier": "75665989632",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": null,
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Podiums",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "124582",
+      "type": "presentation",
+      "attributes": {
+        "title": "Inhibition of Programmed Necrosis Limits Infarct Size through Altered Mitochondrial and Immune Responses in the Aged Female Rat Heart",
+        "activity_insight_identifier": "182273779712",
+        "name": "8th Translational Research in Mitochondria, Aging and Disease (TRiMAD) Symposium",
+        "organization": "Penn State University, The University of Pittsburgh and The University of Pennsylvania",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "153268",
+      "type": "presentation",
+      "attributes": {
+        "title": "Rigor and Reproducibility:  Evaluating Your Laboratory Environment",
+        "activity_insight_identifier": "201504368640",
+        "name": "Noll Seminar (KINES 590B)",
+        "organization": "Penn State Department of Kinesiology",
+        "location": "127 Noll Laboratory",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "1 hr seminar",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "180881",
+      "type": "presentation",
+      "attributes": {
+        "title": "Why Penn State? (October 2020)",
+        "activity_insight_identifier": "219718266880",
+        "name": "2020 STEM Openhouse",
+        "organization": "Penn State Graduate School",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Panels",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "The annual STEM Open House is an opportunity for Penn State to showcase our graduate programs and recruit students from underrepresented backgrounds. I moderated a faculty panel discussion on \"Why Penn State\" for participating students on behalf  of the Graduate School and OGEEP.",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "203866",
+      "type": "presentation",
+      "attributes": {
+        "title": "Evans Blue Dye Interferes with Gating for Certain Fluorochrome-Conjugated Antibodies Using Flow Cytometry in the Ischemic Rat Heart",
+        "activity_insight_identifier": "233068783616",
+        "name": "Experimental Biology 2022",
+        "organization": "American Physiological Society",
+        "location": "Philadelphia, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "International",
+        "profile_preferences": [
+          {
+            "user_id": 555,
+            "webaccess_id": "cjr102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          },
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "203867",
+      "type": "presentation",
+      "attributes": {
+        "title": "Phenotypic Characterization of Macrophage and Monocyte Populations in the NLRP3 KO DAHL/SS-Nlrp3 Rat Model",
+        "activity_insight_identifier": "233068580864",
+        "name": "Experimental Biology 2022",
+        "organization": "American Physiological Society",
+        "location": "Philadelphia, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "International",
+        "profile_preferences": [
+          {
+            "user_id": 555,
+            "webaccess_id": "cjr102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          },
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "203868",
+      "type": "presentation",
+      "attributes": {
+        "title": "Why Penn State? (October 2021)",
+        "activity_insight_identifier": "233066764288",
+        "name": "2021 STEM Openhouse",
+        "organization": "Penn State Graduate School",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Panels",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "The annual STEM Open House is an opportunity for Penn State to showcase our graduate programs and recruit students from underrepresented backgrounds. I moderated a faculty panel discussion on \"Why Penn State\" for participating students on behalf  of the Graduate School and OGEEP.",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "203869",
+      "type": "presentation",
+      "attributes": {
+        "title": "NIH Training Grants:  What's In It for You?",
+        "activity_insight_identifier": "233089443840",
+        "name": "HUCK Graduate Student Orientation",
+        "organization": "HUCK Institutes for the Life Sciences",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "203870",
+      "type": "presentation",
+      "attributes": {
+        "title": "Myocardial Infarction in Aged Females:  Are Mitochondria Immune from Damage?",
+        "activity_insight_identifier": "233065801728",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": "The Pennsylvania State University",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "228044",
+      "type": "presentation",
+      "attributes": {
+        "title": "The effects of vitamin D on SARS-CoV-2 in the mouse heart",
+        "activity_insight_identifier": "257321007104",
+        "name": "ABRCMS 2022",
+        "organization": "ANNUAL BIOMEDICAL RESEARCH CONFERENCE FOR MINORITIZED SCIENTISTS",
+        "location": "Anaheim, CA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": "Direct SARS-CoV-2 infection in left ventricle was not observed, suggesting that cardiac complications are indirectly related to SARS-CoV-2 infection. A cardioprotective role for vitamin D as a possible therapeutic remains inconclusive.",
+        "comment": null,
+        "scope": "International",
+        "profile_preferences": [
+          {
+            "user_id": 2702,
+            "webaccess_id": "mxc69",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          },
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "228045",
+      "type": "presentation",
+      "attributes": {
+        "title": "Develop Your Mentoring Team: A New Look at Building Strategic Relationships to Maximize Success in Graduate School and Beyond",
+        "activity_insight_identifier": "257371172864",
+        "name": "ABRCMS 2022",
+        "organization": "ANNUAL BIOMEDICAL RESEARCH CONFERENCE FOR MINORITIZED SCIENTISTS",
+        "location": "Anaheim, CA, USA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": 5000,
+        "refereed": "Yes",
+        "abstract": "The essential premise of the session was that successful career navigation<b> </b>requires strategic relationship formation with multiple groups of individuals to ensure professional and<b> </b>personal success.",
+        "comment": "We explored the role of the PI as mentor and establishing healthy<b> </b>interactions, and also other persons inside and outside academia, including peer mentors, to<b> </b>successfully navigate various stress points in the life of a graduate student. The session was also<b> </b>appealing to undergraduate and post bac students. Both didactic and case study<b> </b>approaches (examples of problems, stresses, conflicts and resolution) were employed, providing a road map for<b> </b>students to implement, and form success circles to help navigate issues which may arise.",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "228046",
+      "type": "presentation",
+      "attributes": {
+        "title": "Graduate School Opportunities at Penn State:  Oh the Places You'll Go!",
+        "activity_insight_identifier": "257374478336",
+        "name": "Huck Institutes/Claflin University Pipeline",
+        "organization": "Claflin University (HBCU)",
+        "location": "Zoom (University Park, PA and Orangeburg, SC)",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": 25,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "Hoping to build a URM pipeline program and faculty research exchange program with students and faculty at HBCU Claflin University.",
+        "scope": "Universities",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "228047",
+      "type": "presentation",
+      "attributes": {
+        "title": "Why Penn State? (October 2022)",
+        "activity_insight_identifier": "257361149952",
+        "name": "2022 STEM Openhouse",
+        "organization": "Penn State Graduate School",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Participated in event planning and a program 'mixer' to answer questions and interview URM students visiting Penn State for prospective graduate school opportunities.",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "The annual STEM Open House is an opportunity for Penn State to showcase our graduate programs and recruit students from underrepresented backgrounds. I moderated a faculty panel discussion on \"Why Penn State\" for participating students on behalf  of the Graduate School and OGEEP.",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "228048",
+      "type": "presentation",
+      "attributes": {
+        "title": "Predoctoral Training Grants:  What's In It for You?",
+        "activity_insight_identifier": "257360947200",
+        "name": "HUCK Graduate Student Orientation",
+        "organization": "HUCK Institutes for the Life Sciences",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "256771",
+      "type": "presentation",
+      "attributes": {
+        "title": "NLRP3 Inflammasome Inhibition Reduces Ischemia Reperfusion Injury in Female but not Male Rats",
+        "activity_insight_identifier": "306461198336",
+        "name": "Life Sciences Symposium 2023",
+        "organization": "Huck Institutes of the Life Sciences",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": "First Place \"Best Poster\" Physiology and Nutrition",
+        "scope": "Colleges",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "256772",
+      "type": "presentation",
+      "attributes": {
+        "title": "Predoctoral Training Grants:  What's In It for You?",
+        "activity_insight_identifier": "306461167616",
+        "name": "HUCK Graduate Student Orientation",
+        "organization": "HUCK Institutes for the Life Sciences",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "256773",
+      "type": "presentation",
+      "attributes": {
+        "title": "The Impact of Nlrp3 Gene Loss on Cardiac Mitochondrial Function in DAHL/SS Rats",
+        "activity_insight_identifier": "306461237248",
+        "name": "PHSIO Retreat 2023",
+        "organization": "Huck Institutes of the Life Sciences",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "First Place \"Best Poster\" Physiology and Nutrition",
+        "scope": "Colleges",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "256774",
+      "type": "presentation",
+      "attributes": {
+        "title": "Novel Insights from Mitochondrial 3D Reconstructions:  Preventing Heart Attacks in Older Females",
+        "activity_insight_identifier": "306461222912",
+        "name": "Penn State Graduate Exhibition",
+        "organization": "Penn State University",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "International",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "256775",
+      "type": "presentation",
+      "attributes": {
+        "title": "Predoctoral Training Grant  Opportunities",
+        "activity_insight_identifier": "306461171712",
+        "name": "NEURO 501",
+        "organization": "Neuroscience IGDP",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274200",
+      "type": "presentation",
+      "attributes": {
+        "title": "NLRP3 Inflammasome Inhibition Reduces Ischemia/Reperfusion Injury in Female but not Male Rats",
+        "activity_insight_identifier": "324944615424",
+        "name": "Experimental Biology 2025",
+        "organization": "American Physiological Society",
+        "location": "Baltimore, MD",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "International",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274201",
+      "type": "presentation",
+      "attributes": {
+        "title": "The Effects of NLRP3 Inflammasome Activation on Pathological Cardiac Remodeling in Salt Sensitive Hypertension",
+        "activity_insight_identifier": "324944627712",
+        "name": "ABRCMS 2024",
+        "organization": "ANNUAL BIOMEDICAL RESEARCH CONFERENCE FOR MINORITIZED SCIENTISTS",
+        "location": "Pittsburgh, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": null,
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274202",
+      "type": "presentation",
+      "attributes": {
+        "title": "Interdisciplinary Research Features of Penn State",
+        "activity_insight_identifier": "324944752640",
+        "name": "2024 Penn State Fox Graduate School  Open House",
+        "organization": "Penn State Fox Graduate School",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Panels",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "The annual Open House is an opportunity for Penn State to showcase our graduate programs and recruit students from underrepresented backgrounds. I participated on a faculty panel discussion on interdisciplinary research opportunities as a representative of the interim Huck Institutes of the Life Sciences Director.",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274203",
+      "type": "presentation",
+      "attributes": {
+        "title": "Graduate Programs in the Huck Institutes of the Life Sciences",
+        "activity_insight_identifier": "324944715776",
+        "name": "2024 Fox Graduate School Open House",
+        "organization": "Penn State Fox Graduate School",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "No",
+        "abstract": null,
+        "comment": "The annual Open House is an opportunity for Penn State to showcase our graduate programs and recruit students from underrepresented backgrounds. I delivered a presentation overview on graduate programs in the Huck Institutes of the Life Sciences.",
+        "scope": "National",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274204",
+      "type": "presentation",
+      "attributes": {
+        "title": "Pre-Doctoral Training Grants:  Fellowships to Put on Your Radar!",
+        "activity_insight_identifier": "324944644096",
+        "name": "HUCK Graduate Student Orientation",
+        "organization": "HUCK Institutes for the Life Sciences",
+        "location": "University Park PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": null,
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": null,
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274205",
+      "type": "presentation",
+      "attributes": {
+        "title": "Rigor, Reproducibility…and How it Impacts Everything You Do in the Lab",
+        "activity_insight_identifier": "324944707584",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": "The Pennsylvania State University",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274206",
+      "type": "presentation",
+      "attributes": {
+        "title": "Risk Factors for Cardiovascular Disease and Other Introductory Heart Facts",
+        "activity_insight_identifier": "324944701440",
+        "name": "Summer Translational Cardiovascular Sciences Institute (STCSI)",
+        "organization": "The Pennsylvania State University",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": null,
+        "abstract": null,
+        "comment": null,
+        "scope": "Local",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274207",
+      "type": "presentation",
+      "attributes": {
+        "title": "NLRP3 Inflammasome Inhibition Reduces Ischemia/Reperfusion Injury in Female but not Male Rats",
+        "activity_insight_identifier": "324944564224",
+        "name": "Life Sciences Symposium 2024",
+        "organization": "Huck Institutes of the Life Sciences",
+        "location": "University Park, PA",
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Posters and Oral Presentations",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": null,
+        "refereed": "Yes",
+        "abstract": null,
+        "comment": "First Place \"Best Poster\" Physiology and Nutrition",
+        "scope": "Colleges",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274208",
+      "type": "presentation",
+      "attributes": {
+        "title": "IDP Action Session:  Developing and Implementing Your Master Career Plan",
+        "activity_insight_identifier": "324960053248",
+        "name": "IDP Action Session:  Developing and Implementing Your Master Career Plan",
+        "organization": "Huck Institutes of the Life Sciences",
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Workshops",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": 75,
+        "refereed": null,
+        "abstract": "Target audience: ideally 3rd year graduate students or beyond who have already completed the myIDP inventory and participated in an IDP orientation session. Interactive ‘hands on’ session providing feedback on already established plans to discuss progress toward goals and next steps for implementation and realization of career goals.values in pursuit of a meaningful career. Interactive ‘hands on’ session providing orientation to the IDP and short/long term goal setting. Attended by all T32 trainees and Huck IGDP graduate students in year 3 and beyond.",
+        "comment": null,
+        "scope": "Institutes",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "274209",
+      "type": "presentation",
+      "attributes": {
+        "title": "myIDP Session:  Goal Setting Toward a Meaningful Career Path",
+        "activity_insight_identifier": "324960034816",
+        "name": "myIDP Session:  Goal Setting Toward a Meaningful Career Path",
+        "organization": "Huck Institutes of the Life Sciences",
+        "location": null,
+        "started_on": null,
+        "ended_on": null,
+        "presentation_type": "Workshops",
+        "classification": null,
+        "meet_type": "Academic",
+        "attendance": 75,
+        "refereed": null,
+        "abstract": "Target audience: 2nd and 3rd year graduate students who have not completed the myIDP inventory; Students will receive an introduction to the myIDP inventory to begin examining skills, interests and values in pursuit of a meaningful career. Interactive ‘hands on’ session providing orientation to the IDP and short/long term goal setting.",
+        "comment": null,
+        "scope": "Institutes",
+        "profile_preferences": [
+          {
+            "user_id": 787,
+            "webaccess_id": "dhk102",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "data": [
+    {
+      "id": "107",
+      "type": "publication",
+      "attributes": {
+        "title": "Comment on \"How Many Causes Are There of Aging-Related Decrements in Cognitive Functioning?\"",
+        "secondary_title": null,
+        "publication_type": "Academic Journal Article",
+        "status": "Published",
+        "volume": "14",
+        "issue": "4",
+        "edition": null,
+        "page_range": "438-443",
+        "authors_et_al": null,
+        "abstract": "Salthouse (1994) introduces a new type of correlation, termed the quasi-partial correlation (QPC). The QPC reflects the amount of age-related variance that is shared by two variables. In this commentary it is argued that the QPC is a model where age is a suitable proxy for time, change over time is linear, and causation is instantaneous or nearly instantaneous. Where these assumptions are reasonable, QPC′s are a highly valuable research tool. It is also argued that the \"causes\" of decline identified by Salthouse might be termed \"dimensions\" of decline instead, because the analysis did not include independently assessed causal variables. Finally, it is suggested that age is unsatisfying as a predictor of change across the lifespan.",
+        "doi": "https://doi.org/10.1006/drev.1994.1017",
+        "preferred_open_access_url": null,
+        "publisher": "Elsevier Inc.",
+        "journal_title": "Developmental Review",
+        "published_on": "1994-12-01",
+        "citation_count": 1,
+        "supplementary_url": null,
+        "contributors": [
+          {
+            "first_name": "Linda M.",
+            "middle_name": null,
+            "last_name": "Collins",
+            "psu_user_id": null
+          }
+        ],
+        "tags": [
+          {
+            "name": "Cognitive Functioning",
+            "rank": 2.0
+          },
+          {
+            "name": "Cause",
+            "rank": 1.0
+          },
+          {
+            "name": "Partial Correlation",
+            "rank": 1.0
+          },
+          {
+            "name": "Causality",
+            "rank": 0.5
+          },
+          {
+            "name": "Longevity",
+            "rank": 0.5
+          },
+          {
+            "name": "Proxy",
+            "rank": 0.5
+          },
+          {
+            "name": "Research",
+            "rank": 0.5
+          },
+          {
+            "name": "Time",
+            "rank": 0.4
+          },
+          {
+            "name": "Two Variable",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Causal Variables",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Predictors Of Change",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Time Change",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Change Across The Lifespan",
+            "rank": 0.3333333
+          },
+          {
+            "name": "Life Span",
+            "rank": 0.2
+          }
+        ],
+        "pure_ids": [
+          "3021f59f-7728-4d66-98cf-731fc0345cbd"
+        ],
+        "activity_insight_ids": [],
+        "profile_preferences": [
+          {
+            "user_id": 2273,
+            "webaccess_id": "lmc8",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "124",
+      "type": "publication",
+      "attributes": {
+        "title": "Competing processes of sibling influence: Observational learning and sibling deidentification",
+        "secondary_title": null,
+        "publication_type": "Academic Journal Article",
+        "status": "Published",
+        "volume": "16",
+        "issue": "4",
+        "edition": null,
+        "page_range": "642-661",
+        "authors_et_al": null,
+        "abstract": "Although commonly cited as explanations for patterns of sibling similarity and difference, observational learning and sibling deidentification processes have rarely been examined directly. Using a person-oriented approach, we identified patterns in adolescents' perceptions of sibling influences and connected these patterns to sibling similarities and differences and sibling relationship qualities. Participants included two adolescent-age siblings (firstborn age M = 16.39, second-born age M = 13.78) from 171 maritally intact families. Two-stage cluster analyses revealed three sibling influence profiles: modeling, deidentification, and non-reference. Analyses revealed differences in the correlations between firstborn and second-born siblings' personal qualities across the three groups and differences in the sibling relationship qualities of younger siblings who reported modeling vs. those who reported deidentifying from their older siblings. Discussion focuses on refining the study of sibling influence processes.",
+        "doi": "https://doi.org/10.1111/j.1467-9507.2007.00409.x",
+        "preferred_open_access_url": null,
+        "publisher": "Wiley-Blackwell Publishing Ltd",
+        "journal_title": "Social Development",
+        "published_on": "2007-11-01",
+        "citation_count": 111,
+        "supplementary_url": null,
+        "contributors": [
+          {
+            "first_name": "Shawn D.",
+            "middle_name": null,
+            "last_name": "Whiteman",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Susan M.",
+            "middle_name": null,
+            "last_name": "McHale",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Ann C.",
+            "middle_name": null,
+            "last_name": "Crouter",
+            "psu_user_id": null
+          }
+        ],
+        "tags": [
+          {
+            "name": "Observational Learning",
+            "rank": 3.0
+          },
+          {
+            "name": "Learning",
+            "rank": 2.0
+          },
+          {
+            "name": "Youth",
+            "rank": 1.0
+          },
+          {
+            "name": "De Identification",
+            "rank": 1.0
+          },
+          {
+            "name": "Competition Process",
+            "rank": 1.0
+          },
+          {
+            "name": "Data Anonymization",
+            "rank": 1.0
+          },
+          {
+            "name": "Sibling Comparison",
+            "rank": 1.0
+          },
+          {
+            "name": "Sibling Influence",
+            "rank": 1.0
+          },
+          {
+            "name": "Siblings",
+            "rank": 1.0
+          },
+          {
+            "name": "Age At First Birth",
+            "rank": 0.5
+          },
+          {
+            "name": "Sibling Relationship Quality",
+            "rank": 0.5
+          },
+          {
+            "name": "Person Oriented Approach",
+            "rank": 0.5
+          },
+          {
+            "name": "Two Stage Cluster",
+            "rank": 0.25
+          },
+          {
+            "name": "Young Sibling",
+            "rank": 0.25
+          },
+          {
+            "name": "No Reference",
+            "rank": 0.25
+          },
+          {
+            "name": "Influence Process",
+            "rank": 0.25
+          },
+          {
+            "name": "Intact Families",
+            "rank": 0.25
+          },
+          {
+            "name": "Older Siblings",
+            "rank": 0.25
+          },
+          {
+            "name": "Adolescent Perceptions",
+            "rank": 0.25
+          },
+          {
+            "name": "Profile Modeling",
+            "rank": 0.25
+          },
+          {
+            "name": "Personal Qualities",
+            "rank": 0.25
+          },
+          {
+            "name": "Person Centered Approach",
+            "rank": 0.25
+          },
+          {
+            "name": "Adolescent Age",
+            "rank": 0.25
+          },
+          {
+            "name": "Adolescent",
+            "rank": 0.166666672
+          },
+          {
+            "name": "Reproductive Behavior",
+            "rank": 0.166666672
+          },
+          {
+            "name": "Human Being",
+            "rank": 0.0833333358
+          },
+          {
+            "name": "Group",
+            "rank": 0.0833333358
+          },
+          {
+            "name": "Cluster Analysis",
+            "rank": 0.0833333358
+          }
+        ],
+        "pure_ids": [
+          "f3bd76f9-10fe-462b-a099-24f5157e307b"
+        ],
+        "activity_insight_ids": [],
+        "profile_preferences": [
+          {
+            "user_id": 3979,
+            "webaccess_id": "x2u",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          },
+          {
+            "user_id": 4262,
+            "webaccess_id": "ac1",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "171",
+      "type": "publication",
+      "attributes": {
+        "title": "Implications of work pressure and supervisor support for fathers', mothers' and adolescents' relationships and well-being in dual-earner families",
+        "secondary_title": null,
+        "publication_type": "Academic Journal Article",
+        "status": "Published",
+        "volume": "11",
+        "issue": "1",
+        "edition": null,
+        "page_range": "37-60",
+        "authors_et_al": null,
+        "abstract": "The present study investigates the implications of work pressure and supervisor support for individual psychosocial functioning, marital and parent-adolescent relationships. We examined the effects of work pressure and supervisor support separately for mothers and fathers and their adolescent children (M=17.33 years) in 156 white working- and middle-class, dual-earner families. Results revealed when husbands reported high work pressure and low supervisor support, both parents reported higher levels of depressive symptoms. When wives were in the high pressure/low support group, they reported lower levels of marital love, and both spouses reported less marital satisfaction. When either parent was in the high pressure/low support group, both parents reported higher levels of role overload, and families experienced more conflict and less intimacy in their relationships with their children. Their children also reported higher levels of depressive symptoms. Results associated with parent and child depressive symptoms, however, varied by parent and child sex.",
+        "doi": "https://doi.org/10.1080/13668800701785312",
+        "preferred_open_access_url": null,
+        "publisher": "Routledge",
+        "journal_title": "Community, Work and Family",
+        "published_on": "2008-02-01",
+        "citation_count": 35,
+        "supplementary_url": null,
+        "contributors": [
+          {
+            "first_name": "Carolyn R.",
+            "middle_name": null,
+            "last_name": "Ransford",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Ann C.",
+            "middle_name": null,
+            "last_name": "Crouter",
+            "psu_user_id": null
+          },
+          {
+            "first_name": "Susan M.",
+            "middle_name": null,
+            "last_name": "McHale",
+            "psu_user_id": "x2u"
+          }
+        ],
+        "tags": [
+          {
+            "name": "Supervisor Support",
+            "rank": 1.0
+          },
+          {
+            "name": "Parents",
+            "rank": 1.0
+          },
+          {
+            "name": "Well Being",
+            "rank": 1.0
+          },
+          {
+            "name": "Adolescent",
+            "rank": 1.0
+          },
+          {
+            "name": "Father",
+            "rank": 1.0
+          },
+          {
+            "name": "Working Pressure",
+            "rank": 1.0
+          },
+          {
+            "name": "Dual Earner",
+            "rank": 1.0
+          },
+          {
+            "name": "Work Pressure",
+            "rank": 1.0
+          },
+          {
+            "name": "Adolescent Relationship",
+            "rank": 1.0
+          },
+          {
+            "name": "Depression",
+            "rank": 1.0
+          },
+          {
+            "name": "Dual Earner Family",
+            "rank": 1.0
+          },
+          {
+            "name": "Family",
+            "rank": 1.0
+          },
+          {
+            "name": "Dual Earner Families",
+            "rank": 1.0
+          },
+          {
+            "name": "Pressure Support",
+            "rank": 1.0
+          },
+          {
+            "name": "Adolescent Relationships",
+            "rank": 1.0
+          },
+          {
+            "name": "Depressive Symptoms",
+            "rank": 0.6
+          },
+          {
+            "name": "Support Groups",
+            "rank": 0.5
+          },
+          {
+            "name": "Group",
+            "rank": 0.333333343
+          },
+          {
+            "name": "Child Depressive Symptoms",
+            "rank": 0.25
+          },
+          {
+            "name": "Child Sex",
+            "rank": 0.25
+          },
+          {
+            "name": "Psychosocial Functioning",
+            "rank": 0.25
+          },
+          {
+            "name": "Parent Adolescent Relationship",
+            "rank": 0.25
+          },
+          {
+            "name": "Marital Love",
+            "rank": 0.25
+          },
+          {
+            "name": "Parent Depressive Symptoms",
+            "rank": 0.25
+          },
+          {
+            "name": "Preadolescent Children",
+            "rank": 0.25
+          },
+          {
+            "name": "Marital Satisfaction",
+            "rank": 0.2
+          },
+          {
+            "name": "Role Overload",
+            "rank": 0.2
+          },
+          {
+            "name": "Spouses",
+            "rank": 0.2
+          },
+          {
+            "name": "Functioning",
+            "rank": 0.2
+          },
+          {
+            "name": "Effect",
+            "rank": 0.2
+          },
+          {
+            "name": "Conflict",
+            "rank": 0.2
+          },
+          {
+            "name": "Wife",
+            "rank": 0.166666672
+          },
+          {
+            "name": "Intimacy",
+            "rank": 0.166666672
+          },
+          {
+            "name": "Love",
+            "rank": 0.166666672
+          },
+          {
+            "name": "Middle Class",
+            "rank": 0.166666672
+          },
+          {
+            "name": "Spouse",
+            "rank": 0.166666672
+          },
+          {
+            "name": "Husband",
+            "rank": 0.166666672
+          },
+          {
+            "name": "Working Class",
+            "rank": 0.166666672
+          }
+        ],
+        "pure_ids": [
+          "873710f0-a73e-424c-b4a8-30b7a43c059d"
+        ],
+        "activity_insight_ids": [
+          "76206325760"
+        ],
+        "profile_preferences": [
+          {
+            "user_id": 3979,
+            "webaccess_id": "x2u",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          },
+          {
+            "user_id": 4262,
+            "webaccess_id": "ac1",
+            "visible_in_profile": true,
+            "position_in_profile": null
+          }
+        ]
+      }
+    }
+  ]
+}
