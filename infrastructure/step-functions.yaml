@@ -1,0 +1,322 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Overton Pipeline - Step Functions orchestration with EventBridge scheduling'
+
+Parameters:
+  StepFunctionsRoleArn:
+    Type: String
+    Description: ARN of the Step Functions execution role (from pipeline-iam stack)
+
+  ECSClusterArn:
+    Type: String
+    Description: ARN of the ECS cluster to run pipeline tasks on
+
+  PipelineTaskDefinitionArn:
+    Type: String
+    Description: ARN of the pipeline ECS task definition
+
+  Subnet1:
+    Type: AWS::EC2::Subnet::Id
+    Description: First public subnet for pipeline Fargate tasks
+
+  Subnet2:
+    Type: AWS::EC2::Subnet::Id
+    Description: Second public subnet for pipeline Fargate tasks
+
+  TaskSecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+    Description: Security group ID for pipeline Fargate tasks
+
+  NotificationEmail:
+    Type: String
+    Description: Email address for pipeline failure notifications
+
+Resources:
+  # SNS Topic for pipeline failure notifications
+  PipelineAlertTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: overton-pipeline-alerts
+      DisplayName: Overton Pipeline Alerts
+      Tags:
+        - Key: Project
+          Value: overton
+
+  PipelineAlertSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref PipelineAlertTopic
+      Protocol: email
+      Endpoint: !Ref NotificationEmail
+
+  # Step Functions State Machine
+  PipelineStateMachine:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      StateMachineName: overton-pipeline
+      RoleArn: !Ref StepFunctionsRoleArn
+      Tags:
+        - Key: Project
+          Value: overton
+      DefinitionString: !Sub |
+        {
+          "Comment": "Overton Pipeline - 6-stage ETL with error handling",
+          "StartAt": "OpenAlexFetch",
+          "States": {
+            "OpenAlexFetch": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::ecs:runTask.sync",
+              "Parameters": {
+                "LaunchType": "FARGATE",
+                "Cluster": "${ECSClusterArn}",
+                "TaskDefinition": "${PipelineTaskDefinitionArn}",
+                "NetworkConfiguration": {
+                  "AwsvpcConfiguration": {
+                    "AssignPublicIp": "ENABLED",
+                    "Subnets": ["${Subnet1}", "${Subnet2}"],
+                    "SecurityGroups": ["${TaskSecurityGroupId}"]
+                  }
+                },
+                "Overrides": {
+                  "ContainerOverrides": [{
+                    "Name": "overton-pipeline",
+                    "Command": ["--stage", "openalex", "--incremental"]
+                  }]
+                }
+              },
+              "ResultPath": "$.openalexResult",
+              "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.error",
+                "Next": "NotifyFailure"
+              }],
+              "Next": "RMDEnrichment"
+            },
+            "RMDEnrichment": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::ecs:runTask.sync",
+              "Parameters": {
+                "LaunchType": "FARGATE",
+                "Cluster": "${ECSClusterArn}",
+                "TaskDefinition": "${PipelineTaskDefinitionArn}",
+                "NetworkConfiguration": {
+                  "AwsvpcConfiguration": {
+                    "AssignPublicIp": "ENABLED",
+                    "Subnets": ["${Subnet1}", "${Subnet2}"],
+                    "SecurityGroups": ["${TaskSecurityGroupId}"]
+                  }
+                },
+                "Overrides": {
+                  "ContainerOverrides": [{
+                    "Name": "overton-pipeline",
+                    "Command": ["--stage", "rmd", "--incremental"]
+                  }]
+                }
+              },
+              "ResultPath": "$.rmdResult",
+              "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.error",
+                "Next": "NotifyFailure"
+              }],
+              "Next": "OvertArticlesFetch"
+            },
+            "OvertArticlesFetch": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::ecs:runTask.sync",
+              "Parameters": {
+                "LaunchType": "FARGATE",
+                "Cluster": "${ECSClusterArn}",
+                "TaskDefinition": "${PipelineTaskDefinitionArn}",
+                "NetworkConfiguration": {
+                  "AwsvpcConfiguration": {
+                    "AssignPublicIp": "ENABLED",
+                    "Subnets": ["${Subnet1}", "${Subnet2}"],
+                    "SecurityGroups": ["${TaskSecurityGroupId}"]
+                  }
+                },
+                "Overrides": {
+                  "ContainerOverrides": [{
+                    "Name": "overton-pipeline",
+                    "Command": ["--stage", "overton-articles", "--incremental"]
+                  }]
+                }
+              },
+              "ResultPath": "$.articlesResult",
+              "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.error",
+                "Next": "NotifyFailure"
+              }],
+              "Next": "OvertDocumentsFetch"
+            },
+            "OvertDocumentsFetch": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::ecs:runTask.sync",
+              "Parameters": {
+                "LaunchType": "FARGATE",
+                "Cluster": "${ECSClusterArn}",
+                "TaskDefinition": "${PipelineTaskDefinitionArn}",
+                "NetworkConfiguration": {
+                  "AwsvpcConfiguration": {
+                    "AssignPublicIp": "ENABLED",
+                    "Subnets": ["${Subnet1}", "${Subnet2}"],
+                    "SecurityGroups": ["${TaskSecurityGroupId}"]
+                  }
+                },
+                "Overrides": {
+                  "ContainerOverrides": [{
+                    "Name": "overton-pipeline",
+                    "Command": ["--stage", "overton-documents", "--incremental"]
+                  }]
+                }
+              },
+              "ResultPath": "$.documentsResult",
+              "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.error",
+                "Next": "NotifyFailure"
+              }],
+              "Next": "ParallelPostProcessing"
+            },
+            "ParallelPostProcessing": {
+              "Type": "Parallel",
+              "Branches": [
+                {
+                  "StartAt": "DocumentDownload",
+                  "States": {
+                    "DocumentDownload": {
+                      "Type": "Task",
+                      "Resource": "arn:aws:states:::ecs:runTask.sync",
+                      "Parameters": {
+                        "LaunchType": "FARGATE",
+                        "Cluster": "${ECSClusterArn}",
+                        "TaskDefinition": "${PipelineTaskDefinitionArn}",
+                        "NetworkConfiguration": {
+                          "AwsvpcConfiguration": {
+                            "AssignPublicIp": "ENABLED",
+                            "Subnets": ["${Subnet1}", "${Subnet2}"],
+                            "SecurityGroups": ["${TaskSecurityGroupId}"]
+                          }
+                        },
+                        "Overrides": {
+                          "ContainerOverrides": [{
+                            "Name": "overton-pipeline",
+                            "Command": ["--stage", "download"]
+                          }]
+                        }
+                      },
+                      "ResultPath": "$.downloadResult",
+                      "End": true
+                    }
+                  }
+                },
+                {
+                  "StartAt": "Export",
+                  "States": {
+                    "Export": {
+                      "Type": "Task",
+                      "Resource": "arn:aws:states:::ecs:runTask.sync",
+                      "Parameters": {
+                        "LaunchType": "FARGATE",
+                        "Cluster": "${ECSClusterArn}",
+                        "TaskDefinition": "${PipelineTaskDefinitionArn}",
+                        "NetworkConfiguration": {
+                          "AwsvpcConfiguration": {
+                            "AssignPublicIp": "ENABLED",
+                            "Subnets": ["${Subnet1}", "${Subnet2}"],
+                            "SecurityGroups": ["${TaskSecurityGroupId}"]
+                          }
+                        },
+                        "Overrides": {
+                          "ContainerOverrides": [{
+                            "Name": "overton-pipeline",
+                            "Command": ["--stage", "export"]
+                          }]
+                        }
+                      },
+                      "ResultPath": "$.exportResult",
+                      "End": true
+                    }
+                  }
+                }
+              ],
+              "ResultPath": "$.parallelResult",
+              "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.error",
+                "Next": "NotifyFailure"
+              }],
+              "Next": "PipelineComplete"
+            },
+            "NotifyFailure": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::sns:publish",
+              "Parameters": {
+                "TopicArn": "${PipelineAlertTopic}",
+                "Subject": "Overton Pipeline Failed",
+                "Message.$": "States.Format('Pipeline failed at stage. Error: {}', States.JsonToString($.error))"
+              },
+              "End": true
+            },
+            "PipelineComplete": {
+              "Type": "Succeed"
+            }
+          }
+        }
+
+  # EventBridge Rule for weekly scheduling (Sunday 6 AM UTC)
+  WeeklyScheduleRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Name: overton-pipeline-weekly
+      Description: Trigger the Overton pipeline every Sunday at 6 AM UTC
+      ScheduleExpression: 'cron(0 6 ? * SUN *)'
+      State: ENABLED
+      Targets:
+        - Arn: !GetAtt PipelineStateMachine.Arn
+          Id: OvertPipelineTarget
+          RoleArn: !Ref EventBridgeInvokeRole
+
+  # IAM Role for EventBridge to invoke Step Functions
+  EventBridgeInvokeRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: overton-eventbridge-invoke-role
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: events.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: InvokeStepFunctions
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - states:StartExecution
+                Resource:
+                  - !GetAtt PipelineStateMachine.Arn
+
+Outputs:
+  StateMachineArn:
+    Description: ARN of the pipeline Step Functions state machine
+    Value: !GetAtt PipelineStateMachine.Arn
+    Export:
+      Name: OvertonPipelineStateMachineArn
+
+  StateMachineUrl:
+    Description: URL to view the state machine in the AWS Console
+    Value: !Sub https://${AWS::Region}.console.aws.amazon.com/states/home?region=${AWS::Region}#/statemachines/view/${PipelineStateMachine.Arn}
+
+  AlertTopicArn:
+    Description: ARN of the SNS topic for pipeline alerts
+    Value: !Ref PipelineAlertTopic
+    Export:
+      Name: OvertonPipelineAlertTopicArn
+
+  WeeklyScheduleArn:
+    Description: ARN of the weekly EventBridge rule
+    Value: !GetAtt WeeklyScheduleRule.Arn

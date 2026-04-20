@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Overton Pipeline - S3 Data Lake for raw API responses and policy document PDFs'
+
+Resources:
+  # S3 Data Lake Bucket
+  DataLakeBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Sub overton-datalake-${AWS::AccountId}
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules:
+          # Move raw API responses to Infrequent Access after 90 days
+          - Id: RawResponsesTransition
+            Status: Enabled
+            Prefix: raw-api-responses/
+            Transitions:
+              - StorageClass: STANDARD_IA
+                TransitionInDays: 90
+          # Clean up incomplete multipart uploads after 7 days
+          - Id: AbortIncompleteUploads
+            Status: Enabled
+            AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 7
+      Tags:
+        - Key: Project
+          Value: overton
+
+  # Bucket policy restricting access to the pipeline and dashboard IAM roles
+  DataLakeBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DataLakeBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: EnforceTLSOnly
+            Effect: Deny
+            Principal: '*'
+            Action: s3:*
+            Resource:
+              - !Sub ${DataLakeBucket.Arn}
+              - !Sub ${DataLakeBucket.Arn}/*
+            Condition:
+              Bool:
+                aws:SecureTransport: 'false'
+
+Outputs:
+  DataLakeBucketName:
+    Description: S3 Data Lake bucket name
+    Value: !Ref DataLakeBucket
+    Export:
+      Name: OvertonDataLakeBucketName
+
+  DataLakeBucketArn:
+    Description: S3 Data Lake bucket ARN
+    Value: !GetAtt DataLakeBucket.Arn
+    Export:
+      Name: OvertonDataLakeBucketArn

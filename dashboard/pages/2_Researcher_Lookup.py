@@ -13,7 +13,8 @@ from pathlib import Path
 from collections import Counter
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from utils.data_loader import load_summary, load_researchers, get_researcher_by_orcid
+from utils.data_loader import load_summary, load_researchers, get_researcher_by_orcid, get_pdf_presigned_url
+from utils.db_connection import get_engine
 
 # Page config
 st.set_page_config(
@@ -53,8 +54,11 @@ if not selected_name:
 # Load full data for the selected researcher
 orcid = name_to_orcid[selected_name]
 with st.spinner("Loading researcher details..."):
-    all_researchers = load_researchers()
-    researcher = get_researcher_by_orcid(all_researchers, orcid)
+    # Try direct DB lookup first (single SELECT), fall back to loading all
+    researcher = get_researcher_by_orcid(orcid)
+    if researcher is None:
+        all_researchers = load_researchers()
+        researcher = get_researcher_by_orcid(all_researchers, orcid)
 
 if not researcher:
     st.error(f"Could not find researcher data for {selected_name}")
@@ -62,9 +66,32 @@ if not researcher:
 
 oa = researcher.get("openalex") or {}
 rmd = researcher.get("rmd") or {}
-ov = researcher.get("overton") or {}
 topics = oa.get("topics", [])
 primary_topic = topics[0] if topics else {}
+
+# Load policy documents from normalized tables
+policy_docs = []
+engine = get_engine()
+if engine is not None:
+    try:
+        from sqlalchemy import text
+        with engine.connect() as conn:
+            rows = conn.execute(text("""
+                SELECT pd.data as doc_data, pd.policy_document_id
+                FROM articles a
+                JOIN article_citations ac ON ac.doi = a.doi
+                JOIN policy_documents pd ON pd.policy_document_id = ac.policy_document_id
+                WHERE a.data->>'orcids' LIKE :pattern
+                AND pd.data->>'title' IS NOT NULL
+            """), {"pattern": f"%{orcid}%"}).fetchall()
+            # Deduplicate by policy_document_id
+            seen = set()
+            for r in rows:
+                if r.policy_document_id not in seen:
+                    seen.add(r.policy_document_id)
+                    policy_docs.append(r.doc_data)
+    except Exception as e:
+        st.warning(f"Could not load policy documents: {e}")
 
 # === Researcher Header ===
 st.divider()
@@ -113,8 +140,7 @@ with col3:
 with col4:
     st.metric("i10-Index", oa.get("i10_index", 0))
 with col5:
-    policy_total = ov.get("policy_documents_total", 0)
-    st.metric("Policy Documents", policy_total)
+    st.metric("Policy Documents", len(policy_docs))
 
 # === RMD Grants ===
 grants = rmd.get("grants", [])
@@ -151,7 +177,6 @@ if pres_count > 0 or etds_count > 0:
             st.metric("ETDs Advised", etds_count)
 
 # === Overton Policy Documents ===
-policy_docs = ov.get("policy_documents", [])
 if policy_docs:
     st.divider()
     st.subheader("Policy Impact")
@@ -176,6 +201,14 @@ if policy_docs:
         if published:
             years[published[:4]] += 1
 
+        # Check for PDF availability
+        doc_id = doc.get("policy_document_id", "")
+        pdf_link = ""
+        if doc_id:
+            pdf_url = get_pdf_presigned_url(doc_id)
+            if pdf_url:
+                pdf_link = pdf_url
+
         doc_rows.append({
             "Title": doc.get("title", ""),
             "Source": source.get("title", ""),
@@ -183,6 +216,7 @@ if policy_docs:
             "Country": source.get("country", ""),
             "Published": published,
             "URL": doc.get("overton_url", ""),
+            "PDF": pdf_link,
         })
 
     # Summary row
@@ -259,6 +293,7 @@ if policy_docs:
         docs_df,
         column_config={
             "URL": st.column_config.LinkColumn("URL"),
+            "PDF": st.column_config.LinkColumn("PDF", display_text="View PDF"),
             "Title": st.column_config.TextColumn("Title", width="large"),
         },
         use_container_width=True,
@@ -271,7 +306,7 @@ if policy_docs:
         file_name=f"{selected_name.replace(' ', '_')}_policy_documents.csv",
         mime="text/csv"
     )
-elif ov:
+else:
     st.info("No policy documents found for this researcher.")
 
 # === Bio ===

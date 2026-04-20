@@ -1,15 +1,18 @@
-"""Stage 1: Fetch PSU researchers from OpenAlex API.
+"""Stage 2: Enrich researchers with OpenAlex academic metadata.
 
-Produces the baseline researcher records with OpenAlex metadata.
+Loads researchers from the database (populated by RMD stage), fetches
+each one's OpenAlex profile by ORCID, and updates the researcher record
+with works count, citations, h-index, topics, and affiliations.
 """
 
 import logging
-import time
 from datetime import datetime
 from tqdm import tqdm
 
 from . import config
-from .utils import api_request, load_json, save_json, now_iso, days_since
+from .utils import api_request, save_json, now_iso, days_since
+from .db.operations import get_all_researchers, upsert_researcher
+from .db.s3_client import upload_raw_response
 
 logger = logging.getLogger("pipeline.openalex")
 
@@ -25,7 +28,7 @@ def _parse_author(author: dict) -> dict | None:
 
     summary = author.get("summary_stats") or {}
 
-    # Parse affiliations - find PSU and others
+    # Parse affiliations
     current_year = datetime.now().year
     affiliations = []
     for aff in author.get("affiliations", []):
@@ -49,117 +52,98 @@ def _parse_author(author: dict) -> dict | None:
         })
 
     return {
-        "orcid": orcid,
         "openalex_id": openalex_id,
         "display_name": author.get("display_name"),
-        "openalex": {
-            "works_count": author.get("works_count", 0),
-            "cited_by_count": author.get("cited_by_count", 0),
-            "h_index": summary.get("h_index", 0),
-            "i10_index": summary.get("i10_index", 0),
-            "two_yr_mean_citedness": summary.get("2yr_mean_citedness", 0.0),
-            "affiliations": affiliations,
-            "topics": topics,
-            "last_fetched": now_iso(),
-        },
-        "rmd": None,
-        "overton": None,
+        "works_count": author.get("works_count", 0),
+        "cited_by_count": author.get("cited_by_count", 0),
+        "h_index": summary.get("h_index", 0),
+        "i10_index": summary.get("i10_index", 0),
+        "two_yr_mean_citedness": summary.get("2yr_mean_citedness", 0.0),
+        "affiliations": affiliations,
+        "topics": topics,
+        "last_fetched": now_iso(),
     }
 
 
-def run(max_researchers: int | None = None, current_only: bool = False,
-        incremental: bool = False) -> list[dict]:
-    """Fetch all PSU-affiliated researchers with ORCIDs from OpenAlex.
+def run(max_researchers: int | None = None,
+        incremental: bool = False) -> dict:
+    """Enrich researchers with OpenAlex data by ORCID lookup.
 
     Args:
         max_researchers: Limit number of researchers (for testing).
-        current_only: Only fetch researchers currently at PSU.
-        incremental: Skip researchers already fetched within INCREMENTAL_SKIP_DAYS.
+        incremental: Skip researchers already enriched within INCREMENTAL_SKIP_DAYS.
 
     Returns:
-        List of researcher dicts in the unified schema.
+        Stats dict with counts.
     """
     config.DATA_DIR.mkdir(parents=True, exist_ok=True)
-    output_path = config.DATA_DIR / config.OPENALEX_OUTPUT
-
-    # Load existing data for incremental mode
-    existing = {}
-    if incremental:
-        prev = load_json(output_path, [])
-        existing = {r["orcid"]: r for r in prev}
-        logger.info(f"Incremental mode: {len(existing)} existing records loaded")
-
-    # Build filter
-    if current_only:
-        filter_param = f"last_known_institutions.ror:{config.PSU_ROR},has_orcid:true"
-    else:
-        filter_param = f"affiliations.institution.ror:{config.PSU_ROR},has_orcid:true"
-
-    select_fields = "id,orcid,display_name,works_count,cited_by_count,summary_stats,affiliations,topics"
-
     headers = {"User-Agent": f"mailto:{config.OPENALEX_EMAIL}"}
 
-    # Get total count
-    count_resp = api_request(
-        f"{config.OPENALEX_BASE_URL}/authors",
-        params={"filter": filter_param, "per_page": 1},
-        headers=headers,
-    )
-    total_count = (count_resp or {}).get("meta", {}).get("count", 0)
-    to_fetch = min(max_researchers, total_count) if max_researchers else total_count
-    print(f"OpenAlex: Found {total_count:,} researchers, fetching {to_fetch:,}")
+    # Load researchers from database (inserted by RMD stage)
+    try:
+        db_researchers = get_all_researchers()
+    except Exception as e:
+        logger.error("Failed to load researchers from database: %s", e)
+        return {"error": str(e)}
 
-    researchers = []
-    cursor = "*"
-    pbar = tqdm(total=to_fetch, desc="OpenAlex researchers")
+    if max_researchers:
+        db_researchers = db_researchers[:max_researchers]
 
-    while len(researchers) < to_fetch:
-        data = api_request(
-            f"{config.OPENALEX_BASE_URL}/authors",
-            params={
-                "filter": filter_param,
-                "per_page": 200,
-                "cursor": cursor,
-                "select": select_fields,
-            },
+    print(f"OpenAlex: Enriching {len(db_researchers)} researchers")
+
+    fetched = 0
+    skipped = 0
+    not_found = 0
+
+    for row in tqdm(db_researchers, desc="OpenAlex enrichment"):
+        orcid = row["orcid"]
+        data = row["data"]
+
+        # Incremental: skip if recently fetched
+        if incremental and data.get("openalex"):
+            oa_fetched = data["openalex"].get("last_fetched")
+            if oa_fetched and days_since(oa_fetched) < config.INCREMENTAL_SKIP_DAYS:
+                skipped += 1
+                continue
+
+        # Fetch single author by ORCID
+        author_data = api_request(
+            f"{config.OPENALEX_BASE_URL}/authors/orcid:{orcid}",
             headers=headers,
             delay=config.OPENALEX_DELAY,
         )
-        if not data:
-            logger.error("Failed to fetch page from OpenAlex, stopping.")
-            break
 
-        results = data.get("results", [])
-        if not results:
-            break
+        if not author_data:
+            not_found += 1
+            continue
 
-        for author in results:
-            parsed = _parse_author(author)
-            if not parsed:
-                continue
+        # Archive raw response
+        try:
+            upload_raw_response("openalex", orcid, author_data)
+        except Exception as e:
+            logger.warning("Failed to archive to S3: %s", e)
 
-            # Incremental: reuse existing record if recently fetched
-            if incremental and parsed["orcid"] in existing:
-                prev_record = existing[parsed["orcid"]]
-                oa_fetched = (prev_record.get("openalex") or {}).get("last_fetched")
-                if oa_fetched and days_since(oa_fetched) < config.INCREMENTAL_SKIP_DAYS:
-                    researchers.append(prev_record)
-                    pbar.update(1)
-                    if max_researchers and len(researchers) >= max_researchers:
-                        break
-                    continue
+        parsed = _parse_author(author_data)
+        if not parsed:
+            not_found += 1
+            continue
 
-            researchers.append(parsed)
-            pbar.update(1)
-            if max_researchers and len(researchers) >= max_researchers:
-                break
+        # Merge into existing record (preserve RMD data)
+        data["openalex_id"] = parsed["openalex_id"]
+        data["display_name"] = parsed["display_name"] or data.get("display_name")
+        data["openalex"] = parsed
 
-        cursor = data.get("meta", {}).get("next_cursor")
-        if not cursor:
-            break
+        try:
+            upsert_researcher(data)
+            fetched += 1
+        except Exception as e:
+            logger.warning("Failed to upsert researcher %s: %s", orcid, e)
 
-    pbar.close()
-    print(f"OpenAlex: Fetched {len(researchers):,} researchers")
-
-    save_json(researchers, output_path)
-    return researchers
+    stats = {
+        "total_researchers": len(db_researchers),
+        "fetched": fetched,
+        "skipped": skipped,
+        "not_found": not_found,
+    }
+    print(f"OpenAlex: Enriched {fetched}, skipped {skipped}, not found {not_found}")
+    return stats

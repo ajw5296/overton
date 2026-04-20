@@ -47,6 +47,37 @@ def save_json(data, path: Path, compact: bool = False):
     logger.info(f"Saved {path.name} ({size_mb:.1f} MB)")
 
 
+def normalize_date(date_str: str | None) -> str | None:
+    """Normalize a date string to ISO 8601 format (YYYY-MM-DD).
+
+    Handles:
+    - Full ISO 8601 with timezone: 2020-05-18T00:00:00+00:00
+    - Date only: 2020-05-18
+    - Returns None for empty/invalid input
+    """
+    if not date_str:
+        return None
+    try:
+        # Try full ISO parse first
+        dt = datetime.fromisoformat(date_str)
+        return dt.strftime("%Y-%m-%d")
+    except (ValueError, TypeError):
+        pass
+    # Already in YYYY-MM-DD format or unparseable
+    if len(date_str) >= 10 and date_str[:4].isdigit():
+        return date_str[:10]
+    return date_str
+
+
+def cast_bool(val) -> bool:
+    """Cast a value to bool, handling string 'true'/'false' from Overton API."""
+    if isinstance(val, bool):
+        return val
+    if isinstance(val, str):
+        return val.lower() == "true"
+    return bool(val)
+
+
 def api_request(url: str, params: dict = None, headers: dict = None,
                 delay: float = 0, max_retries: int = 3, timeout: int = 30) -> dict | None:
     """Make a GET request with retry and rate-limit handling."""
@@ -58,6 +89,11 @@ def api_request(url: str, params: dict = None, headers: dict = None,
                 logger.warning(f"Rate limited (429). Waiting {wait}s...")
                 time.sleep(wait)
                 continue
+            # Don't retry client errors (4xx) — they won't succeed on retry
+            if 400 <= resp.status_code < 500:
+                if resp.status_code != 429:
+                    logger.debug(f"Client error {resp.status_code} for {url}")
+                    return None
             resp.raise_for_status()
             if delay > 0:
                 time.sleep(delay)

@@ -1,0 +1,184 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Overton Pipeline - IAM roles for pipeline tasks and Step Functions'
+
+Parameters:
+  DataLakeBucketArn:
+    Type: String
+    Description: ARN of the S3 data lake bucket
+
+  DBSecretArn:
+    Type: String
+    Description: ARN of the Secrets Manager secret for RDS credentials
+
+Resources:
+  # IAM Role for pipeline ECS tasks
+  PipelineTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: overton-pipeline-task-role
+      Tags:
+        - Key: Project
+          Value: overton
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        # S3 read/write for data lake
+        - PolicyName: S3DataLakeAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:ListBucket
+                  - s3:GetBucketLocation
+                Resource:
+                  - !Ref DataLakeBucketArn
+                  - !Sub ${DataLakeBucketArn}/*
+        # Secrets Manager read for DB credentials and API keys
+        - PolicyName: SecretsManagerRead
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource:
+                  - !Ref DBSecretArn
+                  - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:overton/*
+        # CloudWatch Logs
+        - PolicyName: CloudWatchLogs
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource:
+                  - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/overton-pipeline:*
+
+  # Execution role for pipeline ECS tasks (pull images, write logs, read secrets)
+  PipelineExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: overton-pipeline-execution-role
+      Tags:
+        - Key: Project
+          Value: overton
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+      Policies:
+        # Allow pulling secrets into container environment
+        - PolicyName: SecretsManagerForTaskDef
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource:
+                  - !Ref DBSecretArn
+                  - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:overton/*
+
+  # IAM Role for Step Functions execution
+  StepFunctionsExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: overton-stepfunctions-execution-role
+      Tags:
+        - Key: Project
+          Value: overton
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: states.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        # Allow Step Functions to run ECS tasks
+        - PolicyName: ECSRunTask
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ecs:RunTask
+                  - ecs:StopTask
+                  - ecs:DescribeTasks
+                Resource: '*'
+                Condition:
+                  ArnEquals:
+                    ecs:cluster: !Sub arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:cluster/overton-dashboard-cluster
+              - Effect: Allow
+                Action:
+                  - iam:PassRole
+                Resource:
+                  - !GetAtt PipelineTaskRole.Arn
+                  - !GetAtt PipelineExecutionRole.Arn
+        # Allow Step Functions to invoke Lambda functions
+        - PolicyName: LambdaInvoke
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - lambda:InvokeFunction
+                Resource:
+                  - !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:overton-*
+        # Allow Step Functions to publish to SNS for error notifications
+        - PolicyName: SNSPublish
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sns:Publish
+                Resource:
+                  - !Sub arn:aws:sns:${AWS::Region}:${AWS::AccountId}:overton-pipeline-*
+        # Allow Step Functions to log executions
+        - PolicyName: CloudWatchEvents
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - events:PutTargets
+                  - events:PutRule
+                  - events:DescribeRule
+                Resource:
+                  - !Sub arn:aws:events:${AWS::Region}:${AWS::AccountId}:rule/overton-*
+
+Outputs:
+  PipelineTaskRoleArn:
+    Description: ARN of the pipeline ECS task role
+    Value: !GetAtt PipelineTaskRole.Arn
+    Export:
+      Name: OvertonPipelineTaskRoleArn
+
+  PipelineExecutionRoleArn:
+    Description: ARN of the pipeline ECS execution role
+    Value: !GetAtt PipelineExecutionRole.Arn
+    Export:
+      Name: OvertonPipelineExecutionRoleArn
+
+  StepFunctionsExecutionRoleArn:
+    Description: ARN of the Step Functions execution role
+    Value: !GetAtt StepFunctionsExecutionRole.Arn
+    Export:
+      Name: OvertonStepFunctionsRoleArn
+

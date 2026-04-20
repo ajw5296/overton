@@ -19,7 +19,31 @@
       "mcp__jsonmcp__json_stats",
       "mcp__jsonmcp__json_structure",
       "mcp__jsonmcp__json_keys",
-      "Bash(git count-objects:*)"
+      "Bash(git count-objects:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(aws sts:*)",
+      "Bash(aws ec2:*)",
+      "Bash(aws rds:*)",
+      "Bash(aws cloudformation:*)",
+      "Bash(export DATABASE_SECRET_ARN=\"arn:aws:secretsmanager:us-east-1:700032885189:secret:overton/rds-credentials-M85fjC\")",
+      "Bash(export S3_BUCKET_NAME=\"overton-datalake-700032885189\")",
+      "Bash(aws lambda:*)",
+      "Read(//tmp/**)",
+      "Bash(docker:*)",
+      "Bash(aws ecr:*)",
+      "Bash(sudo docker:*)",
+      "Bash(aws ecs:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(export AWS_DEFAULT_REGION=us-east-1)",
+      "Bash(export PSU_RESEARCH_API_KEY=\"264d2e02f4c8089b594de2ad8db5f80c0ada5828deca6f06a4d5690d4cd80f869e44aa32b7e4dead64a56f963b368be7\")",
+      "Bash(bash /home/ubuntu/Projects/overton-aws/scripts/build_lambda_package.sh)",
+      "Bash(for fn:*)",
+      "Bash(do aws:*)",
+      "Bash(done)",
+      "Bash(export OPENALEX_EMAIL=\"overton-pipeline@psu.edu\")",
+      "Bash(aws elbv2 *)"
     ]
   }
 }
