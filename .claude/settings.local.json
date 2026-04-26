@@ -43,7 +43,12 @@
       "Bash(do aws:*)",
       "Bash(done)",
       "Bash(export OPENALEX_EMAIL=\"overton-pipeline@psu.edu\")",
-      "Bash(aws elbv2 *)"
+      "Bash(aws elbv2 *)",
+      "WebFetch(domain:help.overton.io)",
+      "WebFetch(domain:app.overton.io)",
+      "Bash(aws secretsmanager *)",
+      "Bash(export OVERTON_API_KEY=$\\(aws secretsmanager get-secret-value --region us-east-1 --secret-id overton/api-keys/overton --query SecretString --output text\\))",
+      "WebSearch"
     ]
   }
 }
