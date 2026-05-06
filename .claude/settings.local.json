@@ -19,7 +19,15 @@
       "mcp__jsonmcp__json_stats",
       "mcp__jsonmcp__json_structure",
       "mcp__jsonmcp__json_keys",
-      "Bash(git count-objects:*)"
+      "Bash(git count-objects:*)",
+      "WebFetch(domain:help.overton.io)",
+      "WebFetch(domain:app.overton.io)",
+      "WebFetch(domain:www.overton.io)",
+      "WebSearch",
+      "WebFetch(domain:gist.github.com)",
+      "Bash(ls -la /home/ubuntu/Projects/overton/*.md /home/ubuntu/Projects/overton/docs/)",
+      "Bash(python:*)",
+      "Bash(python3:*)"
     ]
   }
 }
