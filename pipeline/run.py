@@ -183,10 +183,9 @@ Examples:
         started = datetime.now(timezone.utc)
         _record_run(run_id, "overton-articles", "started", started_at=started)
         try:
-            stats = overton_articles_stage.run(
-                incremental=args.incremental,
-                skip_no_hits=args.skip_no_hits,
-            )
+            # Note: --skip-no-hits is a legacy flag from the per-ORCID era and
+            # has no effect in the DOI-set flow; accepted but ignored here.
+            stats = overton_articles_stage.run(incremental=args.incremental)
             _record_run(run_id, "overton-articles", "completed", stats=stats, started_at=started)
         except Exception as e:
             logger.error("Stage 3 failed: %s", e, exc_info=True)

@@ -111,21 +111,47 @@ def get_researcher_by_orcid(orcid: str) -> dict | None:
 # ── Articles ─────────────────────────────────────────────────────────────────
 
 
-def upsert_article(doc: dict) -> None:
-    """Insert or update an article record keyed on DOI."""
-    stmt = insert(articles).values(
-        doi=doc["doi"],
-        data=doc,
-        last_fetched=datetime.now(timezone.utc),
-    )
-    stmt = stmt.on_conflict_do_update(
-        index_elements=["doi"],
-        set_={
-            "data": stmt.excluded.data,
-            "last_fetched": stmt.excluded.last_fetched,
-            "updated_at": func.now(),
-        },
-    )
+def upsert_article(
+    doc: dict,
+    policy_citation_count: int | None = None,
+    last_policy_cited_at: datetime | None = None,
+    sources: list[str] | None = None,
+) -> None:
+    """Insert or update an article record keyed on DOI.
+
+    Optional columns:
+        policy_citation_count: count of policy docs citing this article (overwrites on update).
+        last_policy_cited_at: most-recent policy citation date.
+        sources: which discovery paths found this article — e.g. ['rmd','openalex','overton'].
+                 On update, sources are merged (set union) rather than overwritten.
+    """
+    values = {
+        "doi": doc["doi"],
+        "data": doc,
+        "last_fetched": datetime.now(timezone.utc),
+    }
+    if policy_citation_count is not None:
+        values["policy_citation_count"] = policy_citation_count
+    if last_policy_cited_at is not None:
+        values["last_policy_cited_at"] = last_policy_cited_at
+    if sources is not None:
+        values["source_set"] = list(sources)
+
+    stmt = insert(articles).values(**values)
+    set_ = {
+        "data": stmt.excluded.data,
+        "last_fetched": stmt.excluded.last_fetched,
+        "updated_at": func.now(),
+    }
+    if policy_citation_count is not None:
+        set_["policy_citation_count"] = stmt.excluded.policy_citation_count
+    if last_policy_cited_at is not None:
+        set_["last_policy_cited_at"] = stmt.excluded.last_policy_cited_at
+    if sources is not None:
+        # Merge source sets via JSONB || (preserves order, dedup happens via consumer)
+        set_["source_set"] = articles.c.source_set.op("||")(stmt.excluded.source_set)
+
+    stmt = stmt.on_conflict_do_update(index_elements=["doi"], set_=set_)
     with get_engine().begin() as conn:
         conn.execute(stmt)
 
@@ -141,6 +167,24 @@ def get_articles_by_orcid(orcid: str) -> list[dict]:
 
 
 # ── Policy Documents ─────────────────────────────────────────────────────────
+
+
+def insert_policy_document_stub_if_missing(policy_document_id: str) -> None:
+    """Insert a placeholder policy_documents row if one doesn't already exist.
+
+    Used by Stage 3 to satisfy the article_citations foreign key when a citation
+    references a policy doc Stage 4 hasn't enriched yet. Critically, this uses
+    ON CONFLICT DO NOTHING — it must NEVER overwrite an already-enriched row,
+    or Stage 4's hard-won metadata gets clobbered back to a bare stub.
+    """
+    stmt = insert(policy_documents).values(
+        policy_document_id=policy_document_id,
+        data={"policy_document_id": policy_document_id},
+        last_fetched=datetime.now(timezone.utc),
+    )
+    stmt = stmt.on_conflict_do_nothing(index_elements=["policy_document_id"])
+    with get_engine().begin() as conn:
+        conn.execute(stmt)
 
 
 def upsert_policy_document(doc: dict) -> None:
@@ -222,6 +266,53 @@ def upsert_article_citation(
     )
     with get_engine().begin() as conn:
         conn.execute(stmt)
+
+
+def get_researcher_policy_citations() -> list[dict]:
+    """Return one row per (researcher × policy document) citation.
+
+    Joins researchers.data (openalex.works_dois ∪ rmd.dois) → article_citations →
+    policy_documents. Used by the export stage to build per-researcher policy
+    impact summaries and the denormalized flat-doc table.
+    """
+    from sqlalchemy import text
+    sql = text("""
+        WITH researcher_dois AS (
+            SELECT
+                r.orcid,
+                r.display_name,
+                r.data,
+                lower(d.value) AS doi
+            FROM researchers r
+            CROSS JOIN LATERAL jsonb_array_elements_text(
+                COALESCE(r.data #> '{openalex,works_dois}', '[]'::jsonb)
+                || COALESCE(r.data #> '{rmd,dois}', '[]'::jsonb)
+            ) AS d(value)
+        )
+        SELECT
+            rd.orcid,
+            rd.display_name,
+            rd.data AS researcher_data,
+            ac.policy_document_id,
+            pd.data AS policy_doc_data,
+            ac.citation_metadata
+        FROM researcher_dois rd
+        JOIN article_citations ac ON ac.doi = rd.doi
+        JOIN policy_documents pd ON pd.policy_document_id = ac.policy_document_id
+    """)
+    with get_engine().connect() as conn:
+        rows = conn.execute(sql).fetchall()
+    return [
+        {
+            "orcid": row.orcid,
+            "display_name": row.display_name,
+            "researcher_data": row.researcher_data,
+            "policy_document_id": row.policy_document_id,
+            "policy_doc_data": row.policy_doc_data,
+            "citation_metadata": row.citation_metadata,
+        }
+        for row in rows
+    ]
 
 
 def get_unique_cited_policy_doc_ids() -> set[str]:

@@ -69,27 +69,30 @@ rmd = researcher.get("rmd") or {}
 topics = oa.get("topics", [])
 primary_topic = topics[0] if topics else {}
 
-# Load policy documents from normalized tables
+# Load policy documents from normalized tables. Joins this researcher's
+# OpenAlex/RMD DOI list against article_citations → policy_documents.
 policy_docs = []
 engine = get_engine()
 if engine is not None:
     try:
         from sqlalchemy import text
-        with engine.connect() as conn:
-            rows = conn.execute(text("""
-                SELECT pd.data as doc_data, pd.policy_document_id
-                FROM articles a
-                JOIN article_citations ac ON ac.doi = a.doi
-                JOIN policy_documents pd ON pd.policy_document_id = ac.policy_document_id
-                WHERE a.data->>'orcids' LIKE :pattern
-                AND pd.data->>'title' IS NOT NULL
-            """), {"pattern": f"%{orcid}%"}).fetchall()
-            # Deduplicate by policy_document_id
-            seen = set()
-            for r in rows:
-                if r.policy_document_id not in seen:
-                    seen.add(r.policy_document_id)
-                    policy_docs.append(r.doc_data)
+        oa_block = researcher.get("openalex") or {}
+        rmd_block = researcher.get("rmd") or {}
+        researcher_dois = sorted({
+            d.lower() for d in (
+                (oa_block.get("works_dois") or []) + (rmd_block.get("dois") or [])
+            ) if d
+        })
+        if researcher_dois:
+            with engine.connect() as conn:
+                rows = conn.execute(text("""
+                    SELECT DISTINCT pd.policy_document_id, pd.data AS doc_data
+                    FROM article_citations ac
+                    JOIN policy_documents pd ON pd.policy_document_id = ac.policy_document_id
+                    WHERE lower(ac.doi) = ANY(:dois)
+                      AND pd.data->>'title' IS NOT NULL
+                """), {"dois": researcher_dois}).fetchall()
+            policy_docs = [r.doc_data for r in rows]
     except Exception as e:
         st.warning(f"Could not load policy documents: {e}")
 
@@ -116,11 +119,31 @@ with col1:
         )
 
 with col2:
+    # `wa:<uid>` synthetic identifiers mean we resolved this researcher via
+    # OpenAlex name search, not via a real ORCID in RMD. Show the discovered
+    # ORCID if Stage 2 found one, else just the WebAccess ID.
+    is_synthetic = orcid.startswith("wa:")
+    discovered = researcher.get("discovered_orcid")
+    if is_synthetic and discovered:
+        st.markdown(
+            f"**ORCID:** [{discovered}](https://orcid.org/{discovered}) _(via name search)_  \n"
+            f"**WebAccess:** {orcid[3:]}"
+        )
+    elif is_synthetic:
+        st.markdown(f"**WebAccess:** {orcid[3:]} _(no ORCID on file)_")
+    else:
+        st.markdown(f"**ORCID:** [{orcid}](https://orcid.org/{orcid})")
     st.markdown(
-        f"**ORCID:** [{orcid}](https://orcid.org/{orcid})  \n"
         f"**OpenAlex:** [{researcher.get('openalex_id', 'N/A')}]"
         f"(https://openalex.org/{researcher.get('openalex_id', '')})"
     )
+    flags = researcher.get("flags") or {}
+    if flags.get("oa_disambiguation_suspect"):
+        st.warning(
+            "⚠️ This researcher's OpenAlex author record is flagged as "
+            "potentially conflated with another author — works list shown is "
+            "based on RMD only."
+        )
     if profile.get("pure_profile_url"):
         st.markdown(f"**Pure Profile:** [View]({profile['pure_profile_url']})")
     if profile.get("email"):

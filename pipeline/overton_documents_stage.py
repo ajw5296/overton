@@ -18,8 +18,9 @@ from .db.operations import (
     get_unique_cited_policy_doc_ids,
     get_existing_policy_doc_ids,
     upsert_policy_document,
+    update_pdf_download_status,
 )
-from .db.s3_client import upload_raw_response
+from .db.s3_client import upload_raw_response, list_existing_pdf_ids
 
 logger = logging.getLogger("pipeline.overton_documents")
 
@@ -167,8 +168,18 @@ def run(incremental: bool = False) -> dict:
         print("Overton Documents: Nothing to fetch")
         return {"referenced": len(cited_ids), "fetched": 0, "already_existed": len(existing_ids)}
 
+    # Snapshot existing PDFs in S3 once (single ListObjectsV2 walk) so we can
+    # mark docs as 'downloaded' on insert and let Stage 5 skip them naturally.
+    try:
+        existing_pdfs = list_existing_pdf_ids()
+        print(f"Overton Documents: {len(existing_pdfs)} PDFs already in S3 — will mark downloaded")
+    except Exception as e:
+        logger.warning("Could not list existing PDFs: %s", e)
+        existing_pdfs = set()
+
     fetched = 0
     failed = 0
+    pdfs_skipped = 0
 
     for doc_id in tqdm(sorted(missing_ids), desc="Overton Documents"):
         doc = _fetch_document(doc_id)
@@ -176,6 +187,16 @@ def run(incremental: bool = False) -> dict:
             try:
                 upsert_policy_document(doc)
                 fetched += 1
+                # If the PDF for this doc is already in S3, mark it downloaded
+                # so Stage 5 doesn't re-fetch it.
+                if doc_id in existing_pdfs:
+                    pdf_prefix = "policy-documents"  # matches S3_PDF_PREFIX default
+                    update_pdf_download_status(
+                        doc_id,
+                        s3_pdf_key=f"{pdf_prefix}/{doc_id}.pdf",
+                        status="downloaded",
+                    )
+                    pdfs_skipped += 1
             except Exception as e:
                 logger.warning("Failed to upsert policy document %s: %s", doc_id, e)
                 failed += 1
@@ -187,7 +208,9 @@ def run(incremental: bool = False) -> dict:
         "already_existed": len(existing_ids) - len(placeholder_ids),
         "fetched": fetched,
         "failed": failed,
+        "pdfs_preserved": pdfs_skipped,
     }
 
-    print(f"Overton Documents: Fetched {fetched}, failed {failed}")
+    print(f"Overton Documents: Fetched {fetched}, failed {failed}, "
+          f"{pdfs_skipped} PDFs preserved from prior run")
     return stats

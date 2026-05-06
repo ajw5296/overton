@@ -23,6 +23,8 @@ from .db.s3_client import (
 logger = logging.getLogger("pipeline.rmd")
 
 S3_MAP_KEY = "pipeline-cache/orcid_webaccess_map.json"
+S3_DOIS_MAP_KEY = "pipeline-cache/webaccess_dois_map.json"
+S3_NAMES_MAP_KEY = "pipeline-cache/webaccess_names_map.json"
 
 RMD_HEADERS = {
     "X-API-Key": config.RMD_API_KEY,
@@ -50,6 +52,49 @@ def _load_orcid_map() -> dict[str, str]:
     return orcid_map or {}
 
 
+def _load_dois_map() -> dict[str, list[str]]:
+    """Load the WebAccess→DOIs map from S3, falling back to local file.
+
+    Built during --rebuild-map. Used by Stage 1 to attach RMD-known DOIs to
+    each researcher record (consumed by Stage 2's disambiguation guard).
+    Returns {} if not yet built — pipeline still runs, just without RMD DOIs.
+    """
+    dois_map = None
+    try:
+        dois_map = load_json_from_s3(S3_DOIS_MAP_KEY)
+        if dois_map:
+            logger.info("Loaded DOIs for %d users from S3", len(dois_map))
+    except Exception as e:
+        logger.warning("Failed to load DOIs map from S3: %s", e)
+
+    if not dois_map:
+        path = config.DATA_DIR / config.WEBACCESS_DOIS_MAP
+        dois_map = load_json(path, {})
+        if dois_map:
+            logger.info("Loaded DOIs for %d users from local file", len(dois_map))
+
+    return dois_map or {}
+
+
+def _load_names_map() -> dict[str, str]:
+    """Load the WebAccess→Name map from S3, falling back to local file."""
+    names_map = None
+    try:
+        names_map = load_json_from_s3(S3_NAMES_MAP_KEY)
+        if names_map:
+            logger.info("Loaded names for %d users from S3", len(names_map))
+    except Exception as e:
+        logger.warning("Failed to load names map from S3: %s", e)
+
+    if not names_map:
+        path = config.DATA_DIR / config.WEBACCESS_NAMES_MAP
+        names_map = load_json(path, {})
+        if names_map:
+            logger.info("Loaded names for %d users from local file", len(names_map))
+
+    return names_map or {}
+
+
 def _fetch_rmd_data(webaccess_id: str) -> dict:
     """Fetch all RMD data for a researcher by WebAccess ID."""
     result = {
@@ -71,6 +116,7 @@ def _fetch_rmd_data(webaccess_id: str) -> dict:
     if profile_data:
         attrs = (profile_data.get("data") or {}).get("attributes", {})
         result["profile"] = {
+            "name": attrs.get("name"),
             "title": attrs.get("title"),
             "organization_name": attrs.get("organization_name"),
             "email": attrs.get("email"),
@@ -449,14 +495,31 @@ def rebuild_orcid_map() -> dict[str, str]:
 
     print(f"Profile lookup: {profile_matched} new mappings")
 
-    # Save to S3 and local
+    # Save ORCID map to S3 and local
     try:
         save_json_to_s3(S3_MAP_KEY, orcid_map)
     except Exception as e:
         logger.warning("Failed to save ORCID map to S3: %s", e)
-    map_path = config.DATA_DIR / config.ORCID_WEBACCESS_MAP
     config.DATA_DIR.mkdir(parents=True, exist_ok=True)
-    save_json(orcid_map, map_path)
+    save_json(orcid_map, config.DATA_DIR / config.ORCID_WEBACCESS_MAP)
+
+    # Save the WebAccess→DOIs map. Used by Stage 1 to attach known DOIs to each
+    # researcher record (Stage 2's disambiguation guard cross-references this).
+    dois_map = {uid: sorted(dois) for uid, dois in user_dois.items() if dois}
+    try:
+        save_json_to_s3(S3_DOIS_MAP_KEY, dois_map)
+    except Exception as e:
+        logger.warning("Failed to save DOIs map to S3: %s", e)
+    save_json(dois_map, config.DATA_DIR / config.WEBACCESS_DOIS_MAP)
+
+    # Save the WebAccess→Name map. Used by Stage 1 to attach a display name to
+    # unmapped researchers (no profile access) and by Stage 2's name-search path.
+    names_map = {uid: name for uid, name in user_names.items() if name}
+    try:
+        save_json_to_s3(S3_NAMES_MAP_KEY, names_map)
+    except Exception as e:
+        logger.warning("Failed to save names map to S3: %s", e)
+    save_json(names_map, config.DATA_DIR / config.WEBACCESS_NAMES_MAP)
 
     print(f"\n=== ORCID Map Summary ===")
     print(f"  Total mappings: {len(orcid_map)}")
@@ -464,6 +527,8 @@ def rebuild_orcid_map() -> dict[str, str]:
     print(f"  New from DOI cross-ref: {doi_matched}")
     print(f"  New from profile lookup: {profile_matched}")
     print(f"  Previously existing: {len(orcid_map) - name_matched - doi_matched - profile_matched}")
+    print(f"  WebAccess→DOIs map:  {len(dois_map)} users, "
+          f"{sum(len(d) for d in dois_map.values())} DOIs total")
     return orcid_map
 
 
@@ -485,12 +550,27 @@ def run(max_researchers: int | None = None,
         print("ERROR: No ORCID map found. Run with --rebuild-map first.")
         return {"error": "no ORCID map", "fetched": 0}
 
-    researchers_to_process = list(orcid_map.items())
+    dois_map = _load_dois_map()    # uid -> [DOIs]; empty if --rebuild-map hasn't run yet
+    names_map = _load_names_map()  # uid -> "First Last" from publications scan
+    uid_to_orcid = {uid: orcid for orcid, uid in orcid_map.items()}
+
+    # Cohort = every uid the publications scan saw.
+    # Mapped uids → keyed on the real ORCID. Unmapped → 'wa:<uid>' synthetic identifier
+    # so they still land in the researchers table. Stage 2 takes the name-search path
+    # for the synthetic ones.
+    all_uids = set(dois_map.keys()) | set(names_map.keys()) | set(uid_to_orcid.keys())
+    researchers_to_process: list[tuple[str, str]] = []
+    for uid in sorted(all_uids):
+        identifier = uid_to_orcid.get(uid) or f"wa:{uid}"
+        researchers_to_process.append((identifier, uid))
+
     if max_researchers:
         researchers_to_process = researchers_to_process[:max_researchers]
 
+    n_mapped = sum(1 for ident, _ in researchers_to_process if not ident.startswith("wa:"))
+    n_unmapped = len(researchers_to_process) - n_mapped
     print(f"RMD: {len(researchers_to_process)} researchers in cohort"
-          f" (from {len(orcid_map)} total in map)")
+          f" ({n_mapped} ORCID-mapped, {n_unmapped} unmapped)")
 
     # Load existing researchers for incremental check
     existing = {}
@@ -514,7 +594,14 @@ def run(max_researchers: int | None = None,
                 continue
 
         rmd_data = _fetch_rmd_data(webaccess_id)
-        display_name = (rmd_data.get("profile") or {}).get("title") or webaccess_id
+        rmd_data["dois"] = dois_map.get(webaccess_id, [])
+        # `name` is the actual person name (from publications scan or profile);
+        # `profile.title` is the academic title ("Professor"). The display_name
+        # priority is: profile.name > publications-scan name > webaccess_id.
+        profile_name = (rmd_data.get("profile") or {}).get("name")
+        scan_name = names_map.get(webaccess_id, "")
+        rmd_data["name"] = profile_name or scan_name or ""
+        display_name = profile_name or scan_name or webaccess_id
 
         researcher = {
             "orcid": orcid,

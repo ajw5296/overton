@@ -46,6 +46,11 @@ articles = Table(
     metadata,
     Column("doi", Text, primary_key=True),
     Column("data", JSONB, nullable=False),
+    # Policy-citation overlay (denormalized for fast filtering)
+    Column("policy_citation_count", Integer, server_default="0"),
+    Column("last_policy_cited_at", TIMESTAMP(timezone=True)),
+    # Which sources discovered this work — {'rmd', 'openalex', 'overton'}
+    Column("source_set", JSONB, server_default="[]"),
     Column("last_fetched", TIMESTAMP(timezone=True)),
     Column("created_at", TIMESTAMP(timezone=True), server_default=func.now()),
     Column("updated_at", TIMESTAMP(timezone=True), server_default=func.now(), onupdate=func.now()),
@@ -94,6 +99,8 @@ _indexes = [
     Index("idx_researchers_data_gin", researchers.c.data, postgresql_using="gin"),
     Index("idx_articles_orcids_gin", articles.c.data["orcids"], postgresql_using="gin"),
     Index("idx_articles_last_fetched", articles.c.last_fetched),
+    Index("idx_articles_policy_cited", articles.c.policy_citation_count,
+          postgresql_where=articles.c.policy_citation_count > 0),
     Index("idx_policy_docs_source_country", policy_documents.c.data["source"]["country"].astext),
     Index("idx_policy_docs_source_type", policy_documents.c.data["source"]["type"].astext),
     Index("idx_policy_docs_download", policy_documents.c.download_status, postgresql_where=policy_documents.c.s3_pdf_key.is_(None)),

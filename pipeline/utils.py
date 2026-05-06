@@ -97,7 +97,21 @@ def api_request(url: str, params: dict = None, headers: dict = None,
             resp.raise_for_status()
             if delay > 0:
                 time.sleep(delay)
-            return resp.json()
+            # Empty / non-JSON bodies can come back from upstream APIs even on
+            # 200 OK (e.g. transient gateway hiccups). Treat as a failed attempt
+            # and retry rather than letting JSONDecodeError kill the whole stage.
+            if not resp.text.strip():
+                logger.warning(f"Empty response body (attempt {attempt + 1}/{max_retries}) for {url}")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+                continue
+            try:
+                return resp.json()
+            except ValueError as e:
+                logger.warning(f"Non-JSON response (attempt {attempt + 1}/{max_retries}) for {url}: {e}")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+                continue
         except requests.exceptions.RequestException as e:
             logger.warning(f"Request failed (attempt {attempt + 1}/{max_retries}): {e}")
             if attempt < max_retries - 1:

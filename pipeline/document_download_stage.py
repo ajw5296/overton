@@ -56,6 +56,12 @@ def _download_pdf(url: str, timeout: int = None) -> tuple[bytes | None, str]:
     except requests.exceptions.RequestException as e:
         logger.warning("Failed to download %s: %s", url, e)
         return None, "failed"
+    except (UnicodeDecodeError, UnicodeError) as e:
+        # Servers occasionally return non-UTF-8 bytes in redirect Location
+        # headers; requests.sessions.get_redirect_target raises on those.
+        # Treat as a failed download so the stage can continue.
+        logger.warning("Failed to download %s: encoding error in response: %s", url, e)
+        return None, "failed"
 
 
 def run(max_downloads: int | None = None) -> dict:

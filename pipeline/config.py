@@ -37,6 +37,8 @@ FINAL_OUTPUT = "researchers.json"
 SUMMARY_OUTPUT = "researchers_summary.json"
 POLICY_DOCS_FLAT_OUTPUT = "policy_documents_flat.json"
 ORCID_WEBACCESS_MAP = "orcid_webaccess_map.json"
+WEBACCESS_DOIS_MAP = "webaccess_dois_map.json"
+WEBACCESS_NAMES_MAP = "webaccess_names_map.json"
 RUN_METADATA = "run_metadata.json"
 
 # === Incremental update settings ===

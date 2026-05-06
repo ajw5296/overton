@@ -48,7 +48,20 @@
       "WebFetch(domain:app.overton.io)",
       "Bash(aws secretsmanager *)",
       "Bash(export OVERTON_API_KEY=$\\(aws secretsmanager get-secret-value --region us-east-1 --secret-id overton/api-keys/overton --query SecretString --output text\\))",
-      "WebSearch"
+      "WebSearch",
+      "Bash(pip show *)",
+      "Bash(grep -v \"^$\")",
+      "Bash(awk '{print $2, $11, $12, $13, $14}')",
+      "Bash(export PSU_RESEARCH_API_KEY=$\\(aws secretsmanager get-secret-value --region us-east-1 --secret-id overton/api-keys/rmd --query SecretString --output text\\))",
+      "Bash(tee /tmp/full_run.log)",
+      "Bash(tee -a /tmp/full_run.log)",
+      "Bash(tee /tmp/stages456.log)",
+      "Bash(tee -a /tmp/stages456.log)",
+      "Bash(aws events *)",
+      "Bash(tee /tmp/restore.log)",
+      "Bash(tee -a /tmp/restore.log)",
+      "Bash(xargs -n1 -I{} aws ecs describe-tasks --region us-east-1 --cluster overton-dashboard-cluster --tasks {} --query 'tasks[].{started:startedAt,task:taskDefinitionArn}' --output text)",
+      "Bash(tee /tmp/recover_stage4.log)"
     ]
   }
 }

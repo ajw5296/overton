@@ -56,24 +56,30 @@ def load_summary() -> list[dict]:
                     "SELECT orcid, openalex_id, display_name, data FROM researchers"
                 )).fetchall()
 
-                # Count policy citations per researcher via normalized tables
-                citation_counts = {}
+                # Count policy citations per researcher by joining the
+                # researcher's OpenAlex/RMD DOI list against article_citations.
+                # Same join pattern as pipeline.db.operations.get_researcher_policy_citations.
                 cite_rows = conn.execute(text("""
-                    SELECT a.data->>'orcids' as orcids, COUNT(DISTINCT ac.policy_document_id) as doc_count
-                    FROM articles a
-                    JOIN article_citations ac ON ac.doi = a.doi
-                    GROUP BY a.data->>'orcids'
+                    SELECT rd.orcid, COUNT(DISTINCT ac.policy_document_id) AS doc_count
+                    FROM (
+                        SELECT r.orcid, lower(d.value) AS doi
+                        FROM researchers r
+                        CROSS JOIN LATERAL jsonb_array_elements_text(
+                            COALESCE(r.data #> '{openalex,works_dois}', '[]'::jsonb)
+                            || COALESCE(r.data #> '{rmd,dois}', '[]'::jsonb)
+                        ) AS d(value)
+                    ) rd
+                    JOIN article_citations ac ON ac.doi = rd.doi
+                    GROUP BY rd.orcid
                 """)).fetchall()
-                for cr in cite_rows:
-                    orcids_str = cr.orcids or ""
-                    for orcid in [o.strip().strip('"').strip("'") for o in orcids_str.strip("[]").split(",") if o.strip()]:
-                        citation_counts[orcid] = citation_counts.get(orcid, 0) + cr.doc_count
+                citation_counts = {cr.orcid: cr.doc_count for cr in cite_rows}
 
             summaries = []
             for row in rows:
                 data = row.data or {}
                 oa = data.get("openalex") or {}
                 rmd = data.get("rmd") or {}
+                flags = data.get("flags") or {}
                 topics = oa.get("topics", [])
                 primary_topic = topics[0] if topics else {}
 
@@ -82,6 +88,7 @@ def load_summary() -> list[dict]:
                     "openalex_id": row.openalex_id,
                     "display_name": row.display_name,
                     "works_count": oa.get("works_count", 0),
+                    "works_dois_count": len(oa.get("works_dois") or []),
                     "cited_by_count": oa.get("cited_by_count", 0),
                     "h_index": oa.get("h_index", 0),
                     "primary_topic": primary_topic.get("topic"),
@@ -96,6 +103,8 @@ def load_summary() -> list[dict]:
                         g.get("amount_in_dollars", 0) or 0
                         for g in rmd.get("grants", [])
                     ),
+                    "lookup_method": flags.get("lookup_method", "orcid"),
+                    "oa_disambiguation_suspect": bool(flags.get("oa_disambiguation_suspect")),
                 })
             logger.info("Loaded %d researcher summaries from database", len(summaries))
             return summaries
@@ -187,16 +196,29 @@ def load_policy_docs_flat() -> list[dict]:
         try:
             from sqlalchemy import text
             with engine.connect() as conn:
-                # Join researchers → articles (via ORCID in article data) → citations → policy docs
+                # Researcher → DOI list → article_citations → policy_documents.
+                # Same join as pipeline.db.operations.get_researcher_policy_citations.
                 rows = conn.execute(text("""
+                    WITH researcher_dois AS (
+                        SELECT
+                            r.orcid,
+                            r.display_name,
+                            r.data,
+                            lower(d.value) AS doi
+                        FROM researchers r
+                        CROSS JOIN LATERAL jsonb_array_elements_text(
+                            COALESCE(r.data #> '{openalex,works_dois}', '[]'::jsonb)
+                            || COALESCE(r.data #> '{rmd,dois}', '[]'::jsonb)
+                        ) AS d(value)
+                    )
                     SELECT
-                        r.orcid,
-                        r.display_name,
-                        r.data as researcher_data,
-                        pd.data as doc_data
-                    FROM researchers r
-                    JOIN articles a ON a.data->>'orcids' LIKE CONCAT('%%', r.orcid, '%%')
-                    JOIN article_citations ac ON ac.doi = a.doi
+                        rd.orcid,
+                        rd.display_name,
+                        rd.data AS researcher_data,
+                        pd.policy_document_id,
+                        pd.data AS doc_data
+                    FROM researcher_dois rd
+                    JOIN article_citations ac ON ac.doi = rd.doi
                     JOIN policy_documents pd ON pd.policy_document_id = ac.policy_document_id
                     WHERE pd.data->>'title' IS NOT NULL
                 """)).fetchall()
@@ -216,6 +238,7 @@ def load_policy_docs_flat() -> list[dict]:
                     "primary_subfield": primary_topic.get("subfield"),
                     "primary_field": primary_topic.get("field"),
                     "primary_domain": primary_topic.get("domain"),
+                    "policy_document_id": row.policy_document_id,
                     "doc_title": doc.get("title"),
                     "source_title": source.get("title"),
                     "source_country": source.get("country"),

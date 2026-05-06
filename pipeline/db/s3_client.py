@@ -140,3 +140,32 @@ def pdf_exists(
         if e.response["Error"]["Code"] == "404":
             return False
         raise
+
+
+def list_existing_pdf_ids(bucket: str | None = None) -> set[str]:
+    """Return the set of policy_document_ids whose PDFs already live in S3.
+
+    Single paginated `ListObjectsV2` over the policy-documents/ prefix —
+    cheaper than calling `pdf_exists` once per document.
+    """
+    bucket = bucket or _get_bucket()
+    prefix = os.getenv("S3_PDF_PREFIX", "policy-documents")
+    suffix = ".pdf"
+    s3 = get_s3_client()
+
+    ids: set[str] = set()
+    token: str | None = None
+    while True:
+        kwargs = {"Bucket": bucket, "Prefix": f"{prefix}/"}
+        if token:
+            kwargs["ContinuationToken"] = token
+        resp = s3.list_objects_v2(**kwargs)
+        for obj in resp.get("Contents", []) or []:
+            key = obj["Key"]
+            if key.endswith(suffix):
+                ids.add(key[len(prefix) + 1 : -len(suffix)])
+        if not resp.get("IsTruncated"):
+            break
+        token = resp.get("NextContinuationToken")
+
+    return ids
