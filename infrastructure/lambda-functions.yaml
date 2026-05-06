@@ -1,0 +1,282 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Overton Pipeline - Lambda functions for each pipeline stage'
+
+Parameters:
+  S3BucketName:
+    Type: String
+    Description: S3 data lake bucket name
+    Default: overton-datalake-700032885189
+
+  DBSecretArn:
+    Type: String
+    Description: ARN of the Secrets Manager secret for RDS credentials
+    Default: arn:aws:secretsmanager:us-east-1:700032885189:secret:overton/rds-credentials-M85fjC
+
+  PipelineCodeBucket:
+    Type: String
+    Description: S3 bucket containing the Lambda deployment package
+    Default: overton-datalake-700032885189
+
+  PipelineCodeKey:
+    Type: String
+    Description: S3 key for the Lambda deployment package zip
+    Default: lambda-packages/pipeline-lambda.zip
+
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subnet IDs for Lambda VPC access (same as RDS)
+
+  SecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+    Description: Security group that allows access to RDS
+
+Resources:
+  # Lambda execution role
+  PipelineLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: overton-pipeline-lambda-role
+      Tags:
+        - Key: Project
+          Value: overton
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+      Policies:
+        - PolicyName: S3DataLakeAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:ListBucket
+                  - s3:HeadObject
+                Resource:
+                  - !Sub arn:aws:s3:::${S3BucketName}
+                  - !Sub arn:aws:s3:::${S3BucketName}/*
+        - PolicyName: SecretsManagerRead
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource:
+                  - !Ref DBSecretArn
+                  - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:overton/*
+        - PolicyName: CloudWatchLogs
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource:
+                  - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/overton-*
+
+  # Stage 1: OpenAlex fetch
+  OpenAlexFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: overton-openalex
+      Runtime: python3.12
+      Handler: pipeline.lambda_handlers.openalex_handler.handler
+      Role: !GetAtt PipelineLambdaRole.Arn
+      Code:
+        S3Bucket: !Ref PipelineCodeBucket
+        S3Key: !Ref PipelineCodeKey
+      Timeout: 900
+      MemorySize: 512
+      Tags:
+        - Key: Project
+          Value: overton
+      VpcConfig:
+        SubnetIds: !Ref SubnetIds
+        SecurityGroupIds:
+          - !Ref SecurityGroupId
+      Environment:
+        Variables:
+          DATABASE_SECRET_ARN: !Ref DBSecretArn
+          S3_BUCKET_NAME: !Ref S3BucketName
+          OPENALEX_EMAIL: overton-pipeline@psu.edu
+
+  # Stage 2: RMD enrichment
+  RMDFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: overton-rmd
+      Runtime: python3.12
+      Handler: pipeline.lambda_handlers.rmd_handler.handler
+      Role: !GetAtt PipelineLambdaRole.Arn
+      Code:
+        S3Bucket: !Ref PipelineCodeBucket
+        S3Key: !Ref PipelineCodeKey
+      Timeout: 900
+      MemorySize: 512
+      Tags:
+        - Key: Project
+          Value: overton
+      VpcConfig:
+        SubnetIds: !Ref SubnetIds
+        SecurityGroupIds:
+          - !Ref SecurityGroupId
+      Environment:
+        Variables:
+          DATABASE_SECRET_ARN: !Ref DBSecretArn
+          S3_BUCKET_NAME: !Ref S3BucketName
+          PSU_RESEARCH_API_KEY: '{{resolve:secretsmanager:overton/api-keys/rmd}}'
+
+  # Chunker: splits work for fan-out stages
+  ChunkerFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: overton-chunker
+      Runtime: python3.12
+      Handler: pipeline.lambda_handlers.chunker_handler.handler
+      Role: !GetAtt PipelineLambdaRole.Arn
+      Code:
+        S3Bucket: !Ref PipelineCodeBucket
+        S3Key: !Ref PipelineCodeKey
+      Timeout: 120
+      MemorySize: 256
+      Tags:
+        - Key: Project
+          Value: overton
+      VpcConfig:
+        SubnetIds: !Ref SubnetIds
+        SecurityGroupIds:
+          - !Ref SecurityGroupId
+      Environment:
+        Variables:
+          DATABASE_SECRET_ARN: !Ref DBSecretArn
+          S3_BUCKET_NAME: !Ref S3BucketName
+
+  # Stage 3: Overton Articles (fan-out workers)
+  OvertArticlesFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: overton-articles
+      Runtime: python3.12
+      Handler: pipeline.lambda_handlers.overton_articles_handler.handler
+      Role: !GetAtt PipelineLambdaRole.Arn
+      Code:
+        S3Bucket: !Ref PipelineCodeBucket
+        S3Key: !Ref PipelineCodeKey
+      Timeout: 900
+      MemorySize: 512
+      Tags:
+        - Key: Project
+          Value: overton
+      VpcConfig:
+        SubnetIds: !Ref SubnetIds
+        SecurityGroupIds:
+          - !Ref SecurityGroupId
+      Environment:
+        Variables:
+          DATABASE_SECRET_ARN: !Ref DBSecretArn
+          S3_BUCKET_NAME: !Ref S3BucketName
+          OVERTON_API_KEY: '{{resolve:secretsmanager:overton/api-keys/overton}}'
+
+  # Stage 4: Overton Documents (fan-out workers)
+  OvertDocumentsFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: overton-documents
+      Runtime: python3.12
+      Handler: pipeline.lambda_handlers.overton_documents_handler.handler
+      Role: !GetAtt PipelineLambdaRole.Arn
+      Code:
+        S3Bucket: !Ref PipelineCodeBucket
+        S3Key: !Ref PipelineCodeKey
+      Timeout: 900
+      MemorySize: 512
+      Tags:
+        - Key: Project
+          Value: overton
+      VpcConfig:
+        SubnetIds: !Ref SubnetIds
+        SecurityGroupIds:
+          - !Ref SecurityGroupId
+      Environment:
+        Variables:
+          DATABASE_SECRET_ARN: !Ref DBSecretArn
+          S3_BUCKET_NAME: !Ref S3BucketName
+          OVERTON_API_KEY: '{{resolve:secretsmanager:overton/api-keys/overton}}'
+
+  # Stage 5: Document PDF download (fan-out workers)
+  DocumentDownloadFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: overton-document-download
+      Runtime: python3.12
+      Handler: pipeline.lambda_handlers.document_download_handler.handler
+      Role: !GetAtt PipelineLambdaRole.Arn
+      Code:
+        S3Bucket: !Ref PipelineCodeBucket
+        S3Key: !Ref PipelineCodeKey
+      Timeout: 900
+      MemorySize: 1024
+      Tags:
+        - Key: Project
+          Value: overton
+      VpcConfig:
+        SubnetIds: !Ref SubnetIds
+        SecurityGroupIds:
+          - !Ref SecurityGroupId
+      Environment:
+        Variables:
+          DATABASE_SECRET_ARN: !Ref DBSecretArn
+          S3_BUCKET_NAME: !Ref S3BucketName
+
+Outputs:
+  LambdaRoleArn:
+    Description: ARN of the Lambda execution role
+    Value: !GetAtt PipelineLambdaRole.Arn
+    Export:
+      Name: OvertonPipelineLambdaRoleArn
+
+  OpenAlexFunctionArn:
+    Description: ARN of the OpenAlex Lambda function
+    Value: !GetAtt OpenAlexFunction.Arn
+    Export:
+      Name: OvertonOpenAlexFunctionArn
+
+  RMDFunctionArn:
+    Description: ARN of the RMD Lambda function
+    Value: !GetAtt RMDFunction.Arn
+    Export:
+      Name: OvertonRMDFunctionArn
+
+  ChunkerFunctionArn:
+    Description: ARN of the Chunker Lambda function
+    Value: !GetAtt ChunkerFunction.Arn
+    Export:
+      Name: OvertonChunkerFunctionArn
+
+  OvertArticlesFunctionArn:
+    Description: ARN of the Overton Articles Lambda function
+    Value: !GetAtt OvertArticlesFunction.Arn
+    Export:
+      Name: OvertonArticlesFunctionArn
+
+  OvertDocumentsFunctionArn:
+    Description: ARN of the Overton Documents Lambda function
+    Value: !GetAtt OvertDocumentsFunction.Arn
+    Export:
+      Name: OvertonDocumentsFunctionArn
+
+  DocumentDownloadFunctionArn:
+    Description: ARN of the Document Download Lambda function
+    Value: !GetAtt DocumentDownloadFunction.Arn
+    Export:
+      Name: OvertonDocumentDownloadFunctionArn

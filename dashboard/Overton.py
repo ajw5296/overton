@@ -49,7 +49,12 @@ if summary:
             st.metric("Total Grant Funding", "N/A")
 
     if metadata:
-        st.caption(f"Last pipeline run: {metadata.get('run_timestamp', 'Unknown')}")
+        run_ts = metadata.get("run_timestamp", "Unknown")
+        run_status = metadata.get("status")
+        caption = f"Last pipeline run: {run_ts}"
+        if run_status and run_status != "completed":
+            caption += f" (status: {run_status})"
+        st.caption(caption)
 
 st.divider()
 

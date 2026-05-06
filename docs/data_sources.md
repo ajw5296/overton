@@ -367,7 +367,12 @@ Paginated list of all publications from an organization unit — used to build t
 
 **API base:** `https://app.overton.io`
 
-**Two endpoints:** `/articles.php` (scholarly articles) and `/documents.php` (policy documents). We query by ORCID.
+**Endpoints used:**
+- `/articles.php` — scholarly articles indexed by Overton (the subset cited by ≥1 policy doc)
+- `/documents.php` — policy documents
+- `/generate_id_set.php` — POST endpoint that batches DOIs into a set ID (required for >1 DOI per query)
+
+**Pipeline query strategy:** the pipeline's Stage 3 uses **DOI-set** (`articles.php?dois=<set_id>`), not the simpler `query=<ORCID>` free-text approach. For Jonathan Foulds (mapped researcher with 205 DOIs from OpenAlex) this returned 3× more policy documents than ORCID-text-search because Overton doesn't always tag every co-authored or older article with the researcher's ORCID. See section 3d for the full filter catalog.
 
 ### 3a. Articles Endpoint (`/articles.php`)
 
@@ -441,6 +446,64 @@ Returns policy documents directly. Simpler structure than the articles endpoint.
 | `topics` | string[] | Topic keywords | `["Microglia", "Nanotoxicology", ...]` |
 | `sdgcategories` | string[] | UN Sustainable Development Goal categories | |
 | `overton_url` | string | Overton page for this document | |
+
+### 3d. Filter Parameters & DOI-Set Workflow
+
+Filters validated against the live API (Swagger docs are incomplete). All recognized — we tested them by checking that Overton's response `description` field changes from "All articles" / "All documents" when the filter is parsed correctly.
+
+**`/articles.php` filters:**
+
+| Parameter | What it filters | Notes |
+|---|---|---|
+| `query` | Free-text search across title/abstract/authors/etc. | Used to be the pipeline's primary path (jam ORCID into this). Lossy. |
+| `r_open_institution_authors` | Author-at-institution by canonical ID | Format: `{ROR}__OVSEP__{Display Name}__OVSEP__{lowercase_name}` — e.g. `https://ror.org/04p491231 __OVSEP__ Jonathan Foulds __OVSEP__ jonathan foulds`. Must match Overton's internal indexed name exactly (Crossref-derived). |
+| `dois` | Single DOI or set ID | For >1 DOI, create a set first via `/generate_id_set.php` (see below). |
+| `journal` | Articles in a named journal | e.g. `The Lancet` |
+| `publisher` | Articles from a publisher | e.g. `Wiley` |
+| `year` | Publication year | e.g. `2020` |
+
+**`/documents.php` filters:**
+
+| Parameter | What it filters | Notes |
+|---|---|---|
+| `query` | Free-text search across document text | |
+| `r_open_cited_institution_authors` | Policy docs citing a person at an institution | Same `{ROR}__OVSEP__{Name}__OVSEP__{lower}` format as above |
+| `plain_dois_cited` | Policy docs citing a specific DOI or set | Single DOI or set ID |
+| `year` | Policy docs published in a year | |
+
+**Plus the documented UI/facets**: people cited, source country, region, topics, SDG categories, journals cited, publishers cited, funders cited, document type, subject area.
+
+**`POST /generate_id_set.php` — batching DOIs**
+
+Because URL parameters can't carry hundreds of DOIs, batching uses this POST workflow:
+
+```
+POST https://app.overton.io/generate_id_set.php?format=json&api_key=<KEY>
+Content-Type: application/x-www-form-urlencoded   ← REQUIRED, else body is silently mis-parsed
+
+dois=10.1016/j.jadohealth.2015.09.004
+10.1093/ntr/ntu071
+10.1080/22221751.2024.2321993
+```
+
+Response:
+```json
+{"set": "set:25040:9406ebe5293849540ad765bc954f1118"}
+```
+
+Then use the set ID as the value of `dois=` (articles) or `plain_dois_cited=` (documents):
+- `GET /articles.php?dois=set:25040:9406ebe5293849540ad765bc954f1118`
+- `GET /documents.php?plain_dois_cited=set:25040:9406ebe5293849540ad765bc954f1118`
+
+Tested ceiling: at least 10,000 DOIs per set (we never hit a limit). One POST per researcher is plenty.
+
+**Rate limiting**: `/generate_id_set.php` has a sustained-burst limit per API key. We hit a 429 wall around researcher 80 in our first run with no pacing. Mitigation in `pipeline/overton_articles_stage.py`:
+- 5/10/20/40s exponential backoff on 429
+- `OVERTON_DELAY` (~0.2s) sleep between researchers in the run loop
+
+The `api_request` helper in `pipeline/utils.py` already handles 429 retries for GETs but doesn't support POSTs — `_create_doi_set` has its own retry block.
+
+**Discovering the canonical author identifier**: the `r_open_institution_authors` filter requires Overton's internal name spelling. The most reliable way to discover it is to query an article we know is by the researcher (via DOI lookup) and read the `r_open_institution_authors` field on the response. Don't try to construct the value from RMD or OpenAlex names — Crossref-derived spellings differ in subtle ways (unicode hyphens, accent marks).
 
 ---
 

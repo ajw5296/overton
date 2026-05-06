@@ -1,0 +1,125 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Overton Pipeline - NAT Gateway for Lambda VPC internet access'
+
+Parameters:
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC ID
+    Default: vpc-b653f0cb
+
+  PublicSubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: Public subnet for the NAT Gateway
+    Default: subnet-62ba2743
+
+  PrivateSubnet1Cidr:
+    Type: String
+    Description: CIDR block for private subnet 1
+    Default: 172.31.96.0/20
+
+  PrivateSubnet2Cidr:
+    Type: String
+    Description: CIDR block for private subnet 2
+    Default: 172.31.112.0/20
+
+  AvailabilityZone1:
+    Type: String
+    Default: us-east-1a
+
+  AvailabilityZone2:
+    Type: String
+    Default: us-east-1b
+
+Resources:
+  # Elastic IP for NAT Gateway
+  NatEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      Tags:
+        - Key: Project
+          Value: overton
+
+  # NAT Gateway in a public subnet
+  NatGateway:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId: !GetAtt NatEIP.AllocationId
+      SubnetId: !Ref PublicSubnetId
+      Tags:
+        - Key: Project
+          Value: overton
+
+  # Private subnets for Lambda functions
+  PrivateSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Ref PrivateSubnet1Cidr
+      AvailabilityZone: !Ref AvailabilityZone1
+      Tags:
+        - Key: Name
+          Value: overton-private-1
+        - Key: Project
+          Value: overton
+
+  PrivateSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Ref PrivateSubnet2Cidr
+      AvailabilityZone: !Ref AvailabilityZone2
+      Tags:
+        - Key: Name
+          Value: overton-private-2
+        - Key: Project
+          Value: overton
+
+  # Route table for private subnets (routes through NAT)
+  PrivateRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: Name
+          Value: overton-private-rt
+        - Key: Project
+          Value: overton
+
+  PrivateRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PrivateRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: !Ref NatGateway
+
+  PrivateSubnet1RouteAssoc:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PrivateSubnet1
+      RouteTableId: !Ref PrivateRouteTable
+
+  PrivateSubnet2RouteAssoc:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PrivateSubnet2
+      RouteTableId: !Ref PrivateRouteTable
+
+Outputs:
+  PrivateSubnet1Id:
+    Description: Private subnet 1 ID (for Lambda VPC config)
+    Value: !Ref PrivateSubnet1
+    Export:
+      Name: OvertonPrivateSubnet1Id
+
+  PrivateSubnet2Id:
+    Description: Private subnet 2 ID (for Lambda VPC config)
+    Value: !Ref PrivateSubnet2
+    Export:
+      Name: OvertonPrivateSubnet2Id
+
+  NatGatewayId:
+    Description: NAT Gateway ID
+    Value: !Ref NatGateway
+    Export:
+      Name: OvertonNatGatewayId

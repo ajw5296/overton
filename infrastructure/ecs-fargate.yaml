@@ -32,6 +32,26 @@ Parameters:
     Default: 1
     Description: Number of Fargate tasks to run
 
+  RDSSecurityGroupId:
+    Type: String
+    Default: ''
+    Description: Security group ID of the RDS instance (leave empty if not yet deployed)
+
+  DBSecretArn:
+    Type: String
+    Default: ''
+    Description: ARN of the Secrets Manager secret for RDS credentials (leave empty if not yet deployed)
+
+  DataLakeBucketArn:
+    Type: String
+    Default: ''
+    Description: ARN of the S3 data lake bucket (leave empty if not yet deployed)
+
+Conditions:
+  HasRDS: !Not [!Equals [!Ref RDSSecurityGroupId, '']]
+  HasDBSecret: !Not [!Equals [!Ref DBSecretArn, '']]
+  HasDataLake: !Not [!Equals [!Ref DataLakeBucketArn, '']]
+
 Resources:
   # ECR Repository
   ECRRepository:
@@ -70,6 +90,9 @@ Resources:
       DefaultCapacityProviderStrategy:
         - CapacityProvider: FARGATE
           Weight: 1
+      Tags:
+        - Key: Project
+          Value: overton
 
   # CloudWatch Log Group
   LogGroup:
@@ -92,8 +115,20 @@ Resources:
             Action: sts:AssumeRole
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+      Policies: !If
+        - HasDBSecret
+        - - PolicyName: SecretsManagerRead
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: Allow
+                  Action:
+                    - secretsmanager:GetSecretValue
+                  Resource:
+                    - !Ref DBSecretArn
+        - !Ref AWS::NoValue
 
-  # ECS Task Role (for application permissions if needed)
+  # ECS Task Role (for application permissions)
   TaskRole:
     Type: AWS::IAM::Role
     Properties:
@@ -105,6 +140,20 @@ Resources:
             Principal:
               Service: ecs-tasks.amazonaws.com
             Action: sts:AssumeRole
+      Policies: !If
+        - HasDataLake
+        - - PolicyName: S3DataLakeRead
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: Allow
+                  Action:
+                    - s3:GetObject
+                    - s3:ListBucket
+                  Resource:
+                    - !Ref DataLakeBucketArn
+                    - !Sub ${DataLakeBucketArn}/*
+        - !Ref AWS::NoValue
 
   # Security Group for ALB
   ALBSecurityGroup:
@@ -134,6 +183,18 @@ Resources:
           SourceSecurityGroupId: !Ref ALBSecurityGroup
           Description: Allow traffic from ALB
 
+  # Egress rule to allow Fargate tasks to reach RDS on port 5432
+  TaskToRDSEgress:
+    Type: AWS::EC2::SecurityGroupEgress
+    Condition: HasRDS
+    Properties:
+      GroupId: !Ref TaskSecurityGroup
+      IpProtocol: tcp
+      FromPort: 5432
+      ToPort: 5432
+      DestinationSecurityGroupId: !Ref RDSSecurityGroupId
+      Description: Allow outbound to RDS PostgreSQL
+
   # Application Load Balancer
   ApplicationLoadBalancer:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
@@ -144,6 +205,9 @@ Resources:
       SecurityGroups:
         - !Ref ALBSecurityGroup
       Subnets: !Ref SubnetIds
+      Tags:
+        - Key: Project
+          Value: overton
 
   # ALB Target Group
   TargetGroup:
@@ -194,6 +258,17 @@ Resources:
           PortMappings:
             - ContainerPort: 8501
               Protocol: tcp
+          Environment:
+            - !If
+              - HasDataLake
+              - Name: S3_BUCKET_NAME
+                Value: !Sub overton-datalake-${AWS::AccountId}
+              - !Ref AWS::NoValue
+            - !If
+              - HasDBSecret
+              - Name: DATABASE_SECRET_ARN
+                Value: !Ref DBSecretArn
+              - !Ref AWS::NoValue
           LogConfiguration:
             LogDriver: awslogs
             Options:

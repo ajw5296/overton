@@ -1,0 +1,140 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Overton Pipeline - RDS PostgreSQL with Secrets Manager'
+
+Parameters:
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC ID where RDS will be deployed
+
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subnet IDs for the RDS subnet group (at least 2 in different AZs)
+
+  ECSTaskSecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+    Description: Security group ID of the ECS Fargate tasks (dashboard + pipeline) that need DB access
+
+  DBInstanceClass:
+    Type: String
+    Default: db.t3.micro
+    AllowedValues:
+      - db.t3.micro
+      - db.t3.small
+      - db.t3.medium
+    Description: RDS instance class (db.t3.micro ~$13/mo, db.t3.small ~$26/mo)
+
+  DBName:
+    Type: String
+    Default: overton
+    Description: Name of the PostgreSQL database
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9_]*'
+    ConstraintDescription: Must begin with a letter and contain only alphanumeric characters or underscores
+
+  DBMasterUsername:
+    Type: String
+    Default: overton_admin
+    Description: Master username for the RDS instance
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9_]*'
+    ConstraintDescription: Must begin with a letter and contain only alphanumeric characters or underscores
+
+Resources:
+  # Secrets Manager secret for DB credentials
+  DBSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: overton/rds-credentials
+      Description: RDS PostgreSQL credentials for the Overton pipeline
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "${DBMasterUsername}"}'
+        GenerateStringKey: password
+        PasswordLength: 32
+        ExcludePunctuation: true
+
+  # DB Subnet Group
+  DBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: Subnet group for Overton RDS PostgreSQL
+      DBSubnetGroupName: overton-db-subnet-group
+      SubnetIds: !Ref SubnetIds
+
+  # Security Group for RDS
+  RDSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: overton-rds-sg
+      GroupDescription: Security group for Overton RDS PostgreSQL
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 5432
+          ToPort: 5432
+          SourceSecurityGroupId: !Ref ECSTaskSecurityGroupId
+          Description: Allow PostgreSQL access from ECS tasks
+
+  # RDS PostgreSQL Instance
+  DBInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: overton-postgres
+      DBInstanceClass: !Ref DBInstanceClass
+      Engine: postgres
+      EngineVersion: '16.13'
+      DBName: !Ref DBName
+      MasterUsername: !Sub '{{resolve:secretsmanager:${DBSecret}:SecretString:username}}'
+      MasterUserPassword: !Sub '{{resolve:secretsmanager:${DBSecret}:SecretString:password}}'
+      AllocatedStorage: 20
+      MaxAllocatedStorage: 100
+      StorageType: gp3
+      StorageEncrypted: true
+      DBSubnetGroupName: !Ref DBSubnetGroup
+      VPCSecurityGroups:
+        - !Ref RDSSecurityGroup
+      PubliclyAccessible: false
+      BackupRetentionPeriod: 7
+      PreferredBackupWindow: '03:00-04:00'
+      PreferredMaintenanceWindow: 'sun:04:30-sun:05:30'
+      DeletionProtection: true
+      CopyTagsToSnapshot: true
+      Tags:
+        - Key: Project
+          Value: overton
+
+  # Attach the secret to the RDS instance for automatic rotation support
+  DBSecretAttachment:
+    Type: AWS::SecretsManager::SecretTargetAttachment
+    Properties:
+      SecretId: !Ref DBSecret
+      TargetId: !Ref DBInstance
+      TargetType: AWS::RDS::DBInstance
+
+Outputs:
+  DBEndpoint:
+    Description: RDS PostgreSQL endpoint address
+    Value: !GetAtt DBInstance.Endpoint.Address
+    Export:
+      Name: OvertonDBEndpoint
+
+  DBPort:
+    Description: RDS PostgreSQL port
+    Value: !GetAtt DBInstance.Endpoint.Port
+    Export:
+      Name: OvertonDBPort
+
+  DBName:
+    Description: Database name
+    Value: !Ref DBName
+    Export:
+      Name: OvertonDBName
+
+  DBSecretArn:
+    Description: ARN of the Secrets Manager secret containing DB credentials
+    Value: !Ref DBSecret
+    Export:
+      Name: OvertonDBSecretArn
+
+  RDSSecurityGroupId:
+    Description: Security group ID for the RDS instance
+    Value: !Ref RDSSecurityGroup
+    Export:
+      Name: OvertonRDSSecurityGroupId

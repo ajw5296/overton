@@ -1,0 +1,111 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Overton Pipeline - ECS Task Definition for pipeline execution'
+
+Parameters:
+  ECRRepositoryUri:
+    Type: String
+    Description: ECR Repository URI for the pipeline image
+
+  ImageTag:
+    Type: String
+    Default: latest
+    Description: Docker image tag for the pipeline container
+
+  PipelineExecutionRoleArn:
+    Type: String
+    Description: ARN of the pipeline ECS execution role (from pipeline-iam stack)
+
+  PipelineTaskRoleArn:
+    Type: String
+    Description: ARN of the pipeline ECS task role (from pipeline-iam stack)
+
+  DBSecretArn:
+    Type: String
+    Description: ARN of the Secrets Manager secret for RDS credentials
+
+  OvertApiKeySecretArn:
+    Type: String
+    Description: ARN of the Secrets Manager secret for the Overton API key
+
+  RmdApiKeySecretArn:
+    Type: String
+    Description: ARN of the Secrets Manager secret for the PSU RMD API key
+
+  OpenAlexEmail:
+    Type: String
+    Description: Email address for OpenAlex API contact header
+
+  S3BucketName:
+    Type: String
+    Description: S3 data lake bucket name
+
+  PipelineCpu:
+    Type: Number
+    Default: 512
+    Description: CPU units for the pipeline container
+    AllowedValues: [256, 512, 1024, 2048, 4096]
+
+  PipelineMemory:
+    Type: Number
+    Default: 1024
+    Description: Memory in MB for the pipeline container
+    AllowedValues: [512, 1024, 2048, 4096, 8192]
+
+Resources:
+  # CloudWatch Log Group for pipeline tasks
+  PipelineLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /ecs/overton-pipeline
+      RetentionInDays: 30
+      Tags:
+        - Key: Project
+          Value: overton
+
+  # ECS Task Definition for the pipeline
+  PipelineTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: overton-pipeline
+      Cpu: !Ref PipelineCpu
+      Memory: !Ref PipelineMemory
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      ExecutionRoleArn: !Ref PipelineExecutionRoleArn
+      TaskRoleArn: !Ref PipelineTaskRoleArn
+      ContainerDefinitions:
+        - Name: overton-pipeline
+          Image: !Sub ${ECRRepositoryUri}:${ImageTag}
+          Essential: true
+          Environment:
+            - Name: S3_BUCKET_NAME
+              Value: !Ref S3BucketName
+            - Name: OPENALEX_EMAIL
+              Value: !Ref OpenAlexEmail
+            # Passed as env var so the code can call GetSecretValue itself
+            - Name: DATABASE_SECRET_ARN
+              Value: !Ref DBSecretArn
+          Secrets:
+            # These are fetched from Secrets Manager and injected as plain values
+            - Name: OVERTON_API_KEY
+              ValueFrom: !Ref OvertApiKeySecretArn
+            - Name: PSU_RESEARCH_API_KEY
+              ValueFrom: !Ref RmdApiKeySecretArn
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref PipelineLogGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: pipeline
+
+Outputs:
+  PipelineTaskDefinitionArn:
+    Description: ARN of the pipeline ECS task definition
+    Value: !Ref PipelineTaskDefinition
+    Export:
+      Name: OvertonPipelineTaskDefinitionArn
+
+  PipelineLogGroupName:
+    Description: CloudWatch Log Group for pipeline tasks
+    Value: !Ref PipelineLogGroup

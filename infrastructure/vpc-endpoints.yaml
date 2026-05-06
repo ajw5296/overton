@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Overton Pipeline - VPC Gateway Endpoint for S3'
+
+Parameters:
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC ID where the endpoint will be created
+
+  RouteTableIds:
+    Type: CommaDelimitedList
+    Description: Route table IDs to associate with the S3 gateway endpoint
+
+Resources:
+  # VPC Gateway Endpoint for S3 (free - keeps S3 traffic within AWS network)
+  S3GatewayEndpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      VpcId: !Ref VpcId
+      ServiceName: !Sub com.amazonaws.${AWS::Region}.s3
+      VpcEndpointType: Gateway
+      RouteTableIds: !Ref RouteTableIds
+
+Outputs:
+  S3EndpointId:
+    Description: VPC Gateway Endpoint ID for S3
+    Value: !Ref S3GatewayEndpoint
+    Export:
+      Name: OvertonS3EndpointId

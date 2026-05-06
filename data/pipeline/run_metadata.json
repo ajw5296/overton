@@ -1,13 +1,13 @@
 {
-  "run_timestamp": "2026-03-11T14:24:28.371600+00:00",
-  "total_researchers": 10,
-  "with_policy_documents": 10,
-  "with_rmd_data": 0,
-  "total_grants": 0,
-  "total_policy_documents": 361,
+  "run_timestamp": "2026-04-30T05:21:56.655430+00:00",
+  "total_researchers": 1011,
+  "with_policy_documents": 790,
+  "with_rmd_data": 1011,
+  "total_grants": 26,
+  "total_policy_documents": 54972,
   "file_sizes": {
-    "researchers.json": 1505711,
-    "researchers_summary.json": 5320,
-    "policy_documents_flat.json": 370333
+    "researchers.json": 6644237,
+    "researchers_summary.json": 622642,
+    "policy_documents_flat.json": 68237377
   }
 }
