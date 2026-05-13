@@ -13,17 +13,16 @@ from pathlib import Path
 from collections import Counter
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from utils.data_loader import load_summary, load_researchers, get_researcher_by_orcid, get_pdf_presigned_url
+from utils.data_loader import load_summary, get_researcher_by_orcid, get_s3_presigned_url
 from utils.db_connection import get_engine
 
 # Page config
 st.set_page_config(
     page_title="Researcher Lookup",
-    page_icon="🔍",
     layout="wide"
 )
 
-st.title("🔍 Researcher Lookup")
+st.title("Researcher Lookup")
 st.markdown("Search for a researcher to view their full research impact profile")
 
 # Load summary for fast dropdown
@@ -54,11 +53,7 @@ if not selected_name:
 # Load full data for the selected researcher
 orcid = name_to_orcid[selected_name]
 with st.spinner("Loading researcher details..."):
-    # Try direct DB lookup first (single SELECT), fall back to loading all
     researcher = get_researcher_by_orcid(orcid)
-    if researcher is None:
-        all_researchers = load_researchers()
-        researcher = get_researcher_by_orcid(all_researchers, orcid)
 
 if not researcher:
     st.error(f"Could not find researcher data for {selected_name}")
@@ -72,6 +67,7 @@ primary_topic = topics[0] if topics else {}
 # Load policy documents from normalized tables. Joins this researcher's
 # OpenAlex/RMD DOI list against article_citations → policy_documents.
 policy_docs = []
+s3_keys_by_doc: dict[str, str | None] = {}
 engine = get_engine()
 if engine is not None:
     try:
@@ -86,13 +82,14 @@ if engine is not None:
         if researcher_dois:
             with engine.connect() as conn:
                 rows = conn.execute(text("""
-                    SELECT DISTINCT pd.policy_document_id, pd.data AS doc_data
+                    SELECT DISTINCT pd.policy_document_id, pd.data AS doc_data, pd.s3_pdf_key
                     FROM article_citations ac
                     JOIN policy_documents pd ON pd.policy_document_id = ac.policy_document_id
                     WHERE lower(ac.doi) = ANY(:dois)
                       AND pd.data->>'title' IS NOT NULL
                 """), {"dois": researcher_dois}).fetchall()
             policy_docs = [r.doc_data for r in rows]
+            s3_keys_by_doc = {r.policy_document_id: r.s3_pdf_key for r in rows}
     except Exception as e:
         st.warning(f"Could not load policy documents: {e}")
 
@@ -140,7 +137,7 @@ with col2:
     flags = researcher.get("flags") or {}
     if flags.get("oa_disambiguation_suspect"):
         st.warning(
-            "⚠️ This researcher's OpenAlex author record is flagged as "
+            "This researcher's OpenAlex author record is flagged as "
             "potentially conflated with another author — works list shown is "
             "based on RMD only."
         )
@@ -224,13 +221,8 @@ if policy_docs:
         if published:
             years[published[:4]] += 1
 
-        # Check for PDF availability
         doc_id = doc.get("policy_document_id", "")
-        pdf_link = ""
-        if doc_id:
-            pdf_url = get_pdf_presigned_url(doc_id)
-            if pdf_url:
-                pdf_link = pdf_url
+        pdf_link = get_s3_presigned_url(s3_keys_by_doc.get(doc_id)) or ""
 
         doc_rows.append({
             "Title": doc.get("title", ""),

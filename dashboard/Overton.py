@@ -13,11 +13,10 @@ from utils.data_loader import load_summary, load_run_metadata
 # Page config
 st.set_page_config(
     page_title="PSU Research Impact Dashboard",
-    page_icon="📊",
     layout="wide"
 )
 
-st.title("📊 PSU Research Impact Dashboard")
+st.title("PSU Research Impact Dashboard")
 st.markdown("### Analyzing how Penn State research is cited in policy documents")
 
 st.divider()

@@ -16,11 +16,10 @@ from utils.data_loader import load_summary
 # Page config
 st.set_page_config(
     page_title="Grant Impact",
-    page_icon="💰",
     layout="wide"
 )
 
-st.title("💰 Grant Impact Analysis")
+st.title("Grant Impact Analysis")
 st.markdown("Exploring grant funding and its relationship to policy impact")
 
 # Load data

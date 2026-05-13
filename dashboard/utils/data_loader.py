@@ -118,67 +118,25 @@ def load_summary() -> list[dict]:
     return data
 
 
-# ── Full Researchers ─────────────────────────────────────────────────────────
-
-
-@st.cache_data(ttl=3600)
-def load_researchers() -> list[dict]:
-    """Load the full researcher dataset.
-
-    From DB: reads all researcher JSONB data.
-    Fallback: reads researchers.json.
-    """
-    engine = get_engine()
-    if engine is not None:
-        try:
-            from sqlalchemy import text
-            with engine.connect() as conn:
-                rows = conn.execute(text("SELECT data FROM researchers")).fetchall()
-            researchers = [row.data for row in rows]
-            logger.info("Loaded %d researchers from database", len(researchers))
-            return researchers
-        except Exception as e:
-            logger.warning("DB researchers query failed, falling back to file: %s", e)
-
-    data = _load_json_file("researchers.json")
-    if not data:
-        st.error("Researcher data not found. Run the pipeline first.")
-    return data
-
-
 # ── Single Researcher Lookup ─────────────────────────────────────────────────
 
 
-def get_researcher_by_orcid(researchers_or_orcid, orcid: str | None = None) -> dict | None:
-    """Find a researcher by ORCID.
-
-    Can be called two ways:
-    - get_researcher_by_orcid(researchers_list, orcid) — legacy list scan
-    - get_researcher_by_orcid(orcid) — direct DB lookup (preferred)
-    """
-    # Handle direct ORCID lookup
-    if isinstance(researchers_or_orcid, str) and orcid is None:
-        orcid = researchers_or_orcid
-        engine = get_engine()
-        if engine is not None:
-            try:
-                from sqlalchemy import text
-                with engine.connect() as conn:
-                    row = conn.execute(
-                        text("SELECT data FROM researchers WHERE orcid = :orcid"),
-                        {"orcid": orcid},
-                    ).fetchone()
-                return row.data if row else None
-            except Exception as e:
-                logger.warning("DB lookup failed for %s: %s", orcid, e)
-                return None
+def get_researcher_by_orcid(orcid: str) -> dict | None:
+    """Fetch a single researcher's full JSONB by ORCID."""
+    engine = get_engine()
+    if engine is None:
         return None
-
-    # Legacy: scan a list
-    for r in researchers_or_orcid:
-        if r.get("orcid") == orcid:
-            return r
-    return None
+    try:
+        from sqlalchemy import text
+        with engine.connect() as conn:
+            row = conn.execute(
+                text("SELECT data FROM researchers WHERE orcid = :orcid"),
+                {"orcid": orcid},
+            ).fetchone()
+        return row.data if row else None
+    except Exception as e:
+        logger.warning("DB lookup failed for %s: %s", orcid, e)
+        return None
 
 
 # ── Policy Documents Flat ────────────────────────────────────────────────────
@@ -196,14 +154,17 @@ def load_policy_docs_flat() -> list[dict]:
         try:
             from sqlalchemy import text
             with engine.connect() as conn:
-                # Researcher → DOI list → article_citations → policy_documents.
-                # Same join as pipeline.db.operations.get_researcher_policy_citations.
+                # Pluck only the fields the dashboard renders in SQL — pulling
+                # the full researcher.data and policy_doc.data JSONB blobs
+                # across ~46k rows OOMs the Fargate task (4GB).
                 rows = conn.execute(text("""
                     WITH researcher_dois AS (
                         SELECT
                             r.orcid,
                             r.display_name,
-                            r.data,
+                            r.data #>> '{openalex,topics,0,subfield}' AS primary_subfield,
+                            r.data #>> '{openalex,topics,0,field}'    AS primary_field,
+                            r.data #>> '{openalex,topics,0,domain}'   AS primary_domain,
                             lower(d.value) AS doi
                         FROM researchers r
                         CROSS JOIN LATERAL jsonb_array_elements_text(
@@ -214,39 +175,24 @@ def load_policy_docs_flat() -> list[dict]:
                     SELECT
                         rd.orcid,
                         rd.display_name,
-                        rd.data AS researcher_data,
+                        rd.primary_subfield,
+                        rd.primary_field,
+                        rd.primary_domain,
                         pd.policy_document_id,
-                        pd.data AS doc_data
+                        pd.data->>'title'                  AS doc_title,
+                        pd.data #>> '{source,title}'       AS source_title,
+                        pd.data #>> '{source,country}'     AS source_country,
+                        pd.data #>> '{source,type}'        AS source_type,
+                        pd.data->>'published_on'           AS published_on,
+                        pd.data->'topics'                  AS topics,
+                        pd.data->'sdgcategories'           AS sdgcategories
                     FROM researcher_dois rd
                     JOIN article_citations ac ON ac.doi = rd.doi
                     JOIN policy_documents pd ON pd.policy_document_id = ac.policy_document_id
                     WHERE pd.data->>'title' IS NOT NULL
-                """)).fetchall()
+                """)).mappings().fetchall()
 
-            flat_docs = []
-            for row in rows:
-                r_data = row.researcher_data or {}
-                doc = row.doc_data or {}
-                oa = r_data.get("openalex") or {}
-                topics = oa.get("topics", [])
-                primary_topic = topics[0] if topics else {}
-                source = doc.get("source") or {}
-
-                flat_docs.append({
-                    "orcid": row.orcid,
-                    "display_name": row.display_name,
-                    "primary_subfield": primary_topic.get("subfield"),
-                    "primary_field": primary_topic.get("field"),
-                    "primary_domain": primary_topic.get("domain"),
-                    "policy_document_id": row.policy_document_id,
-                    "doc_title": doc.get("title"),
-                    "source_title": source.get("title"),
-                    "source_country": source.get("country"),
-                    "source_type": source.get("type"),
-                    "published_on": doc.get("published_on"),
-                    "topics": doc.get("topics", []),
-                    "sdgcategories": doc.get("sdgcategories", []),
-                })
+            flat_docs = [dict(row) for row in rows]
             logger.info("Built %d flat policy doc rows from database", len(flat_docs))
             return flat_docs
         except Exception as e:
@@ -295,42 +241,31 @@ def load_run_metadata() -> dict:
 
 # ── PDF Presigned URLs ───────────────────────────────────────────────────────
 
+_s3_client = None
 
-def get_pdf_presigned_url(policy_document_id: str) -> str | None:
-    """Generate a presigned S3 URL for a policy document PDF.
 
-    Returns None if the document hasn't been downloaded or S3 is not configured.
-    """
-    engine = get_engine()
-    if engine is None:
-        return None
-
-    try:
-        from sqlalchemy import text
-        with engine.connect() as conn:
-            row = conn.execute(
-                text(
-                    "SELECT s3_pdf_key FROM policy_documents "
-                    "WHERE policy_document_id = :id AND s3_pdf_key IS NOT NULL"
-                ),
-                {"id": policy_document_id},
-            ).fetchone()
-
-        if not row or not row.s3_pdf_key:
-            return None
-
-        import os
+def _get_s3_client():
+    global _s3_client
+    if _s3_client is None:
         import boto3
-        bucket = os.getenv("S3_BUCKET_NAME")
-        if not bucket:
-            return None
+        _s3_client = boto3.client("s3")
+    return _s3_client
 
-        s3 = boto3.client("s3")
-        return s3.generate_presigned_url(
+
+def get_s3_presigned_url(s3_key: str | None) -> str | None:
+    """Sign an S3 key into a presigned GET URL. Returns None if no key or S3 not configured."""
+    import os
+    if not s3_key:
+        return None
+    bucket = os.getenv("S3_BUCKET_NAME")
+    if not bucket:
+        return None
+    try:
+        return _get_s3_client().generate_presigned_url(
             "get_object",
-            Params={"Bucket": bucket, "Key": row.s3_pdf_key},
+            Params={"Bucket": bucket, "Key": s3_key},
             ExpiresIn=3600,
         )
     except Exception as e:
-        logger.warning("Failed to generate presigned URL for %s: %s", policy_document_id, e)
+        logger.warning("Failed to sign %s: %s", s3_key, e)
         return None

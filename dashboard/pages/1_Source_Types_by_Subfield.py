@@ -15,7 +15,6 @@ from utils.data_loader import load_policy_docs_flat
 # Page config
 st.set_page_config(
     page_title="Source Types by Subfield",
-    page_icon="📊",
     layout="wide"
 )
 

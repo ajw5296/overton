@@ -15,11 +15,10 @@ from utils.data_loader import load_summary
 # Page config
 st.set_page_config(
     page_title="University Overview",
-    page_icon="🏛️",
     layout="wide"
 )
 
-st.title("🏛️ University Overview")
+st.title("University Overview")
 st.markdown("Cross-domain research impact metrics across Penn State")
 
 # Load data
