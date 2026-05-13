@@ -1,7 +1,7 @@
 """
 Researcher Lookup Page
 Search for a researcher and view their full impact profile including
-OpenAlex metrics, RMD data (grants, position), and Overton policy documents.
+OpenAlex metrics, RMD position data, and Overton policy documents.
 """
 
 import streamlit as st
@@ -164,28 +164,6 @@ with col4:
     st.metric("i10-Index", oa.get("i10_index", 0))
 with col5:
     st.metric("Policy Documents", len(policy_docs))
-
-# === RMD Grants ===
-grants = rmd.get("grants", [])
-if grants:
-    st.divider()
-    st.subheader(f"Grants ({len(grants)})")
-
-    total_funding = sum(g.get("amount_in_dollars", 0) or 0 for g in grants)
-    if total_funding > 0:
-        st.metric("Total Grant Funding", f"${total_funding:,.0f}")
-
-    grants_df = pd.DataFrame([
-        {
-            "Title": g.get("title", "Untitled"),
-            "Agency": g.get("agency", "N/A"),
-            "Amount": f"${g['amount_in_dollars']:,.0f}" if g.get("amount_in_dollars") else "N/A",
-            "Start": g.get("start_date", "N/A"),
-            "End": g.get("end_date", "N/A"),
-        }
-        for g in grants
-    ])
-    st.dataframe(grants_df, use_container_width=True, hide_index=True)
 
 # === RMD Additional Info ===
 pres_count = rmd.get("presentations_count", 0)

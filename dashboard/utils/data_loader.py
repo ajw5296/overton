@@ -98,11 +98,6 @@ def load_summary() -> list[dict]:
                     "has_rmd": bool(rmd.get("webaccess_id")),
                     "rmd_org": (rmd.get("profile") or {}).get("organization_name"),
                     "policy_documents_total": citation_counts.get(row.orcid, 0),
-                    "grants_count": len(rmd.get("grants", [])),
-                    "total_grant_dollars": sum(
-                        g.get("amount_in_dollars", 0) or 0
-                        for g in rmd.get("grants", [])
-                    ),
                     "lookup_method": flags.get("lookup_method", "orcid"),
                     "oa_disambiguation_suspect": bool(flags.get("oa_disambiguation_suspect")),
                 })
