@@ -30,9 +30,8 @@ if summary:
     with_policy = sum(1 for r in summary if r.get("policy_documents_total", 0) > 0)
     with_rmd = sum(1 for r in summary if r.get("has_rmd"))
     domains = len(set(r.get("primary_domain") or "Unknown" for r in summary))
-    total_grant_dollars = sum(r.get("total_grant_dollars", 0) for r in summary)
 
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.metric("Researchers", f"{total:,}")
     with col2:
@@ -41,11 +40,6 @@ if summary:
         st.metric("With RMD Data", f"{with_rmd:,}")
     with col4:
         st.metric("Research Domains", domains)
-    with col5:
-        if total_grant_dollars > 0:
-            st.metric("Total Grant Funding", f"${total_grant_dollars:,.0f}")
-        else:
-            st.metric("Total Grant Funding", "N/A")
 
     if metadata:
         run_ts = metadata.get("run_timestamp", "Unknown")
@@ -65,7 +59,7 @@ using data from three sources:
 
 - **[OpenAlex](https://openalex.org/)** - Scholarly metadata, citations, topics, and researcher profiles
 - **[Overton](https://www.overton.io/)** - Citations in policy documents from governments, think tanks, and IGOs
-- **[PSU Researcher Metadata Database](https://metadata.libraries.psu.edu/)** - Grants, presentations, and institutional data
+- **[PSU Researcher Metadata Database](https://metadata.libraries.psu.edu/)** - Presentations and institutional data
 
 ---
 
@@ -75,7 +69,6 @@ Use the sidebar to navigate between pages:
 
 - **Source Types by Subfield** - Analyze which types of organizations cite research from different academic fields
 - **Researcher Lookup** - Search for a researcher and view their full impact profile
-- **Grant Impact** - Explore grant funding and its relationship to policy impact
 - **University Overview** - Cross-domain aggregate metrics across Penn State
 
 ---
