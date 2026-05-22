@@ -1,0 +1,9 @@
+2026-05-21 12:51:12,489 - pipeline - INFO - Pipeline run 5fd0a904 starting
+2026-05-21 12:51:12,489 - pipeline.db.connection - INFO - Connecting to PostgreSQL via Secrets Manager
+2026-05-21 12:51:12,510 - botocore.credentials - INFO - Found credentials from IAM Role: alex-dev-instance-role
+2026-05-21 12:51:12,786 - pipeline.db.connection - INFO - PostgreSQL connection verified
+2026-05-21 12:51:12,823 - pipeline.db.schema - INFO - Database tables and indexes ensured
+2026-05-21 12:51:12,823 - pipeline - INFO - Database tables initialized
+2026-05-21 12:51:13,174 - pipeline.rmd - INFO - Loaded 752 ORCID mappings from S3
+2026-05-21 12:51:13,302 - pipeline.rmd - INFO - Loaded DOIs for 984 users from S3
+2026-05-21 12:51:13,362 - pipeline.rmd - INFO - Loaded names for 1011 users from S3
